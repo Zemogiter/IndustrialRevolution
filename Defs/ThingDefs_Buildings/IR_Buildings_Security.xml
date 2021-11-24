@@ -105,7 +105,7 @@
       <turretGunDef>Gun_ArcTower</turretGunDef>
       <turretBurstWarmupTime>0.5</turretBurstWarmupTime>
       <turretBurstCooldownTime>5</turretBurstCooldownTime>
-      <turretTopgraphicPath>Things/Building/Tesla_Top</turretTopgraphicPath>
+      <!--<turretTopgraphicPath>Things/Building/Tesla_Top</turretTopgraphicPath>-->
       <soundAmbient>TeslaAmbient</soundAmbient>
     </building>
     <placeWorkers>

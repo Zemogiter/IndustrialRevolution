@@ -43,9 +43,9 @@
         <fuelConsumptionRate>72.0</fuelConsumptionRate>
         <fuelCapacity>150.0</fuelCapacity>
         <fuelFilter>
-          <Defs>
+          <thingDefs>
             <li>Chemfuel</li>
-          </Defs>
+          </thingDefs>
         </fuelFilter>
       </li>
       <li Class="CompProperties_Glower">
@@ -114,10 +114,10 @@
         <fuelConsumptionRate>22.0</fuelConsumptionRate>
         <fuelCapacity>75.0</fuelCapacity>
         <fuelFilter>
-          <Defs>
+          <thingDefs>
             <li>WoodLog</li>
             <li>Coal</li>
-          </Defs>
+          </thingDefs>
         </fuelFilter>
       </li>
       <li Class="CompProperties_Glower">
@@ -263,9 +263,9 @@
         <fuelConsumptionRate>18.0</fuelConsumptionRate>
         <fuelCapacity>200.0</fuelCapacity>
         <fuelFilter>
-          <Defs>
+          <thingDefs>
             <li>Coal</li>
-          </Defs>
+          </thingDefs>
         </fuelFilter>
       </li>
       <li Class="CompProperties_Glower">

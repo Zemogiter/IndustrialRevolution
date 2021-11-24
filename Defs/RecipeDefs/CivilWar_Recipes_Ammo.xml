@@ -11,24 +11,10 @@
     <allowMixingIngredients>true</allowMixingIngredients>
     <workAmount>800</workAmount>
     <targetCountAdjustment>5</targetCountAdjustment>
-    <ingredients>
-      <li>
-        <filter>
-          <Defs>
-            <li>Steel</li>
-          </Defs>
-        </filter>
-        <count>5</count>
-      </li>
-      <li>
-        <filter>
-          <Defs>
-            <li>Chemfuel</li>
-          </Defs>
-        </filter>
-        <count>10</count>
-      </li>
-    </ingredients>
+    <costList>
+      <Steel>5</Steel>
+      <Chemfuel>10</Chemfuel>
+    </costList>
     <fixedIngredientFilter>
       <Defs>
         <li>Steel</li>
@@ -51,24 +37,10 @@
     <allowMixingIngredients>true</allowMixingIngredients>
     <workAmount>800</workAmount>
     <targetCountAdjustment>5</targetCountAdjustment>
-    <ingredients>
-      <li>
-        <filter>
-          <Defs>
-            <li>Steel</li>
-          </Defs>
-        </filter>
-        <count>10</count>
-      </li>
-      <li>
-        <filter>
-          <Defs>
-            <li>Chemfuel</li>
-          </Defs>
-        </filter>
-        <count>5</count>
-      </li>
-    </ingredients>
+    <costList>
+      <Steel>10</Steel>
+      <Chemfuel>5</Chemfuel>
+    </costList>
     <fixedIngredientFilter>
       <Defs>
         <li>Steel</li>

@@ -1122,8 +1122,6 @@
     <equippedStatOffsets>
       <GeneralLaborSpeed>0.10</GeneralLaborSpeed>
       <SmoothingSpeed>0.05</SmoothingSpeed>
-      <GeneralLaborSpeed>0.05</GeneralLaborSpeed>
-      <StonecuttingSpeed>0.05</StonecuttingSpeed>
     </equippedStatOffsets>
     <generateCommonality>0.03</generateCommonality>
     <apparel>
