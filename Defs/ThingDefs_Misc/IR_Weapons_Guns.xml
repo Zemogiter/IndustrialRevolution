@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
-		<techLevel>Industrial</techLevel>
-		<smeltable>true</smeltable>
-		<thingCategories>
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
       <li>WeaponsRanged</li>
     </thingCategories>
     <inspectorTabs>
@@ -15,36 +14,33 @@
         <compClass>CompQuality</compClass>
       </li>
       <li Class="CompProperties_Art">
-        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <nameMaker>NamerArtWeaponGun</nameMaker>
         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
     </comps>
   </ThingDef>
-  
   <ThingDef Name="BaseMakeableElectric" ParentName="BaseGun" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_ArcWeaponry</researchPrerequisite>	  
+      <researchPrerequisite>Industrial_ArcWeaponry</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
-	  <li>EliteGun</li>
-    </weaponTags>	
+      <li>EliteGun</li>
+    </weaponTags>
   </ThingDef>
-
   <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
     <weaponTags>
       <li>Gun</li>
     </weaponTags>
   </ThingDef>
-  
   <ThingDef Name="BaseBullet" Abstract="True">
     <category>Projectile</category>
     <tickerType>Normal</tickerType>
@@ -57,13 +53,11 @@
       <shaderType>Transparent</shaderType>
     </graphicData>
   </ThingDef>
-
-	<!-- ==================== Arc Rifle ========================== -->
-  
-   <ThingDef ParentName="BaseBullet">
+  <!-- ==================== Arc Rifle ========================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_ArcRifle</defName>
     <label>bolt-action rifle bullet</label>
-    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>	
+    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>
     <projectile>
       <damageDef>Arc</damageDef>
       <damageAmountBase>14</damageAmountBase>
@@ -85,27 +79,26 @@
         <damageDef>EMP</damageDef>
         <damageAmount>11</damageAmount>
         <chanceToProc>1</chanceToProc>
-      </li>	  	  
+      </li>
     </comps>
-	
   </ThingDef>
   <ThingDef ParentName="BaseMakeableElectric">
     <defName>Gun_ArcRifle</defName>
     <label>Arc-rifle</label>
     <description>A heavy prototype rifle that hurls bolts of charged electricity. Slow-firing but powerful and has a chance to stun. Very effective against mechanoids.</description>
     <weaponTags>
-	  <li>EliteGun</li>
-	  <li>GunHeavy</li> 	  
+      <li>EliteGun</li>
+      <li>GunHeavy</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/TeslaRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-		<generateCommonality>0.4</generateCommonality>	
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0.4</generateCommonality>
     <statBases>
       <WorkToMake>35000</WorkToMake>
-      <Mass>9.2</Mass>  
+      <Mass>9.2</Mass>
       <AccuracyTouch>0.95</AccuracyTouch>
       <AccuracyShort>0.90</AccuracyShort>
       <AccuracyMedium>0.85</AccuracyMedium>
@@ -115,19 +108,19 @@
     <equippedStatOffsets>
       <MoveSpeed>-0.8</MoveSpeed>
       <WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
-    </equippedStatOffsets>	
-		<equippedAngleOffset>40</equippedAngleOffset>	
+    </equippedStatOffsets>
+    <equippedAngleOffset>40</equippedAngleOffset>
     <costList>
       <Steel>150</Steel>
-      <Component>6</Component>
+      <ComponentIndustrial>6</ComponentIndustrial>
       <WoodLog>20</WoodLog>
-      <Gold>35</Gold>		  
+      <Gold>35</Gold>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ArcRifle</projectileDef>
+        <defaultProjectile>Bullet_ArcRifle</defaultProjectile>
         <warmupTime>2</warmupTime>
         <range>60</range>
         <soundCast>ShotTesla</soundCast>
@@ -137,8 +130,7 @@
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-      </li>	  	  
+      </li>
     </verbs>
   </ThingDef>
-
 </Defs>

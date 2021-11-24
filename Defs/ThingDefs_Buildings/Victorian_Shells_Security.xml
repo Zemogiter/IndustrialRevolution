@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="ResourceBase">
     <defName>FCannonShell</defName>
     <label>cannon shell</label>
@@ -35,8 +34,6 @@
           <max>30</max>
         </wickTicks>
       </li>
-    </comps>	
+    </comps>
   </ThingDef>
- 
-  
 </Defs>

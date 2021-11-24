@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ResourceBase">
     <defName>Coal</defName>
@@ -12,17 +12,16 @@
     <soundDrop>Metal_Drop</soundDrop>
     <statBases>
       <MarketValue>2.0</MarketValue>
-	  <MaxHitPoints>150</MaxHitPoints>
-	  <Flammability>1.0</Flammability>
-	  <Beauty>-2</Beauty>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-2</Beauty>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
-	 <stackLimit>500</stackLimit>
+    <stackLimit>500</stackLimit>
   </ThingDef>
-  
-   <ThingDef ParentName="ResourceBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Cloth</defName>
     <label>cloth</label>
     <description>Cloth woven from organic fibers.</description>
@@ -71,6 +70,5 @@
         </li>
       </options>
     </colorGeneratorInTraderStock>
-  </ThingDef> 
-  
+  </ThingDef>
 </Defs>

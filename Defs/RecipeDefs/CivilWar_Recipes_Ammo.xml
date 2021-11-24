@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-
   <RecipeDef>
     <defName>MakeMortarShell</defName>
     <label>make mortar shell</label>
     <description>Craft a mortar shell.</description>
     <jobString>Making mortar shell.</jobString>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <allowMixingIngredients>true</allowMixingIngredients>
@@ -22,33 +20,32 @@
         </filter>
         <count>5</count>
       </li>
-			<li>
-				<filter>
+      <li>
+        <filter>
           <Defs>
             <li>Chemfuel</li>
           </Defs>
         </filter>
         <count>10</count>
-			</li>
+      </li>
     </ingredients>
     <fixedIngredientFilter>
       <Defs>
         <li>Steel</li>
-				<li>Chemfuel</li>
+        <li>Chemfuel</li>
       </Defs>
     </fixedIngredientFilter>
     <products>
       <FCannonShell>1</FCannonShell>
     </products>
     <workSkill>Crafting</workSkill>
-  </RecipeDef> 
-
-   <RecipeDef>
+  </RecipeDef>
+  <RecipeDef>
     <defName>MakeCannonShell</defName>
     <label>make cannon shell</label>
     <description>Craft a cannon shell.</description>
     <jobString>Making cannon shell.</jobString>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <allowMixingIngredients>true</allowMixingIngredients>
@@ -63,25 +60,24 @@
         </filter>
         <count>10</count>
       </li>
-			<li>
-				<filter>
+      <li>
+        <filter>
           <Defs>
             <li>Chemfuel</li>
           </Defs>
         </filter>
         <count>5</count>
-			</li>
+      </li>
     </ingredients>
     <fixedIngredientFilter>
       <Defs>
         <li>Steel</li>
-				<li>Chemfuel</li>
+        <li>Chemfuel</li>
       </Defs>
     </fixedIngredientFilter>
     <products>
       <FCannonShell>1</FCannonShell>
     </products>
     <workSkill>Crafting</workSkill>
-  </RecipeDef>  
-
+  </RecipeDef>
 </Defs>

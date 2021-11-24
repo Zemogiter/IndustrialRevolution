@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BuildingBase" Name="Industrial_TurretBase" Abstract="True">
-	<thingCategories>
+    <thingCategories>
       <li>Turrets</li>
     </thingCategories>
-		<techLevel>Industrial</techLevel>	
-  <thingClass>ThingWithComps</thingClass>
+    <techLevel>Industrial</techLevel>
+    <thingClass>ThingWithComps</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -14,14 +13,12 @@
     <useHitPoints>true</useHitPoints>
     <statBases>
       <Flammability>1.0</Flammability>
-			<SellPriceFactor>1.10</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
   </ThingDef>
-  
- <ThingDef Name="Industrial_TurretMakeableBase" ParentName="Industrial_TurretBase" Abstract="True">	
-
+  <ThingDef Name="Industrial_TurretMakeableBase" ParentName="Industrial_TurretBase" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -31,33 +28,28 @@
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
-
-	
-
-	
-    <!--=============== Arc tower ===============-->
-
+  <!--=============== Arc tower ===============-->
   <ThingDef ParentName="Industrial_TurretMakeableBase">
     <defName>ArcTower</defName>
     <label>arc tower</label>
     <description>The tesla turret uses a combination of electricity generation and atmosphere ionization to hurl electromagnetic arcs of electricity at hostile attackers. Disables people and mechanoids.</description>
-        <thingClass>Building_TurretGun</thingClass>	
-	<graphicData>
+    <thingClass>Building_TurretGun</thingClass>
+    <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Things/Building/Tesla_Base</texPath>	  
+      <texPath>Things/Building/Tesla_Base</texPath>
       <drawSize>(3,3)</drawSize>
       <damageData>
         <rect>(0.38,0.2,0.56375,0.8)</rect>
         <cornerTL>Damage/Corner</cornerTL>
       </damageData>
     </graphicData>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <stealable>false</stealable>
     <rotatable>true</rotatable>
     <size>(3,3)</size>
     <statBases>
-      <MarketValue>2000</MarketValue>	
+      <MarketValue>2000</MarketValue>
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>0.5</Flammability>
       <WorkToMake>65000</WorkToMake>
@@ -66,7 +58,7 @@
     </statBases>
     <tickerType>Normal</tickerType>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Explosive">
         <explosiveRadius>4.9</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
@@ -76,12 +68,12 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>4500</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <tradeTags>
       <li>Turret</li>
-    </tradeTags>	
+    </tradeTags>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
@@ -90,25 +82,25 @@
     <costList>
       <Steel>350</Steel>
       <Uranium>20</Uranium>
-      <Component>25</Component>
+      <ComponentIndustrial>25</ComponentIndustrial>
     </costList>
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_ArcTower</researchPrerequisite>		  
+      <researchPrerequisite>Industrial_ArcTower</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    <skillRequirements>
-      <li>
-        <skill>Crafting</skill>
-        <minLevel>12</minLevel>
-      </li>
-    </skillRequirements>
-	  </recipeMaker>	
+      <skillRequirements>
+        <li>
+          <skill>Crafting</skill>
+          <minLevel>12</minLevel>
+        </li>
+      </skillRequirements>
+    </recipeMaker>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <building>
@@ -116,8 +108,8 @@
       <turretGunDef>Gun_ArcTower</turretGunDef>
       <turretBurstWarmupTime>0.5</turretBurstWarmupTime>
       <turretBurstCooldownTime>5</turretBurstCooldownTime>
-      <turretTopgraphicPath>Things/Building/Tesla_Top</turretTopgraphicPath>	  
-	  <soundAmbient>TeslaAmbient</soundAmbient>	  
+      <turretTopgraphicPath>Things/Building/Tesla_Top</turretTopgraphicPath>
+      <soundAmbient>TeslaAmbient</soundAmbient>
     </building>
     <placeWorkers>
       <li>PlaceWorker_NotUnderRoof</li>
@@ -125,7 +117,5 @@
     <researchPrerequisites>
       <li>Industrial_ArcTower</li>
     </researchPrerequisites>
-  </ThingDef>  	
-
-
+  </ThingDef>
 </Defs>

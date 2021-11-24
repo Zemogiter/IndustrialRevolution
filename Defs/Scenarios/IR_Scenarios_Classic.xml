@@ -1,6 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ScenarioDef>
     <defName>Drifters</defName>
     <label>Drifters</label>
@@ -12,20 +11,17 @@
         <factionDef>PlayerColony2</factionDef>
       </playerFaction>
       <parts>
-
         <!-- Config pages -->
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>5</pawnCount>
         </li>
-
         <!-- Player starting stuff spawn method-->
         <li Class="ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>
           <method>Standing</method>
           <visible>false</visible>
         </li>
-        
         <!-- Player starting things -->
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -39,17 +35,16 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>HerbalMedicine</thingDef>
+          <thingDef>MedicineHerbal</thingDef>
           <count>30</count>
         </li>
-
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>Gun_BoltActionRifle</thingDef>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>Gun_Pistol</thingDef>
+          <thingDef>Gun_Autopistol</thingDef>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -61,7 +56,6 @@
           <count>1</count>
           <bondToRandomPlayerPawnChance>1.0</bondToRandomPlayerPawnChance>
         </li>
-
         <!-- Scatter some things near player start -->
         <li Class="ScenPart_ScatterThingsNearPlayerStart">
           <def>ScatterThingsNearPlayerStart</def>
@@ -72,15 +66,13 @@
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>WoodLog</thingDef>
           <count>50</count>
-        </li>      
-
+        </li>
         <!-- Scatter some things anywhere -->
         <li Class="ScenPart_ScatterThingsAnywhere">
           <def>ScatterThingsAnywhere</def>
           <thingDef>WoodLog</thingDef>
           <count>500</count>
         </li>
-        
         <!-- Game start dialog -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
@@ -90,7 +82,4 @@
       </parts>
     </scenario>
   </ScenarioDef>
-
-
-
 </Defs>

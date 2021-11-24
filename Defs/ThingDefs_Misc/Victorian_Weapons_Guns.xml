@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
- <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
-		<techLevel>Industrial</techLevel>
-		<smeltable>true</smeltable>
-		<thingCategories>
+  <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
       <li>WeaponsRanged</li>
     </thingCategories>
     <inspectorTabs>
@@ -15,77 +14,72 @@
         <compClass>CompQuality</compClass>
       </li>
       <li Class="CompProperties_Art">
-        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <nameMaker>NamerArtWeaponGun</nameMaker>
         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
     </comps>
   </ThingDef>
-
   <ThingDef Name="BaseMakeableGun" ParentName="BaseGun" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_SelfLoading</researchPrerequisite>		  
+      <researchPrerequisite>Industrial_SelfLoading</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    <skillRequirements>
-      <li>
-        <skill>Crafting</skill>
-        <minLevel>5</minLevel>
-      </li>
-    </skillRequirements>
-	  </recipeMaker>
+      <skillRequirements>
+        <li>
+          <skill>Crafting</skill>
+          <minLevel>5</minLevel>
+        </li>
+      </skillRequirements>
+    </recipeMaker>
   </ThingDef>
-  
   <ThingDef Name="BaseMakeableRifle" ParentName="BaseGun" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_BoltAction</researchPrerequisite>	  
+      <researchPrerequisite>Industrial_BoltAction</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
     <weaponTags>
       <li>Rifle</li>
-    </weaponTags>	
+    </weaponTags>
   </ThingDef>
-
   <ThingDef Name="BaseMakeableAutomatic" ParentName="BaseGun" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_MachineGun</researchPrerequisite>		  
+      <researchPrerequisite>Industrial_MachineGun</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    <skillRequirements>
-      <li>
-        <skill>Crafting</skill>
-        <minLevel>5</minLevel>
-      </li>
-    </skillRequirements>
-	  </recipeMaker>
+      <skillRequirements>
+        <li>
+          <skill>Crafting</skill>
+          <minLevel>5</minLevel>
+        </li>
+      </skillRequirements>
+    </recipeMaker>
     <weaponTags>
       <li>Automatic</li>
-    </weaponTags>	
+    </weaponTags>
   </ThingDef>
-  
-  
-   <ThingDef Name="BaseSimpleMakeableGun" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseSimpleMakeableGun" ParentName="BaseGun" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -93,44 +87,36 @@
         <li>ElectricSmithy</li>
         <li>FueledSmithy</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_GunSmithing</researchPrerequisite>	  
+      <researchPrerequisite>Industrial_GunSmithing</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
-  </ThingDef>  
-
+  </ThingDef>
   <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
     <weaponTags>
       <li>Gun</li>
     </weaponTags>
   </ThingDef>
-  
   <ThingDef Name="BaseHumanMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
     <weaponTags>
       <li>Gun</li>
     </weaponTags>
   </ThingDef>
-  
   <ThingDef Name="BaseHumanMakeableRifle" ParentName="BaseMakeableRifle" Abstract="True">
     <weaponTags>
       <li>Rifle</li>
     </weaponTags>
   </ThingDef>
-
   <ThingDef Name="BaseHumanMakeableAutomatic" ParentName="BaseMakeableAutomatic" Abstract="True">
     <weaponTags>
       <li>Automatic</li>
     </weaponTags>
-  </ThingDef>  
-  
+  </ThingDef>
   <ThingDef Name="BaseHumanSimpleMakeableGun" ParentName="BaseSimpleMakeableGun" Abstract="True">
     <weaponTags>
       <li>Gun</li>
-      <li>Civillian</li>	  
+      <li>Civillian</li>
     </weaponTags>
   </ThingDef>
-
-  
-
   <ThingDef Name="BaseBullet" Abstract="True">
     <category>Projectile</category>
     <tickerType>Normal</tickerType>
@@ -143,13 +129,8 @@
       <shaderType>Transparent</shaderType>
     </graphicData>
   </ThingDef>
-
   <!-- ======================== Pistols ================================== -->
-
-  
   <!-- ======================== Bergmann Pistol ================================== -->
-  
-  
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_BergmannPistol</defName>
     <label>bergmann bullet</label>
@@ -160,8 +141,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>9</DamageAmountBase>
-      <Speed>55</Speed>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>55</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
@@ -176,8 +157,8 @@
       <texPath>Things/Item/Equipment/WeaponRanged/Bergmann</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
-		<generateCommonality>1</generateCommonality>	
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <generateCommonality>1</generateCommonality>
     <statBases>
       <WorkToMake>15000</WorkToMake>
       <Mass>1.2</Mass>
@@ -189,13 +170,13 @@
     </statBases>
     <costList>
       <Steel>30</Steel>
-      <Component>2</Component>
+      <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_BergmannPistol</projectileDef>
+        <defaultProjectile>Bullet_BergmannPistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>22</range>
         <soundCast>ShotC96</soundCast>
@@ -203,11 +184,8 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-  </ThingDef>  
-  
+  </ThingDef>
   <!-- ======================== Volcanic Pistol ================================== -->
-  
-  
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_VolcanicPistol</defName>
     <label>volcanic pistol bullet</label>
@@ -218,8 +196,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>13</DamageAmountBase>
-      <Speed>55</Speed>
+      <damageAmountBase>13</damageAmountBase>
+      <speed>55</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -228,15 +206,15 @@
     <description>Old pattern lever action pistol. Short range, but decently powerful and cheap to build.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Pistol</li>
     </weaponTags>
-		<generateCommonality>1</generateCommonality>	
+    <generateCommonality>1</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/VolcanicPistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <Mass>1.3</Mass>
@@ -248,14 +226,14 @@
     </statBases>
     <costList>
       <Steel>40</Steel>
-      <Component>1</Component>
-      <WoodLog>20</WoodLog>	  
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <WoodLog>20</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_VolcanicPistol</projectileDef>
+        <defaultProjectile>Bullet_VolcanicPistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>20</range>
         <soundCast>ShotWebley</soundCast>
@@ -264,11 +242,7 @@
       </li>
     </verbs>
   </ThingDef>
-  
-
   <!-- ======================== Beaumont Revolver ================================== -->
-  
-  
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Beaumont</defName>
     <label>beaumont bullet</label>
@@ -279,8 +253,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>14</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -289,15 +263,15 @@
     <description>Percussion revolver. Short range, but quick.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Pistol</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Beaumont</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
-		<generateCommonality>1</generateCommonality>	
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <generateCommonality>1</generateCommonality>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
@@ -309,13 +283,13 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Beaumont</projectileDef>
+        <defaultProjectile>Bullet_Beaumont</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>26</range>
         <soundCast>ShotBeaumont</soundCast>
@@ -324,11 +298,7 @@
       </li>
     </verbs>
   </ThingDef>
-
-
- <!-- ======================== Remington Revolver ================================== -->
-  
-  
+  <!-- ======================== Remington Revolver ================================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Remington</defName>
     <label>revolver bullet</label>
@@ -339,8 +309,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>14</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -349,15 +319,15 @@
     <description>Percussion revolver. Short range, but quick.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Pistol</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Remington</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
-		<generateCommonality>1</generateCommonality>	
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <generateCommonality>1</generateCommonality>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
@@ -369,13 +339,13 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Remington</projectileDef>
+        <defaultProjectile>Bullet_Remington</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>26</range>
         <soundCast>ShotWebley</soundCast>
@@ -383,11 +353,8 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-  </ThingDef>  
-  
-   <!-- ======================== Colt Revolver ================================== -->
-  
-
+  </ThingDef>
+  <!-- ======================== Colt Revolver ================================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Colt</defName>
     <label>colt bullet</label>
@@ -398,8 +365,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>15</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -408,15 +375,15 @@
     <description>Long barrelled percussion revolver. Short range, but quick.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Pistol</li>
-    </weaponTags>		
+    </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Colt</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
-		<generateCommonality>1</generateCommonality>	
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <generateCommonality>1</generateCommonality>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
@@ -428,13 +395,13 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Colt</projectileDef>
+        <defaultProjectile>Bullet_Colt</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>30</range>
         <soundCast>ShotColt</soundCast>
@@ -443,8 +410,6 @@
       </li>
     </verbs>
   </ThingDef>
-  
-
   <!-- ======================== Webley Revolver ================================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Webley</defName>
@@ -456,8 +421,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>13</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>13</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -466,15 +431,15 @@
     <description>Small percussion revolver. Weak, short range, but quick and accurate.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Pistol</li>
     </weaponTags>
-		<generateCommonality>1.2</generateCommonality>		
+    <generateCommonality>1.2</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Webley</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.2</Mass>
@@ -486,13 +451,13 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Webley</projectileDef>
+        <defaultProjectile>Bullet_Webley</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>20</range>
         <soundCast>ShotWebley</soundCast>
@@ -500,11 +465,8 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-  </ThingDef>  
- 
+  </ThingDef>
   <!-- ======================== Flintlock Pistol ================================== -->
-  
-  
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_FlintlockPistol</defName>
     <label>flintlock ball</label>
@@ -515,8 +477,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>30</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -525,20 +487,20 @@
     <description>Old pattern muzzle-loaded flintlock pistol, made obsolete by the advent of newer weapon designs, but still used on the rim as it is cheap to make. Powerful, slow-firing, and heavy. Sometimes used to settle disputes by dueling. The gun can be used as a blunt melee weapon.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
-      <li>Pistol</li> 	  
+      <li>Civillian</li>
+      <li>Pistol</li>
     </weaponTags>
-		<generateCommonality>1</generateCommonality>	
+    <generateCommonality>1</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/FlintlockPistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>8000</WorkToMake>
       <Mass>3</Mass>
       <MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>2</MeleeWeapon_Cooldown>	  
+      <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
       <AccuracyTouch>0.94</AccuracyTouch>
       <AccuracyShort>0.70</AccuracyShort>
       <AccuracyMedium>0.50</AccuracyMedium>
@@ -547,13 +509,13 @@
     </statBases>
     <costList>
       <Steel>35</Steel>
-      <WoodLog>25</WoodLog>	  
+      <WoodLog>25</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_FlintlockPistol</projectileDef>
+        <defaultProjectile>Bullet_FlintlockPistol</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>34</range>
         <soundCast>ShotFlintlock</soundCast>
@@ -564,12 +526,10 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Blunt</meleeDamageDef>
-      </li>		  
+      </li>
     </verbs>
-  </ThingDef> 
-
+  </ThingDef>
   <!-- ======================== Cavalry Pistol ================================== -->
-  
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_CavalryPistol</defName>
     <label>flintlock ball</label>
@@ -580,8 +540,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>25</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -590,18 +550,18 @@
     <description>Old pattern muzzle-loaded pistol, made obsolete by the advent of newer weapon designs, but still used on the rim as it is cheap to make. Powerful but slow-firing. Lighter and easier to load than dueling pistols, but shorter range.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
-      <li>Pistol</li> 
+      <li>Civillian</li>
+      <li>Pistol</li>
     </weaponTags>
-		<generateCommonality>1</generateCommonality>	
+    <generateCommonality>1</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/CavalryPistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>8000</WorkToMake>
-      <Mass>1.8</Mass>	  
+      <Mass>1.8</Mass>
       <AccuracyTouch>0.94</AccuracyTouch>
       <AccuracyShort>0.73</AccuracyShort>
       <AccuracyMedium>0.56</AccuracyMedium>
@@ -610,29 +570,24 @@
     </statBases>
     <costList>
       <Steel>35</Steel>
-      <WoodLog>20</WoodLog>	  
+      <WoodLog>20</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_CavalryPistol</projectileDef>
+        <defaultProjectile>Bullet_CavalryPistol</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>24</range>
         <soundCast>ShotFlintlock</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>15</muzzleFlashScale>
-      </li>  
+      </li>
     </verbs>
   </ThingDef>
-    
-  
   <!-- ======================== Rifles ================================== -->
-  
-
-  <!-- ======================== Revolver Rifle ================================== -->  
-  
-    <ThingDef ParentName="BaseBullet">
+  <!-- ======================== Revolver Rifle ================================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_RevolverRifle</defName>
     <label>revolver bullet</label>
     <graphicData>
@@ -642,8 +597,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>15</DamageAmountBase>
-      <Speed>55</Speed>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>55</speed>
     </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseHumanSimpleMakeableGun">
@@ -652,15 +607,15 @@
     <description>Percussion revolver rifle. Short range, but quick.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Rifle</li>
     </weaponTags>
-		<generateCommonality>1</generateCommonality>	
+    <generateCommonality>1</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/RevolverRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
+    <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
       <WorkToMake>18000</WorkToMake>
       <Mass>3.5</Mass>
@@ -672,28 +627,26 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
-      <WoodLog>30</WoodLog>	  
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <WoodLog>30</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_RevolverRifle</projectileDef>
+        <defaultProjectile>Bullet_RevolverRifle</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>26</range>
-		<burstShotCount>3</burstShotCount>
-		<ticksBetweenBurstShots>80</ticksBetweenBurstShots>		
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>80</ticksBetweenBurstShots>
         <soundCast>ShotWebley</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
   </ThingDef>
-
-  <!-- ======================== Henry Repeater Rifle ================================== -->    
-  
-    <ThingDef ParentName="BaseBullet">
+  <!-- ======================== Henry Repeater Rifle ================================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_HenryRifle</defName>
     <label>repeater bullet</label>
     <projectile>
@@ -712,15 +665,15 @@
     <description>Old pattern lever action rifle. Decent range, good power, good rate of fire, but poor accuracy.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Rifle</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/RepeaterRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-		<generateCommonality>1.6</generateCommonality>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>1.6</generateCommonality>
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <Mass>3.5</Mass>
@@ -732,26 +685,24 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
-      <WoodLog>30</WoodLog>		  
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <WoodLog>30</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_HenryRifle</projectileDef>
+        <defaultProjectile>Bullet_HenryRifle</defaultProjectile>
         <warmupTime>1</warmupTime>
         <range>28</range>
-        <soundCast>ShotBoltActionRifle</soundCast>
+        <soundCast>Shot_BoltActionRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
   </ThingDef>
-
-  <!-- ======================== Spencer Repeater Rifle ================================== -->  
-  
-      <ThingDef ParentName="BaseBullet">
+  <!-- ======================== Spencer Repeater Rifle ================================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_SpencerRifle</defName>
     <label>repeater bullet</label>
     <projectile>
@@ -770,15 +721,15 @@
     <description>Old pattern lever action rifle. Decent range, good power, good rate of fire.</description>
     <weaponTags>
       <li>Gun</li>
-	  <li>Civillian</li>
+      <li>Civillian</li>
       <li>Rifle</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/SpencerRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-		<generateCommonality>1.4</generateCommonality>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>1.4</generateCommonality>
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <Mass>3.5</Mass>
@@ -790,26 +741,24 @@
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <Component>1</Component>
-      <WoodLog>30</WoodLog>		  
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <WoodLog>30</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_SpencerRifle</projectileDef>
+        <defaultProjectile>Bullet_SpencerRifle</defaultProjectile>
         <warmupTime>1.2</warmupTime>
         <range>35</range>
-        <soundCast>ShotBoltActionRifle</soundCast>
+        <soundCast>Shot_BoltActionRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
   </ThingDef>
-  
-<!-- ======================== Flintlock Rifle ================================== -->    
-  
-    <ThingDef ParentName="BaseBullet">
+  <!-- ======================== Flintlock Rifle ================================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_FlintlockRifle</defName>
     <label>musket ball</label>
     <projectile>
@@ -829,35 +778,35 @@
     <weaponTags>
       <li>Gun</li>
       <li>Rifle</li>
-      <li>Civillian</li>	   
+      <li>Civillian</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/FlintlockRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-		<generateCommonality>1.5</generateCommonality>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>1.5</generateCommonality>
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <Mass>6</Mass>
       <MeleeWeapon_DamageAmount>9</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>2.3</MeleeWeapon_Cooldown>	 	  
+      <MeleeWeapon_CooldownMultiplier>2.3</MeleeWeapon_CooldownMultiplier>
       <AccuracyTouch>0.70</AccuracyTouch>
       <AccuracyShort>0.80</AccuracyShort>
       <AccuracyMedium>0.63</AccuracyMedium>
       <AccuracyLong>0.34</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
     </statBases>
-		<equippedAngleOffset>40</equippedAngleOffset>	
+    <equippedAngleOffset>40</equippedAngleOffset>
     <costList>
       <Steel>60</Steel>
-      <WoodLog>80</WoodLog>	  
+      <WoodLog>80</WoodLog>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_FlintlockRifle</projectileDef>
+        <defaultProjectile>Bullet_FlintlockRifle</defaultProjectile>
         <warmupTime>2</warmupTime>
         <range>45</range>
         <soundCast>ShotFlintlockRifle</soundCast>
@@ -868,13 +817,11 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Blunt</meleeDamageDef>
-      </li>	  	  
+      </li>
     </verbs>
   </ThingDef>
-  
-  <!-- ======================== Flintlock Rifle w/ Bayonet ================================== -->    
-  
-    <ThingDef ParentName="BaseBullet">
+  <!-- ======================== Flintlock Rifle w/ Bayonet ================================== -->
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_FlintlockRifle</defName>
     <label>musket ball</label>
     <projectile>
@@ -894,42 +841,42 @@
     <weaponTags>
       <li>Gun</li>
       <li>Rifle</li>
-      <li>Civillian</li>	   
+      <li>Civillian</li>
     </weaponTags>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/FlintlockRifle_Bayonet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-		<generateCommonality>1</generateCommonality>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>1</generateCommonality>
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <Mass>6</Mass>
-            <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
-            <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>	  
+      <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_CooldownMultiplier>1.8</MeleeWeapon_CooldownMultiplier>
       <AccuracyTouch>0.70</AccuracyTouch>
       <AccuracyShort>0.80</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
       <AccuracyLong>0.32</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
     </statBases>
-    		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricSmithy</li>
-				<li>FueledSmithy</li>
-				<li>CraftingSpot</li>
-			</recipeUsers>
-		</recipeMaker>
-		<equippedAngleOffset>40</equippedAngleOffset>		
-	<costList>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <equippedAngleOffset>40</equippedAngleOffset>
+    <costList>
       <Gun_FlintlockRifle>1</Gun_FlintlockRifle>
-      <MeleeWeapon_Bayonet>1</MeleeWeapon_Bayonet>	  
+      <MeleeWeapon_Bayonet>1</MeleeWeapon_Bayonet>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_FlintlockRifle</projectileDef>
+        <defaultProjectile>Bullet_FlintlockRifle</defaultProjectile>
         <warmupTime>2</warmupTime>
         <range>45</range>
         <soundCast>ShotFlintlockRifle</soundCast>
@@ -940,11 +887,10 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Cut</meleeDamageDef>
-      </li>	  	  
+      </li>
     </verbs>
-  </ThingDef>  
-  
-  	<!-- ==================== Trench Gun ========================== -->
+  </ThingDef>
+  <!-- ==================== Trench Gun ========================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_TrenchShotgun</defName>
     <label>shotgun blast</label>
@@ -964,39 +910,38 @@
     <description>Deadly, but short range.</description>
     <weaponTags>
       <li>Shotgun</li>
-	<li>Civillian</li>
-      <li>Gun</li>	  
+      <li>Civillian</li>
+      <li>Gun</li>
     </weaponTags>
-		<generateCommonality>1</generateCommonality>		
+    <generateCommonality>1</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/TrenchGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractShotgun</soundInteract>
+    <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
       <WorkToMake>30000</WorkToMake>
       <Mass>3.4</Mass>
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>2.3</MeleeWeapon_Cooldown>	  
+      <MeleeWeapon_CooldownMultiplier>2.3</MeleeWeapon_CooldownMultiplier>
       <AccuracyTouch>0.80</AccuracyTouch>
       <AccuracyShort>0.87</AccuracyShort>
       <AccuracyMedium>0.77</AccuracyMedium>
       <AccuracyLong>0.64</AccuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
     </statBases>
-
     <costList>
       <Steel>60</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_TrenchShotgun</projectileDef>
+        <defaultProjectile>Bullet_TrenchShotgun</defaultProjectile>
         <warmupTime>0.9</warmupTime>
         <range>16</range>
-        <soundCast>ShotShotgun</soundCast>
+        <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -1004,11 +949,10 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Blunt</meleeDamageDef>
-      </li>	  
+      </li>
     </verbs>
-  </ThingDef> 
-
-	<!-- ==================== Trench Gun w/ Bayonet ========================== -->
+  </ThingDef>
+  <!-- ==================== Trench Gun w/ Bayonet ========================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_TrenchShotgun</defName>
     <label>shotgun blast</label>
@@ -1029,29 +973,29 @@
     <weaponTags>
       <li>Gun</li>
       <li>Military</li>
-	  <li>EliteGun</li>	  
+      <li>EliteGun</li>
     </weaponTags>
-		<generateCommonality>0.5</generateCommonality>		
+    <generateCommonality>0.5</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/TrenchGun_Bayonet</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractShotgun</soundInteract>
+    <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
       <WorkToMake>5000</WorkToMake>
       <Mass>3.4</Mass>
       <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
+      <MeleeWeapon_CooldownMultiplier>1.8</MeleeWeapon_CooldownMultiplier>
       <AccuracyTouch>0.80</AccuracyTouch>
       <AccuracyShort>0.87</AccuracyShort>
       <AccuracyMedium>0.74</AccuracyMedium>
       <AccuracyLong>0.61</AccuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
     </statBases>
-    <equippedStatOffsets>	  
+    <equippedStatOffsets>
       <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
     </equippedStatOffsets>
-		<equippedAngleOffset>40</equippedAngleOffset>	
+    <equippedAngleOffset>40</equippedAngleOffset>
     <costList>
       <Gun_BerettaOVP>1</Gun_BerettaOVP>
       <MeleeWeapon_Bayonet>1</MeleeWeapon_Bayonet>
@@ -1060,10 +1004,10 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_TrenchShotgun</projectileDef>
+        <defaultProjectile>Bullet_TrenchShotgun</defaultProjectile>
         <warmupTime>0.9</warmupTime>
         <range>13</range>
-        <soundCast>ShotShotgun</soundCast>
+        <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -1071,8 +1015,7 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Cut</meleeDamageDef>
-      </li>	  	  
+      </li>
     </verbs>
   </ThingDef>
-
 </Defs>

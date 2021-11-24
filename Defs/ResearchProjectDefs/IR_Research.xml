@@ -1,37 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ResearchProjectDef>
-		<defName>Industrial_BasicElectricity</defName>
-		<label>basic electricity</label>
-		<description>Discover rudimentary utilization of electricity. Unlocks building simple generators and lights.</description>
-		<baseCost>100</baseCost>
-		<techLevel>Industrial</techLevel>
-        <tab>Estate_ResearchTab</tab>	
-		<tags>
-			<li>ClassicStart</li>
-		</tags>		
-		<researchViewX>0</researchViewX>
-		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>
-
-	
-	<ResearchProjectDef>
-		<defName>Industrial_Telegraph</defName>
-		<label>telegraph</label>
-		<description>Decode the mysteries of telecommunication. The telegraph allows contact with other communities.</description>
-		<baseCost>400</baseCost>
-		<techLevel>Industrial</techLevel>
-    <tab>Estate_ResearchTab</tab>		
-		<tags>
-			<li>ClassicStart</li>
-		</tags>
-	<prerequisites>
-	    <li>Industrial_BasicElectricity</li>
-	</prerequisites>		
-		<researchViewX>6</researchViewX>
-		<researchViewY>2.5</researchViewY>
-	</ResearchProjectDef>	
-	
+  <ResearchProjectDef>
+    <defName>Industrial_BasicElectricity</defName>
+    <label>basic electricity</label>
+    <description>Discover rudimentary utilization of electricity. Unlocks building simple generators and lights.</description>
+    <baseCost>100</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>Estate_ResearchTab</tab>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2.5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>Industrial_Telegraph</defName>
+    <label>telegraph</label>
+    <description>Decode the mysteries of telecommunication. The telegraph allows contact with other communities.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>Estate_ResearchTab</tab>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
+    <prerequisites>
+      <li>Industrial_BasicElectricity</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>2.5</researchViewY>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Industrial_SiegeWeaponry</defName>
     <label>siege weaponry</label>
@@ -39,90 +36,79 @@
     <tab>Estate_ResearchTab</tab>
     <baseCost>350</baseCost>
     <techLevel>Industrial</techLevel>
-	<prerequisites>
-	    <li>Machining</li>
-	</prerequisites>		
+    <prerequisites>
+      <li>Machining</li>
+    </prerequisites>
   </ResearchProjectDef>
-
-   <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Industrial_ArcWeaponry</defName>
     <label>weaponized electricity</label>
     <description>Learn how to use electricity as a weapon. Unlocks slow but powerful arc weapons that can stun enemies.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
-	<prerequisites>
-	    <li>Electricity</li>
-			<li>MicroelectronicsBasics</li>		
-	</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>	
-  </ResearchProjectDef>   
-
-   <ResearchProjectDef>
+    <prerequisites>
+      <li>Electricity</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Industrial_ArcTower</defName>
     <label>arc tower patent</label>
     <description>Learn to build Arc Towers which electrocute and stun enemies. Build at the machining table.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
-	<prerequisites>
-	    <li>Industrial_ArcWeaponry</li>
-			<li>MicroelectronicsBasics</li>		
-	</prerequisites>
-		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>	
-  </ResearchProjectDef>   
-  
+    <prerequisites>
+      <li>Industrial_ArcWeaponry</li>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Industrial_SteamPower</defName>
     <label>steam engine</label>
     <description>Develops an understanding of the creation of energy through the use of large steam engines.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
-	 <tags>
+    <tags>
       <li>ClassicStart</li>
     </tags>
-	<prerequisites>
-	    <li>Industrial_BasicElectricity</li>
-	</prerequisites>		
-  </ResearchProjectDef> 
-  
+    <prerequisites>
+      <li>Industrial_BasicElectricity</li>
+    </prerequisites>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Industrial_OilGenerator</defName>
     <label>oil generator patent</label>
     <description>Allows your colonists to construct oil generators which produce a great amount of power but burn out fast.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
-	<prerequisites>
-	    <li>Electricity</li>
-	</prerequisites>		
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
   </ResearchProjectDef>
-
-	<ResearchProjectDef>
-		<defName>sd_medicaddons_research_medieval_med</defName>
-		<label>medieval medical care</label>
-		<description>New means to set up your medical area medieval style.</description>
-		<baseCost>400</baseCost>
-		<techLevel>Medieval</techLevel>
-		<researchViewX>13</researchViewX>
-	</ResearchProjectDef>
-	
-	<ResearchProjectDef>
-		<defName>sd_medicaddons_research_industrial_med</defName>
-		<label>industrial medical care</label>
-		<description>Setting up a hospital area in your colony with these instruments will increase your colonists chances of survival. New means to set up your medical area somewhat civilized.</description>
-		<baseCost>600</baseCost>
-		<techLevel>Industrial</techLevel>
-		<researchViewX>14</researchViewX>
-		<prerequisites>
-			<li>Industrial_BasicElectricity</li>
-			<li>sd_medicaddons_research_medieval_med</li>
-		</prerequisites>
-	</ResearchProjectDef>
-		
-  
-  
-
-
+  <ResearchProjectDef>
+    <defName>sd_medicaddons_research_medieval_med</defName>
+    <label>medieval medical care</label>
+    <description>New means to set up your medical area medieval style.</description>
+    <baseCost>400</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>13</researchViewX>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>sd_medicaddons_research_industrial_med</defName>
+    <label>industrial medical care</label>
+    <description>Setting up a hospital area in your colony with these instruments will increase your colonists chances of survival. New means to set up your medical area somewhat civilized.</description>
+    <baseCost>600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>14</researchViewX>
+    <prerequisites>
+      <li>Industrial_BasicElectricity</li>
+      <li>sd_medicaddons_research_medieval_med</li>
+    </prerequisites>
+  </ResearchProjectDef>
 </Defs>

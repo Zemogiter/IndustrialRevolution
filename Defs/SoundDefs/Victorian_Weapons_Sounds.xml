@@ -1,384 +1,365 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-
-<SoundDef>
-<defName>ShotBeaumont</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Beaumont</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotWebley</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Webley</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotFlintlock</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Flintlock</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotFlintlockRifle</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/FlintlockRifle</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotC96</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/C96</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotColt</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Colt</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotTaurus</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Taurus</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotSpringfield</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Springfield</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>Shotppsh</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/ppsh</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotSpencer</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Spencer</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotMaxim</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Maxim</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotLewisGun</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/LewisGun</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotMosin</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Mosin</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotCarbine</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Carbine</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotCannon</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Cannon</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>ShotTesla</defName>
-<context>MapOnly</context>
-<eventNames/>
-<maxSimultaneous>1</maxSimultaneous>
-<subSounds>
-<li>
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/Tesla</clipPath>
-</li>
-</grains>
-<pitchRange>
-<min>0.9152174</min>
-<max>1.042391</max>
-</pitchRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>TeslaAmbient</defName>
-<context>MapOnly</context>
-<eventNames/>
-    <sustain>True</sustain>
-    <priorityMode>PrioritizeNearest</priorityMode> 	
-<subSounds>
-<li>
-        <muteWhenPaused>True</muteWhenPaused> 
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/TeslaAmbient</clipPath>
-</li>
-        </grains>      
-        <volumeRange>
-          <min>50</min>        
-          <max>50</max>
-        </volumeRange>      
+  <SoundDef>
+    <defName>ShotBeaumont</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Beaumont</clipPath>
+          </li>
+        </grains>
         <pitchRange>
-          <min>1</min>        
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotWebley</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Webley</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotFlintlock</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Flintlock</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotFlintlockRifle</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/FlintlockRifle</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotC96</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/C96</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotColt</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Colt</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotTaurus</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Taurus</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotSpringfield</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Springfield</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>Shotppsh</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/ppsh</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotSpencer</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Spencer</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotMaxim</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Maxim</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotLewisGun</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/LewisGun</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotMosin</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Mosin</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotCarbine</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Carbine</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotCannon</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Cannon</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>ShotTesla</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Tesla</clipPath>
+          </li>
+        </grains>
+        <pitchRange>
+          <min>0.9152174</min>
+          <max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>TeslaAmbient</defName>
+    <context>MapOnly</context>
+    <eventNames />
+    <sustain>True</sustain>
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/TeslaAmbient</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>50</min>
+          <max>50</max>
+        </volumeRange>
+        <pitchRange>
+          <min>1</min>
           <max>1.015</max>
-        </pitchRange>      
+        </pitchRange>
         <distRange>
-          <min>0</min>        
+          <min>0</min>
           <max>25</max>
         </distRange>
-</li>
-</subSounds>
-</SoundDef>
-
-<SoundDef>
-<defName>TeslaImpact</defName>
-<context>MapOnly</context>
-<eventNames/>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>TeslaImpact</defName>
+    <context>MapOnly</context>
+    <eventNames />
     <sustain>True</sustain>
-    <priorityMode>PrioritizeNearest</priorityMode> 	
-<subSounds>
-<li>
-        <muteWhenPaused>True</muteWhenPaused> 
-<grains>
-<li Class="AudioGrain_Clip">
-<clipPath>Things/TeslaImpact</clipPath>
-</li>
-        </grains>      
+    <priorityMode>PrioritizeNearest</priorityMode>
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/TeslaImpact</clipPath>
+          </li>
+        </grains>
         <volumeRange>
-          <min>50</min>        
+          <min>50</min>
           <max>50</max>
-        </volumeRange>      
+        </volumeRange>
         <pitchRange>
-          <min>1</min>        
+          <min>1</min>
           <max>1.015</max>
-        </pitchRange>      
+        </pitchRange>
         <distRange>
-          <min>0</min>        
+          <min>0</min>
           <max>25</max>
         </distRange>
-</li>
-</subSounds>
-</SoundDef>
-		
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>

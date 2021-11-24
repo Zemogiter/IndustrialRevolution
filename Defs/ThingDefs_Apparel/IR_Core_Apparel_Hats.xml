@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!-- Tuque  -->  
+  <!-- Tuque  -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_Tuque</defName>
     <label>tuque</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>	
+    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
     <description>A soft, thick cap. Great for keeping warm in winter.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</texPath>
@@ -19,7 +19,7 @@
       <Mass>0.07</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
-      <Insulation_Cold>-10</Insulation_Cold>
+      <Insulation_Cold>10</Insulation_Cold>
       <Insulation_Heat>-2</Insulation_Heat>
     </statBases>
     <generateCommonality>0.5</generateCommonality>
@@ -27,7 +27,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -41,14 +41,14 @@
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
-       <li>
+        <li>
           <weight>15</weight>
           <only>RGBA(0.20,0.20,0.30,1)</only>
         </li>
-       <li>
+        <li>
           <weight>25</weight>
           <only>RGBA(0.50,0.24,0.24,1)</only>
-        </li>	
+        </li>
         <li>
           <weight>10</weight>
           <min>RGBA(0.3,0.3,0.3,1)</min>
@@ -57,12 +57,11 @@
       </options>
     </colorGenerator>
   </ThingDef>
-
-<!-- Cowboy Hat -->    
+  <!-- Cowboy Hat -->
   <ThingDef ParentName="HatMakeableBase" Name="CowboyHat">
     <defName>Apparel_CowboyHat</defName>
     <label>cowboy hat</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>	
+    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
     <description>Stylish yet rugged, this hat keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -83,7 +82,7 @@
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Heat>8</Insulation_Heat>
     </statBases>
-		<generateCommonality>1.4</generateCommonality> 	
+    <generateCommonality>1.4</generateCommonality>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
     </equippedStatOffsets>
@@ -91,13 +90,13 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>Outlander</li>
-        <li>Pirate</li>		
+        <li>Pirate</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -105,155 +104,150 @@
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
-<!-- Color: Brown Hat -->  
-<!-- Dark Brown -->
+        <!-- Color: Brown Hat -->
+        <!-- Dark Brown -->
         <li>
           <weight>30</weight>
           <only>RGBA(0.51,0.32,0.20,1)</only>
         </li>
-<!-- Brown  --> 
+        <!-- Brown  -->
         <li>
           <weight>30</weight>
           <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>  
-<!-- Light Brown --> 
-       <li>
+        </li>
+        <!-- Light Brown -->
+        <li>
           <weight>15</weight>
           <only>RGBA(0.77,0.52,0.43,1)</only>
         </li>
-<!-- Orange Brown --> 
+        <!-- Orange Brown -->
         <li>
           <weight>15</weight>
           <only>RGBA(0.38,0.17,0.17,1)</only>
         </li>
-<!-- Burgundy --> 
-         <li>
+        <!-- Burgundy -->
+        <li>
           <weight>8</weight>
           <only>RGBA(0.43,0.24,0.29,1)</only>
         </li>
-<!-- Red --> 
+        <!-- Red -->
         <li>
           <weight>3</weight>
           <only>RGBA(0.43,0.20,0.20,1)</only>
-        </li>			
-<!-- Sage Green --> 
+        </li>
+        <!-- Sage Green -->
         <li>
           <weight>1</weight>
           <only>RGBA(0.26,0.32,0.26,1)</only>
         </li>
-<!-- Lavendar --> 
+        <!-- Lavendar -->
         <li>
           <weight>1</weight>
           <only>RGBA(0.32,0.26,0.33,1)</only>
         </li>
- <!-- Navy Blue --> 
+        <!-- Navy Blue -->
         <li>
           <weight>7</weight>
           <only>RGBA(0.20,0.20,0.30,1)</only>
-        </li>	
-<!-- Grey --> 
+        </li>
+        <!-- Grey -->
         <li>
           <weight>15</weight>
           <only>RGBA(0.60,0.60,0.60,1)</only>
-        </li>			
-<!-- Black --> 
+        </li>
+        <!-- Black -->
         <li>
           <weight>25</weight>
           <only>RGBA(0.30,0.30,0.30,1)</only>
-        </li>		
-        </options>
+        </li>
+      </options>
     </colorGenerator>
   </ThingDef>
-
-  
-<!-- Makeable Bowler Hat: Trilby  -->    
-	<ThingDef ParentName="CowboyHat">
-		<defName>Apparel_BowlerHat</defName>
-		<label>trilby</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>		
-		<description>A good-looking hat which projects a slightly urban, money-loving style. Improves social impact.</description>
-		<graphicData>
-			<texPath>Things/Pawn/Humanlike/Apparel/BowlerHat/BowlerHat</texPath>
-		</graphicData>
-		<costStuffCount>20</costStuffCount>
-		<statBases>
-			<WorkToMake>4500</WorkToMake>
-			<Mass>0.14</Mass>
-			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
-			<Insulation_Heat>4</Insulation_Heat>
-		</statBases>
-	<generateCommonality>1</generateCommonality>	
-		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>
-		</equippedStatOffsets>
-		<apparel>
-			<worngraphicPath>Things/Pawn/Humanlike/Apparel/BowlerHat/BowlerHat</worngraphicPath>
-		</apparel>
+  <!-- Makeable Bowler Hat: Trilby  -->
+  <ThingDef ParentName="CowboyHat">
+    <defName>Apparel_BowlerHat</defName>
+    <label>trilby</label>
+    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <description>A good-looking hat which projects a slightly urban, money-loving style. Improves social impact.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/BowlerHat/BowlerHat</texPath>
+    </graphicData>
+    <costStuffCount>20</costStuffCount>
+    <statBases>
+      <WorkToMake>4500</WorkToMake>
+      <Mass>0.14</Mass>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Heat>4</Insulation_Heat>
+    </statBases>
+    <generateCommonality>1</generateCommonality>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/BowlerHat/BowlerHat</wornGraphicPath>
+    </apparel>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
-<!-- Color: Standard Hat -->  
-<!-- Dark Brown --> 
+        <!-- Color: Standard Hat -->
+        <!-- Dark Brown -->
         <li>
           <weight>10</weight>
           <only>RGBA(0.51,0.32,0.20,1)</only>
         </li>
-<!-- Brown  --> 
+        <!-- Brown  -->
         <li>
           <weight>20</weight>
           <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>  
-<!-- Light Brown --> 
-       <li>
+        </li>
+        <!-- Light Brown -->
+        <li>
           <weight>15</weight>
           <only>RGBA(0.77,0.52,0.43,1)</only>
         </li>
-<!-- Orange Brown --> 
+        <!-- Orange Brown -->
         <li>
           <weight>10</weight>
           <only>RGBA(0.38,0.17,0.17,1)</only>
         </li>
-<!-- Burgundy --> 
-         <li>
+        <!-- Burgundy -->
+        <li>
           <weight>10</weight>
           <only>RGBA(0.43,0.24,0.29,1)</only>
         </li>
-<!-- Red --> 
+        <!-- Red -->
         <li>
           <weight>5</weight>
           <only>RGBA(0.43,0.20,0.20,1)</only>
-        </li>			
-<!-- Sage Green --> 
+        </li>
+        <!-- Sage Green -->
         <li>
           <weight>5</weight>
           <only>RGBA(0.26,0.32,0.26,1)</only>
         </li>
-<!-- Lavendar --> 
+        <!-- Lavendar -->
         <li>
           <weight>5</weight>
           <only>RGBA(0.32,0.26,0.33,1)</only>
         </li>
- <!-- Navy Blue --> 
+        <!-- Navy Blue -->
         <li>
           <weight>30</weight>
           <only>RGBA(0.20,0.20,0.30,1)</only>
-        </li>	
-<!-- Grey --> 
+        </li>
+        <!-- Grey -->
         <li>
           <weight>30</weight>
           <only>RGBA(0.60,0.60,0.60,1)</only>
-        </li>			
-<!-- Black --> 
+        </li>
+        <!-- Black -->
         <li>
           <weight>35</weight>
           <only>RGBA(0.30,0.30,0.30,1)</only>
-        </li>		
-        </options>
+        </li>
+      </options>
     </colorGenerator>
-
-	</ThingDef>    
-  
-  
+  </ThingDef>
   <!-- ================================== Helmets ====================================-->
   <ThingDef ParentName="ArmorHelmetMakeableBase">
     <defName>Apparel_SimpleHelmet</defName>
@@ -283,7 +277,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/SimpleHelmet/SimpleHelmet</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/SimpleHelmet/SimpleHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -295,17 +289,14 @@
       </defaultOutfitTags>
     </apparel>
     <colorGenerator Class="ColorGenerator_Options">
-      <options>	
+      <options>
         <li>
           <weight>10</weight>
           <only>RGBA(0.45,0.45,0.45,1)</only>
-        </li>		
-        </options>
-    </colorGenerator>	
+        </li>
+      </options>
+    </colorGenerator>
   </ThingDef>
-
-
-  
   <ThingDef ParentName="HatBase">
     <defName>Apparel_AdvancedHelmet</defName>
     <label>advanced helmet</label>
@@ -330,10 +321,10 @@
     </stuffCategories>
     <costStuffCount>70</costStuffCount>
     <costList>
-      <Component>2</Component>
+      <ComponentIndustrial>2</ComponentIndustrial>
       <Plasteel>5</Plasteel>
     </costList>
-    <generateCommonality>0.001</generateCommonality>	
+    <generateCommonality>0.001</generateCommonality>
     <equippedStatOffsets>
       <MoveSpeed>-0.02</MoveSpeed>
     </equippedStatOffsets>
@@ -341,7 +332,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/AdvancedHelmet/AdvancedHelmet</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/AdvancedHelmet/AdvancedHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -388,15 +379,14 @@
       <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
-      <ArmorRating_Electric>0</ArmorRating_Electric>
-      <Insulation_Cold>-3</Insulation_Cold>
+      <Insulation_Cold>3</Insulation_Cold>
       <Insulation_Heat>3</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
       <MoveSpeed>-0.04</MoveSpeed>
     </equippedStatOffsets>
     <costList>
-      <Component>7</Component>
+      <ComponentIndustrial>7</ComponentIndustrial>
       <Plasteel>60</Plasteel>
     </costList>
     <generateCommonality>0.5</generateCommonality>
@@ -404,7 +394,7 @@
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorHelmet</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PowerArmorHelmet/PowerArmorHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -457,7 +447,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Things/Pawn/Humanlike/Apparel/PsychicFoilHelmet/PsychicFoilHelmet</worngraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PsychicFoilHelmet/PsychicFoilHelmet</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>

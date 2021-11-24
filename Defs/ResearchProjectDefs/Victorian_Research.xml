@@ -1,5 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ResearchProjectDef>
     <defName>Industrial_GunSmithing</defName>
     <label>gunsmithing</label>
@@ -7,33 +7,31 @@
     <tab>Estate_ResearchTab</tab>
     <baseCost>150</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>2</researchViewX>
-	<researchViewY>4.5</researchViewY>	
-	<prerequisites>
-	    <li>Smithing</li>
-	</prerequisites>
-	 <tags>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4.5</researchViewY>
+    <prerequisites>
+      <li>Smithing</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>		
+    </tags>
   </ResearchProjectDef>
-  
-    <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Industrial_SelfLoading</defName>
     <label>self-loading mechanism</label>
     <description>Discovery of gun mechanisms that allows the production of advanced guns and self-loading automatic firearms at the machining table.</description>
     <tab>Estate_ResearchTab</tab>
     <baseCost>200</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>3</researchViewX>
-	<researchViewY>4.5</researchViewY>	
-	<prerequisites>
-	    <li>Industrial_GunSmithing</li>
-	</prerequisites>
-	 <tags>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4.5</researchViewY>
+    <prerequisites>
+      <li>Industrial_GunSmithing</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
-  </ResearchProjectDef>  
-  
+    </tags>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Industrial_BoltAction</defName>
     <label>bolt-action rifle mechanism</label>
@@ -41,16 +39,15 @@
     <tab>Estate_ResearchTab</tab>
     <baseCost>150</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>2.5</researchViewX>
-	<researchViewY>4.5</researchViewY>	
-	<prerequisites>
-	    <li>Industrial_GunSmithing</li>
-	</prerequisites>
-	 <tags>
+    <researchViewX>2.5</researchViewX>
+    <researchViewY>4.5</researchViewY>
+    <prerequisites>
+      <li>Industrial_GunSmithing</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
+    </tags>
   </ResearchProjectDef>
-
   <ResearchProjectDef>
     <defName>Industrial_MachineGun</defName>
     <label>machine gun mechanism</label>
@@ -58,17 +55,15 @@
     <tab>Estate_ResearchTab</tab>
     <baseCost>200</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>3.5</researchViewX>
-	<researchViewY>4.5</researchViewY>	
-	<prerequisites>
-	    <li>Industrial_SelfLoading</li>
-	</prerequisites>
-	 <tags>
+    <researchViewX>3.5</researchViewX>
+    <researchViewY>4.5</researchViewY>
+    <prerequisites>
+      <li>Industrial_SelfLoading</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
-  </ResearchProjectDef>    
-
-
+    </tags>
+  </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Industrial_SiegeWeaponry</defName>
     <label>siege weaponry</label>
@@ -76,80 +71,73 @@
     <tab>Estate_ResearchTab</tab>
     <baseCost>350</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>3</researchViewX>
-	<researchViewY>6</researchViewY>	
-	<prerequisites>
-	    <li>Machining</li>
-	    <li>Industrial_GunSmithing</li>		
-	</prerequisites>
-	 <tags>
+    <researchViewX>3</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>Machining</li>
+      <li>Industrial_GunSmithing</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
+    </tags>
   </ResearchProjectDef>
-
   <ResearchProjectDef>
     <defName>Industrial_GatlingGun</defName>
     <label>gatling gun patent</label>
     <description>New designs for engineering a gatling gun at the machining table</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>4</researchViewX>
-	<researchViewY>5.5</researchViewY>		
-	<prerequisites>
-	    <li>Industrial_MachineGun</li>		
-	</prerequisites>
-	 <tags>
+    <researchViewX>4</researchViewX>
+    <researchViewY>5.5</researchViewY>
+    <prerequisites>
+      <li>Industrial_MachineGun</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
+    </tags>
   </ResearchProjectDef>
-  
-  
-
   <ResearchProjectDef>
     <defName>Industrial_FieldCannon</defName>
     <label>field cannon patent</label>
     <description>New designs for engineering field cannons at the smithing table..</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>3.5</researchViewX>
-	<researchViewY>6</researchViewY>	
-	<prerequisites>
-	    <li>Industrial_SiegeWeaponry</li>
-	</prerequisites>
-	 <tags>
+    <researchViewX>3.5</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>Industrial_SiegeWeaponry</li>
+    </prerequisites>
+    <tags>
       <li>ClassicStart</li>
-    </tags>	
+    </tags>
   </ResearchProjectDef>
- 
-   <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Industrial_LightCannon</defName>
     <label>light cannon patent</label>
     <description>New designs for engineering light cannons at the machining table.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>4</researchViewX>
-	<researchViewY>6</researchViewY>	
-	<prerequisites>
-	    <li>Industrial_SiegeWeaponry</li>
-	    <li>Industrial_FieldCannon</li>		
-	</prerequisites>		
+    <researchViewX>4</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites>
+      <li>Industrial_SiegeWeaponry</li>
+      <li>Industrial_FieldCannon</li>
+    </prerequisites>
   </ResearchProjectDef>
-  
-   <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>Industrial_LightMortar</defName>
     <label>light mortar patent</label>
     <description>New designs for engineering light mortars, which are faster and easier to carry.</description>
-    <tab>Estate_ResearchTab</tab>	
+    <tab>Estate_ResearchTab</tab>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
-	<researchViewX>3.5</researchViewX>
-	<researchViewY>6.5</researchViewY>	
-	<prerequisites>
-	    <li>Mortars</li>		
-	</prerequisites>		
-  </ResearchProjectDef> 
-
+    <researchViewX>3.5</researchViewX>
+    <researchViewY>6.5</researchViewY>
+    <prerequisites>
+      <li>Mortars</li>
+    </prerequisites>
+  </ResearchProjectDef>
 </Defs>

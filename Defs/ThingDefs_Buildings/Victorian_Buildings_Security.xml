@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BuildingBase" Name="CivilWar_TurretBase" Abstract="True">
-	<thingCategories>
+    <thingCategories>
       <li>Turrets</li>
     </thingCategories>
-		<techLevel>Industrial</techLevel>	
-  <thingClass>ThingWithComps</thingClass>
+    <techLevel>Industrial</techLevel>
+    <thingClass>ThingWithComps</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
@@ -14,16 +13,14 @@
     <useHitPoints>true</useHitPoints>
     <statBases>
       <Flammability>1.0</Flammability>
-			<SellPriceFactor>1.10</SellPriceFactor>
+      <SellPriceFactor>1.10</SellPriceFactor>
     </statBases>
-		<repairEffect>Repair</repairEffect>
-		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>		
+    <repairEffect>Repair</repairEffect>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
   </ThingDef>
-  
- <ThingDef Name="CivilWar_TurretMakeableBase" ParentName="CivilWar_TurretBase" Abstract="True">	
-
+  <ThingDef Name="CivilWar_TurretMakeableBase" ParentName="CivilWar_TurretBase" Abstract="True">
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -31,73 +28,71 @@
         <li>TableMachining</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    </recipeMaker>	
+    </recipeMaker>
   </ThingDef>
- 
-	<ThingDef ParentName="BuildingBase">
-		<defName>IndBarbedWire</defName>
-		<label>barbed wire</label>
-		<thingClass>Building</thingClass>
-		<category>Building</category>
-		<description>Simple defensive structure that reduces movement and provides no cover.</description>
-		<designationCategory>Security</designationCategory>
-		<graphicData>
-			<texPath>BarbedWire/BarbedWire_Atlas</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<linkType>Basic</linkType>
-			<linkFlags>
-				<li>Custom2</li>
-			</linkFlags>
-		</graphicData>
-		<designationHotKey>Misc10</designationHotKey>
-		<uiIconPath>BarbedWire/BarbedWire_Icon</uiIconPath>
-		<blueprintGraphicData>
-			<texPath>BarbedWire/BarbedWire_Blueprint_Atlas</texPath>
-		</blueprintGraphicData>
-		<constructEffect>ConstructMetal</constructEffect>
-		<repairEffect>ConstructMetal</repairEffect>
-		<altitudeLayer>Building</altitudeLayer>
-		<building>
-			<isInert>true</isInert>
-		</building>
-		<statBases>
-			<Beauty>-10</Beauty>	
-			<MaxHitPoints>225</MaxHitPoints>
-			<WorkToMake>200</WorkToMake>
-			<Flammability>0</Flammability>
-		</statBases>
-		<damageMultipliers>
-			<li>
-				<damageDef>Bomb</damageDef>
-				<multiplier>3</multiplier>
-			</li>
-		</damageMultipliers>
-		<costList>
-			<Steel>4</Steel>
-		</costList>
-		<filthLeaving>BuildingRubble</filthLeaving>		
-		<passability>PassThroughOnly</passability>
-		<pathCost>70</pathCost>
-		<pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
-		<castEdgeShadows>true</castEdgeShadows>
-		<fillPercent>0.1</fillPercent>
-		<coversFloor>false</coversFloor>
-		<placingDraggableDimensions>1</placingDraggableDimensions>
-		<tickerType>Never</tickerType>
-		<rotatable>false</rotatable>
-		<selectable>true</selectable>
-		<neverMultiSelect>true</neverMultiSelect>
-		<holdsRoof>false</holdsRoof>
-		<staticSunShadowHeight>0.1</staticSunShadowHeight>
-		<blockLight>false</blockLight>
-	</ThingDef>  
-	
+  <ThingDef ParentName="BuildingBase">
+    <defName>IndBarbedWire</defName>
+    <label>barbed wire</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Simple defensive structure that reduces movement and provides no cover.</description>
+    <designationCategory>Security</designationCategory>
+    <graphicData>
+      <texPath>BarbedWire/BarbedWire_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom2</li>
+      </linkFlags>
+    </graphicData>
+    <designationHotKey>Misc10</designationHotKey>
+    <uiIconPath>BarbedWire/BarbedWire_Icon</uiIconPath>
+    <blueprintGraphicData>
+      <texPath>BarbedWire/BarbedWire_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <constructEffect>ConstructMetal</constructEffect>
+    <repairEffect>ConstructMetal</repairEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <statBases>
+      <Beauty>-10</Beauty>
+      <MaxHitPoints>225</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>0</Flammability>
+    </statBases>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+    <costList>
+      <Steel>4</Steel>
+    </costList>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.1</fillPercent>
+    <coversFloor>false</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>0.1</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+  </ThingDef>
   <!--=============== Field Cannon ===============-->
- <ThingDef ParentName="CivilWar_TurretMakeableBase">
+  <ThingDef ParentName="CivilWar_TurretMakeableBase">
     <defName>FieldCannon</defName>
     <label>field cannon</label>
     <thingClass>Building_TurretGun</thingClass>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <stealable>false</stealable>
     <graphicData>
       <texPath>Things/Building/FieldCannon_Base</texPath>
@@ -122,12 +117,12 @@
       <li Class="CompProperties_Explosive">
         <explosiveRadius>5</explosiveRadius>
         <explosiveDamageType>Bomb</explosiveDamageType>
-      </li>	
+      </li>
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <description>3 inch field cannon limbered with wheels. Long range, powerful, but very slow to load. Can be redeployed. Fires cannon shells.</description>
     <size>(2,2)</size>
@@ -138,10 +133,10 @@
     <hasTooltip>true</hasTooltip>
     <costList>
       <Steel>175</Steel>
-      <Component>2</Component>
+      <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
@@ -150,41 +145,39 @@
         <li>FueledSmithy</li>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>		  
+      <researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    <skillRequirements>
-      <li>
-        <skill>Crafting</skill>
-        <minLevel>6</minLevel>
-      </li>
-    </skillRequirements>
-	  </recipeMaker>	
+      <skillRequirements>
+        <li>
+          <skill>Crafting</skill>
+          <minLevel>6</minLevel>
+        </li>
+      </skillRequirements>
+    </recipeMaker>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <specialDisplayRadius>15</specialDisplayRadius>
     <building>
       <turretShellDef>FCannonShell</turretShellDef>
-	  <ai_combatDangerous>true</ai_combatDangerous>
+      <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_FieldCannon</turretGunDef>
-      <turretBurstwarmupTime>4.5</turretBurstwarmupTime>
+      <turretBurstWarmupTime>4.5</turretBurstWarmupTime>
       <turretBurstCooldownTime>15</turretBurstCooldownTime>
       <turretTopgraphicPath>Things/Building/FieldCannon_Top</turretTopgraphicPath>
-			<buildingTags>
-				<li>Artillery</li>
-			</buildingTags>	
-	  </building>
+      <buildingTags>
+        <li>Artillery</li>
+      </buildingTags>
+    </building>
     <tradeTags>
       <li>Turret</li>
-    </tradeTags>	
+    </tradeTags>
   </ThingDef>
-  
- <!--=============== Gatling Gun ===============-->
-  
- <ThingDef ParentName="CivilWar_TurretMakeableBase">
+  <!--=============== Gatling Gun ===============-->
+  <ThingDef ParentName="CivilWar_TurretMakeableBase">
     <defName>GatlingGun</defName>
     <label>gatling gun</label>
     <thingClass>Building_TurretGun</thingClass>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <stealable>false</stealable>
     <graphicData>
       <texPath>Things/Building/Gatling_Base</texPath>
@@ -209,8 +202,8 @@
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-      <li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <description>Fixed emplacement on wheels. Low range and fairly weak, but considerably fast-firing. Can be redeployed.</description>
     <size>(1,1)</size>
@@ -221,38 +214,37 @@
     <hasTooltip>true</hasTooltip>
     <costList>
       <Steel>145</Steel>
-      <Component>3</Component>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
       <effectWorking>Smith</effectWorking>
       <soundWorking>Recipe_Smith</soundWorking>
       <recipeUsers>
         <li>TableMachining</li>
       </recipeUsers>
-			<researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>		  
+      <researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-    <skillRequirements>
-      <li>
-        <skill>Crafting</skill>
-        <minLevel>6</minLevel>
-      </li>
-    </skillRequirements>
-	  </recipeMaker>	
+      <skillRequirements>
+        <li>
+          <skill>Crafting</skill>
+          <minLevel>6</minLevel>
+        </li>
+      </skillRequirements>
+    </recipeMaker>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <specialDisplayRadius>38</specialDisplayRadius>
     <building>
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_GatlingGun</turretGunDef>
-      <turretBurstwarmupTime>0.8</turretBurstwarmupTime>
+      <turretBurstWarmupTime>0.8</turretBurstWarmupTime>
       <turretBurstCooldownTime>2.75</turretBurstCooldownTime>
       <turretTopgraphicPath>Things/Building/Gatling_Top</turretTopgraphicPath>
     </building>
     <tradeTags>
       <li>Turret</li>
-    </tradeTags>	
-  </ThingDef>  
-
+    </tradeTags>
+  </ThingDef>
 </Defs>

@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <FactionDef Abstract="True" Name="PlayerFactionBase">
-    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultFactionBase</settlementTexturePath>
     <colorSpectrum>
       <li>(0, 0.737, 0.847)</li>
     </colorSpectrum>
   </FactionDef>
-  
   <FactionDef ParentName="PlayerFactionBase">
     <defName>PlayerColony2</defName>
     <label>Drifters</label>
@@ -15,24 +13,28 @@
     <isPlayer>true</isPlayer>
     <basicMemberKind>Colonist2</basicMemberKind>
     <pawnsPlural>colonists</pawnsPlural>
-    <baseNameMaker>NamerFactionBasePlayerColony</baseNameMaker>
+    <settlementNameMaker>NamerSettlementPlayerColony</settlementNameMaker>
     <techLevel>Industrial</techLevel>
-    <backstoryCategory>Civil</backstoryCategory>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
     <startingResearchTags>
       <li>TribalStart</li>
-    </startingResearchTags>	
+    </startingResearchTags>
     <hairTags>
       <li>Urban</li>
       <li>Rural</li>
-      <li>Punk</li>	  
+      <li>Punk</li>
     </hairTags>
     <apparelStuffFilter>
       <Defs>
         <li>Cloth</li>
       </Defs>
     </apparelStuffFilter>
-  </FactionDef>  
-  
-
+  </FactionDef>
 </Defs>

@@ -1,10 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <PawnKindDef Name="PirateBase" Abstract="True">
     <race>Human</race>
     <defaultFactionType>Pirate</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <chemicalAddictionChance>0.10</chemicalAddictionChance>
     <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
@@ -13,7 +18,6 @@
       <li>Pirate</li>
     </apparelTags>
   </PawnKindDef>
-
   <PawnKindDef ParentName="PirateBase">
     <defName>Drifter</defName>
     <label>drifter</label>
@@ -28,7 +32,7 @@
       <min>90</min>
       <max>480</max>
     </apparelMoney>
-    <apparelAllowHeadwearChance>0.2</apparelAllowHeadwearChance>
+    <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
     <weaponMoney>
       <min>60</min>
       <max>260</max>
@@ -56,7 +60,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -64,8 +68,7 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
-  </PawnKindDef>  
-
+  </PawnKindDef>
   <PawnKindDef ParentName="PirateBase">
     <defName>Scavenger</defName>
     <label>scavenger</label>
@@ -80,14 +83,14 @@
       <min>300</min>
       <max>500</max>
     </apparelMoney>
-    <apparelAllowHeadwearChance>0.3</apparelAllowHeadwearChance>
+    <apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
     <weaponMoney>
       <min>250</min>
       <max>450</max>
     </weaponMoney>
     <weaponTags>
       <li>Gun</li>
-      <li>Melee</li>	  
+      <li>Melee</li>
     </weaponTags>
     <techHediffsMoney>
       <min>0</min>
@@ -108,7 +111,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -117,7 +120,6 @@
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="PirateBase">
     <defName>Thrasher</defName>
     <label>thrasher</label>
@@ -137,9 +139,9 @@
     </apparelMoney>
     <apparelTags>
       <li>Pirate</li>
-			<li>BeltDefense</li>
-		</apparelTags>
-    <apparelAllowHeadwearChance>0.8</apparelAllowHeadwearChance>
+      <li>BeltDefense</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
     <weaponMoney>
       <min>60</min>
       <max>150</max>
@@ -166,7 +168,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -175,7 +177,6 @@
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
-
   <PawnKindDef ParentName="PirateBase">
     <defName>Pirate</defName>
     <label>pirate</label>
@@ -193,9 +194,9 @@
     </apparelMoney>
     <apparelTags>
       <li>Pirate</li>
-      <li>Military</li>	  
+      <li>Military</li>
     </apparelTags>
-    <apparelAllowHeadwearChance>0.7</apparelAllowHeadwearChance>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
     <weaponMoney>
       <min>450</min>
       <max>800</max>
@@ -222,7 +223,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>Medicine</thingDef>
+          <thingDef>MedicineIndustrial</thingDef>
           <countRange>
             <min>1</min>
             <max>1</max>
@@ -231,5 +232,4 @@
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
-
 </Defs>
