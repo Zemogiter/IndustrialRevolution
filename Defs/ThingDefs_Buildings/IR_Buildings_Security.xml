@@ -95,10 +95,7 @@
       <researchPrerequisite>Industrial_ArcTower</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
       <skillRequirements>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>12</minLevel>
-        </li>
+        <Crafting>12</Crafting>
       </skillRequirements>
     </recipeMaker>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>

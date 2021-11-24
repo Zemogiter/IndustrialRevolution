@@ -147,11 +147,8 @@
       </recipeUsers>
       <researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <skillRequirements>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>6</minLevel>
-        </li>
+	  <skillRequirements>
+        <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -227,10 +224,7 @@
       <researchPrerequisite>Industrial_FieldCannon</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
       <skillRequirements>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>6</minLevel>
-        </li>
+	    <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>

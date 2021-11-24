@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
+  <ThingDef Name="BaseGun2" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
     <smeltable>true</smeltable>
     <thingCategories>
@@ -20,7 +20,7 @@
       </li>
     </comps>
   </ThingDef>
-  <ThingDef Name="BaseMakeableGun" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseMakeableGun" ParentName="BaseGun2" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
@@ -31,15 +31,12 @@
       </recipeUsers>
       <researchPrerequisite>Industrial_SelfLoading</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-      <skillRequirements>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>5</minLevel>
-        </li>
+	  <skillRequirements>
+        <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
-  <ThingDef Name="BaseMakeableRifle" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseMakeableRifle" ParentName="BaseGun2" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
@@ -55,7 +52,7 @@
       <li>Rifle</li>
     </weaponTags>
   </ThingDef>
-  <ThingDef Name="BaseMakeableAutomatic" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseMakeableAutomatic" ParentName="BaseGun2" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
@@ -67,17 +64,14 @@
       <researchPrerequisite>Industrial_MachineGun</researchPrerequisite>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
       <skillRequirements>
-        <li>
-          <skill>Crafting</skill>
-          <minLevel>5</minLevel>
-        </li>
+	    <Crafting>5</Crafting>
       </skillRequirements>
     </recipeMaker>
     <weaponTags>
       <li>Automatic</li>
     </weaponTags>
   </ThingDef>
-  <ThingDef Name="BaseSimpleMakeableGun" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseSimpleMakeableGun" ParentName="BaseGun2" Abstract="True">
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>
@@ -91,7 +85,7 @@
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
-  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+  <ThingDef Name="BaseHumanGun2" ParentName="BaseGun2" Abstract="True">
     <weaponTags>
       <li>Gun</li>
     </weaponTags>
@@ -117,7 +111,7 @@
       <li>Civillian</li>
     </weaponTags>
   </ThingDef>
-  <ThingDef Name="BaseBullet" Abstract="True">
+  <ThingDef Name="BaseBullet2" Abstract="True">
     <category>Projectile</category>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Projectile</altitudeLayer>
@@ -131,7 +125,7 @@
   </ThingDef>
   <!-- ======================== Pistols ================================== -->
   <!-- ======================== Bergmann Pistol ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_BergmannPistol</defName>
     <label>bergmann bullet</label>
     <graphicData>
@@ -162,10 +156,10 @@
     <statBases>
       <WorkToMake>15000</WorkToMake>
       <Mass>1.2</Mass>
-      <AccuracyTouch>0.91</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.43</AccuracyMedium>
-      <AccuracyLong>0.18</AccuracyLong>
+      <accuracyTouch>0.91</accuracyTouch>
+      <accuracyShort>0.70</accuracyShort>
+      <accuracyMedium>0.43</accuracyMedium>
+      <accuracyLong>0.18</accuracyLong>
       <RangedWeapon_Cooldown>1.08</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -186,7 +180,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Volcanic Pistol ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_VolcanicPistol</defName>
     <label>volcanic pistol bullet</label>
     <graphicData>
@@ -218,10 +212,10 @@
     <statBases>
       <WorkToMake>12000</WorkToMake>
       <Mass>1.3</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.76</AccuracyShort>
-      <AccuracyMedium>0.43</AccuracyMedium>
-      <AccuracyLong>0.26</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.76</accuracyShort>
+      <accuracyMedium>0.43</accuracyMedium>
+      <accuracyLong>0.26</accuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -243,7 +237,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Beaumont Revolver ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_Beaumont</defName>
     <label>beaumont bullet</label>
     <graphicData>
@@ -275,10 +269,10 @@
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.45</AccuracyMedium>
-      <AccuracyLong>0.28</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.70</accuracyShort>
+      <accuracyMedium>0.45</accuracyMedium>
+      <accuracyLong>0.28</accuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -299,7 +293,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Remington Revolver ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_Remington</defName>
     <label>revolver bullet</label>
     <graphicData>
@@ -331,10 +325,10 @@
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.45</AccuracyMedium>
-      <AccuracyLong>0.28</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.70</accuracyShort>
+      <accuracyMedium>0.45</accuracyMedium>
+      <accuracyLong>0.28</accuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -355,7 +349,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Colt Revolver ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_Colt</defName>
     <label>colt bullet</label>
     <graphicData>
@@ -387,10 +381,10 @@
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.4</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.45</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.80</accuracyShort>
+      <accuracyMedium>0.60</accuracyMedium>
+      <accuracyLong>0.45</accuracyLong>
       <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -411,7 +405,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Webley Revolver ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_Webley</defName>
     <label>webley bullet</label>
     <graphicData>
@@ -443,10 +437,10 @@
     <statBases>
       <WorkToMake>14000</WorkToMake>
       <Mass>1.2</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.74</AccuracyShort>
-      <AccuracyMedium>0.50</AccuracyMedium>
-      <AccuracyLong>0.32</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.74</accuracyShort>
+      <accuracyMedium>0.50</accuracyMedium>
+      <accuracyLong>0.32</accuracyLong>
       <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -467,7 +461,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Flintlock Pistol ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_FlintlockPistol</defName>
     <label>flintlock ball</label>
     <graphicData>
@@ -501,10 +495,10 @@
       <Mass>3</Mass>
       <MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
       <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.70</AccuracyShort>
-      <AccuracyMedium>0.50</AccuracyMedium>
-      <AccuracyLong>0.25</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.70</accuracyShort>
+      <accuracyMedium>0.50</accuracyMedium>
+      <accuracyLong>0.25</accuracyLong>
       <RangedWeapon_Cooldown>3.6</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -530,7 +524,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Cavalry Pistol ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_CavalryPistol</defName>
     <label>flintlock ball</label>
     <graphicData>
@@ -562,10 +556,10 @@
     <statBases>
       <WorkToMake>8000</WorkToMake>
       <Mass>1.8</Mass>
-      <AccuracyTouch>0.94</AccuracyTouch>
-      <AccuracyShort>0.73</AccuracyShort>
-      <AccuracyMedium>0.56</AccuracyMedium>
-      <AccuracyLong>0.2</AccuracyLong>
+      <accuracyTouch>0.94</accuracyTouch>
+      <accuracyShort>0.73</accuracyShort>
+      <accuracyMedium>0.56</accuracyMedium>
+      <accuracyLong>0.2</accuracyLong>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -587,7 +581,7 @@
   </ThingDef>
   <!-- ======================== Rifles ================================== -->
   <!-- ======================== Revolver Rifle ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_RevolverRifle</defName>
     <label>revolver bullet</label>
     <graphicData>
@@ -619,10 +613,10 @@
     <statBases>
       <WorkToMake>18000</WorkToMake>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.74</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.70</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
+      <accuracyTouch>0.74</accuracyTouch>
+      <accuracyShort>0.80</accuracyShort>
+      <accuracyMedium>0.70</accuracyMedium>
+      <accuracyLong>0.50</accuracyLong>
       <RangedWeapon_Cooldown>1.86</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -646,7 +640,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Henry Repeater Rifle ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_HenryRifle</defName>
     <label>repeater bullet</label>
     <projectile>
@@ -677,10 +671,10 @@
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.75</AccuracyTouch>
-      <AccuracyShort>0.90</AccuracyShort>
-      <AccuracyMedium>0.66</AccuracyMedium>
-      <AccuracyLong>0.50</AccuracyLong>
+      <accuracyTouch>0.75</accuracyTouch>
+      <accuracyShort>0.90</accuracyShort>
+      <accuracyMedium>0.66</accuracyMedium>
+      <accuracyLong>0.50</accuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -702,7 +696,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Spencer Repeater Rifle ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_SpencerRifle</defName>
     <label>repeater bullet</label>
     <projectile>
@@ -733,10 +727,10 @@
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <Mass>3.5</Mass>
-      <AccuracyTouch>0.75</AccuracyTouch>
-      <AccuracyShort>0.90</AccuracyShort>
-      <AccuracyMedium>0.80</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
+      <accuracyTouch>0.75</accuracyTouch>
+      <accuracyShort>0.90</accuracyShort>
+      <accuracyMedium>0.80</accuracyMedium>
+      <accuracyLong>0.65</accuracyLong>
       <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -758,7 +752,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Flintlock Rifle ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_FlintlockRifle</defName>
     <label>musket ball</label>
     <projectile>
@@ -791,10 +785,10 @@
       <Mass>6</Mass>
       <MeleeWeapon_DamageAmount>9</MeleeWeapon_DamageAmount>
       <MeleeWeapon_CooldownMultiplier>2.3</MeleeWeapon_CooldownMultiplier>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.63</AccuracyMedium>
-      <AccuracyLong>0.34</AccuracyLong>
+      <accuracyTouch>0.70</accuracyTouch>
+      <accuracyShort>0.80</accuracyShort>
+      <accuracyMedium>0.63</accuracyMedium>
+      <accuracyLong>0.34</accuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
     </statBases>
     <equippedAngleOffset>40</equippedAngleOffset>
@@ -821,7 +815,7 @@
     </verbs>
   </ThingDef>
   <!-- ======================== Flintlock Rifle w/ Bayonet ================================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_FlintlockRifle</defName>
     <label>musket ball</label>
     <projectile>
@@ -854,10 +848,10 @@
       <Mass>6</Mass>
       <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
       <MeleeWeapon_CooldownMultiplier>1.8</MeleeWeapon_CooldownMultiplier>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.32</AccuracyLong>
+      <accuracyTouch>0.70</accuracyTouch>
+      <accuracyShort>0.80</accuracyShort>
+      <accuracyMedium>0.60</accuracyMedium>
+      <accuracyLong>0.32</accuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
     </statBases>
     <recipeMaker>
@@ -891,7 +885,7 @@
     </verbs>
   </ThingDef>
   <!-- ==================== Trench Gun ========================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_TrenchShotgun</defName>
     <label>shotgun blast</label>
     <graphicData>
@@ -924,10 +918,10 @@
       <Mass>3.4</Mass>
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_CooldownMultiplier>2.3</MeleeWeapon_CooldownMultiplier>
-      <AccuracyTouch>0.80</AccuracyTouch>
-      <AccuracyShort>0.87</AccuracyShort>
-      <AccuracyMedium>0.77</AccuracyMedium>
-      <AccuracyLong>0.64</AccuracyLong>
+      <accuracyTouch>0.80</accuracyTouch>
+      <accuracyShort>0.87</accuracyShort>
+      <accuracyMedium>0.77</accuracyMedium>
+      <accuracyLong>0.64</accuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -953,7 +947,7 @@
     </verbs>
   </ThingDef>
   <!-- ==================== Trench Gun w/ Bayonet ========================== -->
-  <ThingDef ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet2">
     <defName>Bullet_TrenchShotgun</defName>
     <label>shotgun blast</label>
     <graphicData>
@@ -986,10 +980,10 @@
       <Mass>3.4</Mass>
       <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
       <MeleeWeapon_CooldownMultiplier>1.8</MeleeWeapon_CooldownMultiplier>
-      <AccuracyTouch>0.80</AccuracyTouch>
-      <AccuracyShort>0.87</AccuracyShort>
-      <AccuracyMedium>0.74</AccuracyMedium>
-      <AccuracyLong>0.61</AccuracyLong>
+      <accuracyTouch>0.80</accuracyTouch>
+      <accuracyShort>0.87</accuracyShort>
+      <accuracyMedium>0.74</accuracyMedium>
+      <accuracyLong>0.61</accuracyLong>
       <RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
     </statBases>
     <equippedStatOffsets>

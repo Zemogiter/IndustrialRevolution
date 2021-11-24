@@ -1137,8 +1137,6 @@
     <equippedStatOffsets>
       <ResearchSpeed>0.05</ResearchSpeed>
       <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
-      <GeneralLaborSpeed>0.20</GeneralLaborSpeed>
-      <GeneralLaborSpeed>0.15</GeneralLaborSpeed>
       <ToxicSensitivity>-0.15</ToxicSensitivity>
     </equippedStatOffsets>
     <apparel>

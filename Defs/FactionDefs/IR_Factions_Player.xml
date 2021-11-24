@@ -26,15 +26,5 @@
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>
-    <hairTags>
-      <li>Urban</li>
-      <li>Rural</li>
-      <li>Punk</li>
-    </hairTags>
-    <apparelStuffFilter>
-      <Defs>
-        <li>Cloth</li>
-      </Defs>
-    </apparelStuffFilter>
   </FactionDef>
 </Defs>

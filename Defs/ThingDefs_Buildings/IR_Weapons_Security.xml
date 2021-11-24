@@ -13,10 +13,10 @@
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
     <statBases>
-      <AccuracyTouch>1.00</AccuracyTouch>
-      <AccuracyShort>1.00</AccuracyShort>
-      <AccuracyMedium>1.00</AccuracyMedium>
-      <AccuracyLong>0.95</AccuracyLong>
+      <accuracyTouch>1.00</accuracyTouch>
+      <accuracyShort>1.00</accuracyShort>
+      <accuracyMedium>1.00</accuracyMedium>
+      <accuracyLong>0.95</accuracyLong>
       <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
@@ -27,10 +27,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Tesla</defaultProjectile>
-        <AccuracyTouch>1.00</AccuracyTouch>
-        <AccuracyShort>1.00</AccuracyShort>
-        <AccuracyMedium>1.00</AccuracyMedium>
-        <AccuracyLong>1.00</AccuracyLong>
+        <accuracyTouch>1.00</accuracyTouch>
+        <accuracyShort>1.00</accuracyShort>
+        <accuracyMedium>1.00</accuracyMedium>
+        <accuracyLong>1.00</accuracyLong>
         <warmupTime>10</warmupTime>
         <range>18</range>
         <soundCast>ShotTesla</soundCast>

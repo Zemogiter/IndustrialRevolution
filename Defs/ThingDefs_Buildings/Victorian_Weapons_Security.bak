@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
-
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GatlingGun</defName>
     <label>gatling bullet</label>
@@ -12,27 +10,25 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Bullet</damageDef>
-      <DamageAmountBase>5</DamageAmountBase>
-      <Speed>65</Speed>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>65</speed>
     </projectile>
   </ThingDef>
-
-  <ThingDef ParentName="BaseHumanGun">
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_GatlingGun</defName>
     <label>gatling gun turret</label>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <menuHidden>true</menuHidden>
     <description>Medium machine gun</description>
-    <soundInteract>InteractSMG</soundInteract>
-    <canBeSpawningInventory>false</canBeSpawningInventory>
-    <tradeability>Never</tradeability>
+    <soundInteract>Interact_SMG</soundInteract>
+    <generateCommonality>0</generateCommonality>
+    <tradeability>None</tradeability>
     <statBases>
-      <AccuracyTouch>0.6</AccuracyTouch>
-      <AccuracyShort>0.7</AccuracyShort>
-      <AccuracyMedium>0.55</AccuracyMedium>
+      <accuracyTouch>0.6</accuracyTouch>
+      <accuracyShort>0.7</accuracyShort>
+      <accuracyMedium>0.55</accuracyMedium>
       <AccuracyLong>0.3</AccuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
@@ -43,7 +39,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_GatlingGun</projectileDef>
+        <defaultProjectile>Bullet_GatlingGun</defaultProjectile>
         <warmupTime>20</warmupTime>
         <range>28</range>
         <burstShotCount>24</burstShotCount>
@@ -53,24 +49,22 @@
         <muzzleFlashScale>10</muzzleFlashScale>
       </li>
     </verbs>
-  </ThingDef>  
-  
-   <ThingDef ParentName="BaseHumanGun">
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_FieldCannon</defName>
     <label>field cannon turret</label>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <menuHidden>true</menuHidden>
     <description>field cannon</description>
-    <soundInteract>InteractChargeRifle</soundInteract>
-    <canBeSpawningInventory>false</canBeSpawningInventory>
-    <tradeability>Never</tradeability>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <generateCommonality>0</generateCommonality>
+    <tradeability>None</tradeability>
     <statBases>
-      <AccuracyTouch>0.65</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
+      <accuracyTouch>0.65</accuracyTouch>
+      <accuracyShort>0.65</accuracyShort>
+      <accuracyMedium>0.75</accuracyMedium>
       <AccuracyLong>0.85</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
     </statBases>
@@ -81,7 +75,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_FieldCannon</projectileDef>
+        <defaultProjectile>Bullet_FieldCannon</defaultProjectile>
         <warmupTime>190</warmupTime>
         <range>400</range>
         <forcedMissRadius>8</forcedMissRadius>
@@ -94,15 +88,14 @@
         </targetParams>
       </li>
     </verbs>
-  </ThingDef> 
-  
-   <ThingDef ParentName="BaseBullet">
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_FieldCannon</defName>
     <label>cannon shell</label>
-    <graphicData> 
-	  <texPath>Things/Projectile/Shell</texPath>
-      <graphicClass>Graphic_Single</graphicClass> 
-	</graphicData>
+    <graphicData>
+      <texPath>Things/Projectile/Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <thingClass>Projectile_Explosive</thingClass>
     <projectile>
       <speed>85</speed>
@@ -111,10 +104,9 @@
       <explosionRadius>4.5</explosionRadius>
       <soundExplode>MortarBomb_Explode</soundExplode>
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-      <soundAmbient>MortarRound_Ambient</soundAmbient>	  
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
-  </ThingDef> 
-  
+  </ThingDef>
   <ThingDef ParentName="BaseArtilleryWeapon">
     <defName>Gun_LightCannon</defName>
     <label>explosive mortar</label>
@@ -127,10 +119,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_LightCannonBomb</projectileDef>
-				<warmupTime>4</warmupTime>
-				<forcedMissRadius>8</forcedMissRadius>
-				<minRange>20</minRange>
+        <defaultProjectile>Bullet_LightCannonBomb</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <forcedMissRadius>8</forcedMissRadius>
+        <minRange>20</minRange>
         <range>160</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>Mortar_LaunchA</soundCast>
@@ -141,7 +133,6 @@
       </li>
     </verbs>
   </ThingDef>
-
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_LightCannonBomb</defName>
     <label>explosive mortar shell</label>
@@ -156,13 +147,10 @@
       <speed>81</speed>
       <explosionRadius>4.0</explosionRadius>
       <flyOverhead>true</flyOverhead>
-      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
       <soundExplode>MortarBomb_Explode</soundExplode>
       <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
-	</ThingDef>  
-	
-
-
-</ThingDefs>
+  </ThingDef>
+</Defs>

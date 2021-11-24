@@ -99,10 +99,10 @@
     <statBases>
       <WorkToMake>35000</WorkToMake>
       <Mass>9.2</Mass>
-      <AccuracyTouch>0.95</AccuracyTouch>
-      <AccuracyShort>0.90</AccuracyShort>
-      <AccuracyMedium>0.85</AccuracyMedium>
-      <AccuracyLong>0.75</AccuracyLong>
+      <accuracyTouch>0.95</accuracyTouch>
+      <accuracyShort>0.90</accuracyShort>
+      <accuracyMedium>0.85</accuracyMedium>
+      <accuracyLong>0.75</accuracyLong>
       <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
     </statBases>
     <equippedStatOffsets>

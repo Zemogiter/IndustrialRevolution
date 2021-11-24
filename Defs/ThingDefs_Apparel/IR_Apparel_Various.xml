@@ -1121,7 +1121,6 @@
     </statBases>
     <equippedStatOffsets>
       <GeneralLaborSpeed>0.10</GeneralLaborSpeed>
-      <GeneralLaborSpeed>0.20</GeneralLaborSpeed>
       <SmoothingSpeed>0.05</SmoothingSpeed>
       <GeneralLaborSpeed>0.05</GeneralLaborSpeed>
       <StonecuttingSpeed>0.05</StonecuttingSpeed>

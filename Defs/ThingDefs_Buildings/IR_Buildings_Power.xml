@@ -27,9 +27,6 @@
     <tickerType>Normal</tickerType>
     <description>A generator that burns chemfuel for energy output. Produces a lot of power but consumes the fuel quickly. Highly explosive.</description>
     <size>(3,3)</size>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
     <costList>
       <Steel>300</Steel>
       <Plasteel>5</Plasteel>
@@ -102,9 +99,6 @@
     <description>Produces steam power by consuming coal or wood. Must be fueled by hand. Has a chance to combust when damaged.</description>
     <canOverlapZones>false</canOverlapZones>
     <size>(2,2)</size>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
     <costList>
       <Steel>70</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
@@ -178,9 +172,6 @@
     <description>Small steam-powered engine that produces power by burning wood or coal. Must be fueled by hand. Has a chance to combust when damaged.</description>
     <canOverlapZones>false</canOverlapZones>
     <size>(1,2)</size>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>
     <costList>
       <Steel>35</Steel>
       <ComponentIndustrial>1</ComponentIndustrial>
@@ -254,7 +245,6 @@
     <canOverlapZones>false</canOverlapZones>
     <size>(4,5)</size>
     <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
       <wantsHopperAdjacent>true</wantsHopperAdjacent>
       <soundAmbient>GeothermalPlant_Ambience</soundAmbient>
     </building>

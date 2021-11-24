@@ -26,10 +26,10 @@
     <generateCommonality>0</generateCommonality>
     <tradeability>None</tradeability>
     <statBases>
-      <AccuracyTouch>0.6</AccuracyTouch>
-      <AccuracyShort>0.7</AccuracyShort>
-      <AccuracyMedium>0.55</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <accuracyTouch>0.6</accuracyTouch>
+      <accuracyShort>0.7</accuracyShort>
+      <accuracyMedium>0.55</accuracyMedium>
+      <accuracyLong>0.3</accuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
@@ -62,10 +62,10 @@
     <generateCommonality>0</generateCommonality>
     <tradeability>None</tradeability>
     <statBases>
-      <AccuracyTouch>0.65</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.75</AccuracyMedium>
-      <AccuracyLong>0.85</AccuracyLong>
+      <accuracyTouch>0.65</accuracyTouch>
+      <accuracyShort>0.65</accuracyShort>
+      <accuracyMedium>0.75</accuracyMedium>
+      <accuracyLong>0.85</accuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
