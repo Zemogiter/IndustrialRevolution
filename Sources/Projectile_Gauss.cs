@@ -1,163 +1,77 @@
-﻿using RimWorld;
-using System;
+﻿using GaussWeapons;
+using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace Industrial_Revolution
+public class Projectile_Gauss : Projectile
 {
-    public class Projectile_Gauss : Projectile
-    {
-        public int tickCounter;
-        public Thing hitThing;
-        public CompExtraDamage compED;
+	public int tickCounter;
 
-        public virtual void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            ((ThingWithComps)this).SpawnSetup(map, respawningAfterLoad);
-            this.compED = (CompExtraDamage)((ThingWithComps)this).GetComp<CompExtraDamage>();
-        }
+	public Thing hitThing;
 
-        protected virtual void Impact(Thing hitThing)
-        {
-            Map map = ((Thing)this).Map;
-            base.Impact(hitThing);
-            if (hitThing != null)
-            {
-                int damageAmountBase = (int)((ProjectileProperties)((ThingDef)((Thing)this).def).projectile).damageAmountBase;
-                ThingDef equipmentDef = (ThingDef)this.equipmentDef;
-				// ISSUE: variable of the null type
-				Verse.DamageDef damageDef = def.projectile.damageDef;
-                int num = damageAmountBase;
-                Quaternion exactRotation1 = this.ExactRotation;
-                ThingDef thingDef = equipmentDef;
-                // ISSUE: explicit constructor call
-                if (!(hitThing is Pawn pawn2) || pawn2.Downed || (double)Rand.Value >= (double)this.compED.chanceToProc)
-                    return;
-                Thing thing = hitThing;
-                DamageDef named = DefDatabase<DamageDef>.GetNamed(this.compED.damageDef, true);
-                int damageAmount = this.compED.damageAmount;
-                Quaternion exactRotation2 = this.ExactRotation;
-                // ISSUE: variable of the null type
-                DamageInfo damageInfo2 = new DamageInfo(named, damageAmount, (float)(DamageInfo.SourceCategory)0);
-                thing.TakeDamage(damageInfo2);
-            }
-            else
-            {
-                SoundStarter.PlayOneShot((SoundDef)SoundDefOf.BulletImpact_Ground, SoundInfo.InMap(new TargetInfo(((Thing)this).Position, map, false)));
-                MoteMaker.MakeStaticMote(this.ExactPosition, map, (ThingDef)ThingDefOf.Filth_Dirt, 1f);
-                Projectile_Gauss.ThrowMicroSparksBlue(this.ExactPosition, ((Thing)this).Map);
-            }
-        }
+	public CompExtraDamage compED;
 
-        public static void ThrowMicroSparksBlue(Vector3 loc, Map map)
-        {
-            if (!GenView.ShouldSpawnMotesAt(loc, map) || ((MoteCounter)map.moteCounter).SaturatedLowPriority)
-                return;
-            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"), (ThingDef)null);
-            ((Mote)moteThrown).Scale = Rand.Range(0.8f, 1.2f);
-            ((Mote)moteThrown).rotationRate = Rand.Range(-12f, 12f);
-            ((Mote)moteThrown).exactPosition = loc;
-            ((Mote)moteThrown).exactPosition = new NewStruct(moteThrown.exactPosition, new Vector3(0.5f, 0.0f, 0.5f));
-            ((Mote)moteThrown).exactPosition = new NewStruct1(moteThrown.exactPosition, new Vector3(Rand.Value, 0.0f, Rand.Value));
-            moteThrown.SetVelocity((float)Rand.Range(35, 45), 1.2f);
-            GenSpawn.Spawn((Thing)moteThrown, IntVec3Utility.ToIntVec3(loc), map);
-        }
-    }
-
-	internal struct NewStruct
+	public override void SpawnSetup(Map map, bool respawningAfterLoad)
 	{
-		public Vector3 exactPosition;
-		public Vector3 Item2;
+		((ThingWithComps)this).SpawnSetup(map, respawningAfterLoad);
+		compED = ((ThingWithComps)this).GetComp<CompExtraDamage>();
+	}
 
-		public NewStruct(Vector3 exactPosition, Vector3 item2)
+	protected  void Impact(Thing hitThing)
+	{
+		//IL_0062: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
+		Map map = ((Thing)this).get_Map();
+		((Projectile)this).Impact(hitThing);
+		if (hitThing != null)
 		{
-			this.exactPosition = exactPosition;
-			Item2 = item2;
+			int damageAmountBase = ((Thing)this).def.projectile.damageAmountBase;
+			ThingDef equipmentDef = base.equipmentDef;
+			DamageInfo val = default;
+			((DamageInfo)( val))..ctor(((Thing)this).def.projectile.damageDef, damageAmountBase, ((Projectile)this).get_ExactRotation().eulerAngles.y, base.launcher, (BodyPartRecord)null, equipmentDef, (SourceCategory)0);
+			hitThing.TakeDamage(val);
+			Pawn val2 = (Pawn)(object)((hitThing is Pawn) ? hitThing : null);
+			if (val2 != null && !val2.get_Downed() && Rand.get_Value() < compED.chanceToProc)
+			{
+				MoteMaker.ThrowMicroSparks(base.destination, ((Thing)this).get_Map());
+				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef, true), compED.damageAmount, ((Projectile)this).get_ExactRotation().eulerAngles.y, base.launcher, (BodyPartRecord)null, (ThingDef)null, (SourceCategory)0));
+			}
 		}
-
-		public override bool Equals(object obj)
+		else
 		{
-			return obj is NewStruct other &&
-				   exactPosition.Equals(other.exactPosition) &&
-				   Item2.Equals(other.Item2);
-		}
-
-		public override int GetHashCode()
-		{
-			int hashCode = 108502699;
-			hashCode = hashCode * -1521134295 + exactPosition.GetHashCode();
-			hashCode = hashCode * -1521134295 + Item2.GetHashCode();
-			return hashCode;
-		}
-
-		public void Deconstruct(out Vector3 exactPosition, out Vector3 item2)
-		{
-			exactPosition = this.exactPosition;
-			item2 = Item2;
-		}
-
-		public static implicit operator (Vector3 exactPosition, Vector3)(NewStruct value)
-		{
-			return (value.exactPosition, value.Item2);
-		}
-
-		public static implicit operator NewStruct((Vector3 exactPosition, Vector3) value)
-		{
-			return new NewStruct(value.exactPosition, value.Item2);
-		}
-
-		public static implicit operator Vector3(NewStruct v)
-		{
-			throw new NotImplementedException();
+			SoundStarter.PlayOneShot(SoundDefOf.BulletImpactGround, SoundInfo.op_Implicit(new TargetInfo(((Thing)this).get_Position(), map, false)));
+			MoteMaker.MakeStaticMote(((Projectile)this).get_ExactPosition(), map, ThingDefOf.Mote_ShotHit_Dirt, 1f);
+			ThrowMicroSparksBlue(((Projectile)this).get_ExactPosition(), ((Thing)this).get_Map());
 		}
 	}
 
-	internal struct NewStruct1
+	public static void ThrowMicroSparksBlue(Vector3 loc, Map map)
 	{
-		public Vector3 exactPosition;
-		public Vector3 Item2;
-
-		public NewStruct1(Vector3 exactPosition, Vector3 item2)
+		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
+		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+		//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
+		//IL_00c8: Expected O, but got Unknown
+		if (GenView.ShouldSpawnMotesAt(loc, map) && !map.moteCounter.get_SaturatedLowPriority())
 		{
-			this.exactPosition = exactPosition;
-			Item2 = item2;
-		}
-
-		public override bool Equals(object obj)
-		{
-			return obj is NewStruct1 other &&
-				   exactPosition.Equals(other.exactPosition) &&
-				   Item2.Equals(other.Item2);
-		}
-
-		public override int GetHashCode()
-		{
-			int hashCode = 108502699;
-			hashCode = hashCode * -1521134295 + exactPosition.GetHashCode();
-			hashCode = hashCode * -1521134295 + Item2.GetHashCode();
-			return hashCode;
-		}
-
-		public void Deconstruct(out Vector3 exactPosition, out Vector3 item2)
-		{
-			exactPosition = this.exactPosition;
-			item2 = Item2;
-		}
-
-		public static implicit operator (Vector3 exactPosition, Vector3)(NewStruct1 value)
-		{
-			return (value.exactPosition, value.Item2);
-		}
-
-		public static implicit operator NewStruct1((Vector3 exactPosition, Vector3) value)
-		{
-			return new NewStruct1(value.exactPosition, value.Item2);
-		}
-
-		public static implicit operator Vector3(NewStruct1 v)
-		{
-			throw new NotImplementedException();
+			MoteThrown val = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"), (ThingDef)null);
+			((Mote)val).set_Scale(Rand.Range(0.8f, 1.2f));
+			((Mote)val).rotationRate = Rand.Range(-12f, 12f);
+			((Mote)val).exactPosition = loc;
+			((Mote)val).exactPosition = ((Mote)val).exactPosition - new Vector3(0.5f, 0f, 0.5f);
+			((Mote)val).exactPosition = ((Mote)val).exactPosition + new Vector3(Rand.get_Value(), 0f, Rand.get_Value());
+			val.SetVelocity((float)Rand.Range(35, 45), 1.2f);
+			GenSpawn.Spawn((Thing)val, IntVec3Utility.ToIntVec3(loc), map);
 		}
 	}
 }
