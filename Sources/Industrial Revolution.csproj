@@ -34,9 +34,9 @@
     <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
     <Prefer32Bit>false</Prefer32Bit>
     </PropertyGroup>
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
+    <PropertyGroup>
+        <LangVersion>9.0</LangVersion>
+    </PropertyGroup>
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
 	</PropertyGroup>
@@ -44,6 +44,7 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>   
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="IndexRange" Version="1.0.0" />
 		<PackageReference Include="Krafs.Publicizer" Version="1.0.1">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

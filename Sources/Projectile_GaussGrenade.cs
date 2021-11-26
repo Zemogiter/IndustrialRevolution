@@ -24,7 +24,7 @@ public class Projectile_GaussGrenade : Projectile
 		}
 	}
 
-	protected  void Impact(Thing hitThing)
+	public override void Impact(Thing hitThing)
 	{
 		if (((Thing)this).def.projectile.explosionDelay == 0)
 		{
@@ -43,13 +43,13 @@ public class Projectile_GaussGrenade : Projectile
 		//IL_00da: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
 		((Thing)this).Destroy((DestroyMode)0);
-		GenExplosion.DoExplosion(((Thing)this).get_Position(), ((Thing)this).get_Map(), ((Thing)this).def.projectile.explosionRadius, ((Thing)this).def.projectile.damageDef, base.launcher, ((Thing)this).def.projectile.soundExplode, ((Thing)this).def, base.equipmentDef, ((Thing)this).def.projectile.postExplosionSpawnThingDef, ((Thing)this).def.projectile.explosionSpawnChance, 0, false, (ThingDef)null, 0f, 0);
+		GenExplosion.DoExplosion(((Thing)this).Position, ((Thing)this).Map, ((Thing)this).def.projectile.explosionRadius, ((Thing)this).def.projectile.damageDef, base.launcher, ((Thing)this).def.projectile.soundExplode, ((Thing)this).def, base.equipmentDef, ((Thing)this).def.projectile.postExplosionSpawnThingDef, ((Thing)this).def.projectile.preExplosionSpawnChance, 0, false, (ThingDef)null, 0f, 0);
 		for (int i = 0; i < 4; i++)
 		{
-			IntVec3 position = ((Thing)this).get_Position();
-			ThrowSmokeBlue(((IntVec3)( position)).ToVector3Shifted() + Gen.RandomHorizontalVector(((Thing)this).def.projectile.explosionRadius * 0.7f), ((Thing)this).get_Map(), ((Thing)this).def.projectile.explosionRadius * 0.6f);
-			position = ((Thing)this).get_Position();
-			ThrowMicroSparksBlue(((IntVec3)( position)).ToVector3Shifted() + Gen.RandomHorizontalVector(((Thing)this).def.projectile.explosionRadius * 0.7f), ((Thing)this).get_Map());
+			IntVec3 position = ((Thing)this).Position;
+			ThrowSmokeBlue(((IntVec3)( position)).ToVector3Shifted() + Gen.RandomHorizontalVector(((Thing)this).def.projectile.explosionRadius * 0.7f), ((Thing)this).Map, ((Thing)this).def.projectile.explosionRadius * 0.6f);
+			position = ((Thing)this).Position;
+			ThrowMicroSparksBlue(((IntVec3)( position)).ToVector3Shifted() + Gen.RandomHorizontalVector(((Thing)this).def.projectile.explosionRadius * 0.7f), ((Thing)this).Map);
 		}
 	}
 
@@ -62,10 +62,10 @@ public class Projectile_GaussGrenade : Projectile
 		//IL_005f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_007f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_008a: Expected O, but got Unknown
-		if (GenView.ShouldSpawnMotesAt(loc, map) && !map.moteCounter.get_SaturatedLowPriority())
+		if (GenView.ShouldSpawnMotesAt(loc, map) && !map.moteCounter.SaturatedLowPriority)
 		{
 			MoteThrown val = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_SmokeBlue"), (ThingDef)null);
-			((Mote)val).set_Scale(Rand.Range(1.5f, 2.5f) * size);
+			((Mote)val).Scale = (Rand.Range(1.5f, 2.5f) * size);
 			((Mote)val).rotationRate = Rand.Range(-30f, 30f);
 			((Mote)val).exactPosition = loc;
 			val.SetVelocity((float)Rand.Range(30, 40), Rand.Range(0.5f, 0.7f));
@@ -86,14 +86,14 @@ public class Projectile_GaussGrenade : Projectile
 		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00c8: Expected O, but got Unknown
-		if (GenView.ShouldSpawnMotesAt(loc, map) && !map.moteCounter.get_SaturatedLowPriority())
+		if (GenView.ShouldSpawnMotesAt(loc, map) && !map.moteCounter.SaturatedLowPriority)
 		{
 			MoteThrown val = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"), (ThingDef)null);
-			((Mote)val).set_Scale(Rand.Range(0.8f, 1.2f));
+			((Mote)val).Scale = (Rand.Range(0.8f, 1.2f));
 			((Mote)val).rotationRate = Rand.Range(-12f, 12f);
 			((Mote)val).exactPosition = loc;
 			((Mote)val).exactPosition = ((Mote)val).exactPosition - new Vector3(0.5f, 0f, 0.5f);
-			((Mote)val).exactPosition = ((Mote)val).exactPosition + new Vector3(Rand.get_Value(), 0f, Rand.get_Value());
+			((Mote)val).exactPosition = ((Mote)val).exactPosition + new Vector3(Rand.Value, 0f, Rand.Value);
 			val.SetVelocity((float)Rand.Range(35, 45), 1.2f);
 			GenSpawn.Spawn((Thing)val, IntVec3Utility.ToIntVec3(loc), map);
 		}

@@ -10,7 +10,7 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 
 	public SoundDef jamSound = SoundDef.Named("Misfire");
 
-	protected  int ShotsPerBurst => ((Verb)this).verbProps.burstShotCount;
+	public override int ShotsPerBurst => ((Verb)this).verbProps.burstShotCount;
 
 	public override void WarmupComplete()
 	{
@@ -35,14 +35,12 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 			if (new System.Random().Next(0, 2) == 1)
 			{
 				isJammed = false;
-				MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.get_Position().x + 1f, ((Verb)this).caster.get_Position().y, (float)((Verb)this).caster.get_Position().z + 1f), ((Verb)this).caster.get_Map(), "Jam Cleared", Color.white, -1f);
-				SoundStarter.PlayOneShot(((Thing)((Verb)this).ownerEquipment).def.soundInteract, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.get_Position(), ((Verb)this).caster.get_Map(), false)));
+				MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.Position.x + 1f, ((Verb)this).caster.Position.y, (float)((Verb)this).caster.Position.z + 1f), ((Verb)this).caster.Map, "Jam Cleared", Color.white, -1f);
+				SoundStarter.PlayOneShot(((Thing)((Verb)this).EquipmentSource).def.soundInteract, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
 			}
 			return;
 		}
-		int num = 0;
-		QualityCategory val = default;
-		QualityUtility.TryGetQuality(((Verb)this).caster, ref val);
+		QualityUtility.TryGetQuality(((Verb)this).caster, out QualityCategory val);
 		if (Rand.Range(1, (int)val switch
 		{
 			0 => 30,
@@ -57,20 +55,20 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 			_ => 60,
 		}) == 1)
 		{
-			MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.get_Position().x + 1f, ((Verb)this).caster.get_Position().y, (float)((Verb)this).caster.get_Position().z + 1f), ((Verb)this).caster.get_Map(), "Jammed", Color.white, -1f);
-			SoundStarter.PlayOneShot(jamSound, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.get_Position(), ((Verb)this).caster.get_Map(), false)));
+			MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.Position.x + 1f, ((Verb)this).caster.Position.y, (float)((Verb)this).caster.Position.z + 1f), ((Verb)this).caster.Map, "Jammed", Color.white, -1f);
+			SoundStarter.PlayOneShot(jamSound, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
 			isJammed = true;
 			return;
 		}
 		((Verb)this).WarmupComplete();
-		if (((Verb)this).get_CasterIsPawn() && ((Verb)this).get_CasterPawn().skills != null)
+		if (((Verb)this).CasterIsPawn && ((Verb)this).CasterPawn.skills != null)
 		{
 			float num2 = 10f;
-			if (((LocalTargetInfo)( ((Verb)this).currentTarget)).get_Thing() != null && (int)((LocalTargetInfo)( ((Verb)this).currentTarget)).get_Thing().def.category == 1)
+			if (((LocalTargetInfo)( ((Verb)this).currentTarget)).Thing != null && (int)((LocalTargetInfo)( ((Verb)this).currentTarget)).Thing.def.category == 1)
 			{
-				num2 = ((!GenHostility.HostileTo(((LocalTargetInfo)( ((Verb)this).currentTarget)).get_Thing(), ((Verb)this).caster)) ? 50f : 240f);
+				num2 = ((!GenHostility.HostileTo(((LocalTargetInfo)( ((Verb)this).currentTarget)).Thing, ((Verb)this).caster)) ? 50f : 240f);
 			}
-			((Verb)this).get_CasterPawn().skills.Learn(SkillDefOf.Shooting, num2, false);
+			((Verb)this).CasterPawn.skills.Learn(SkillDefOf.Shooting, num2, false);
 		}
 	}
 }

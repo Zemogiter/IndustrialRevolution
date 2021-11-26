@@ -27,56 +27,55 @@ public class HeadgearFrame : Apparel
 		//IL_01f8: Unknown result type (might be due to invalid IL or missing references)
 		//IL_01fd: Unknown result type (might be due to invalid IL or missing references)
 		//IL_029b: Unknown result type (might be due to invalid IL or missing references)
-		if (!ThingUtility.DestroyedOrNull((Thing)(object)((Apparel)this).get_Wearer()))
+		if (!ThingUtility.DestroyedOrNull((Thing)(object)((Apparel)this).Wearer))
 		{
 			if (!init)
 			{
-				ApparelGraphicRecord item = default;
-				ApparelGraphicRecordGetter.TryGetGraphicApparel((Apparel)(object)this, ((Apparel)this).get_Wearer().story.bodyType, ref item);
-				((Apparel)this).get_Wearer().get_Drawer().renderer.graphics.apparelGraphics.Remove(item);
+				ApparelGraphicRecordGetter.TryGetGraphicApparel((Apparel)(object)this, ((Apparel)this).Wearer.story.bodyType, out ApparelGraphicRecord item);
+				((Apparel)this).Wearer.Drawer.renderer.graphics.apparelGraphics.Remove(item);
 				PortraitsCache.Clear();
 				init = true;
 			}
-			if (init && ((Apparel)this).get_Wearer() == null)
+			if (init && ((Apparel)this).Wearer == null)
 			{
 				init = false;
 			}
-			if ((int)PawnUtility.GetPosture(((Apparel)this).get_Wearer()) == 0)
+			if ((int)PawnUtility.GetPosture(((Apparel)this).Wearer) == 0)
 			{
-				Material material = GraphicDatabase.Get<Graphic_Multi>(((Thing)this).def.graphicData.texPath, ShaderDatabase.Cutout, Vector2.one, ((Thing)this).get_DrawColor()).MatAt(((Thing)((Apparel)this).get_Wearer()).get_Rotation(), (Thing)null);
+				Material material = GraphicDatabase.Get<Graphic_Multi>(((Thing)this).def.graphicData.texPath, ShaderDatabase.Cutout, Vector2.one, ((Thing)this).DrawColor).MatAt(((Thing)((Apparel)this).Wearer).Rotation, (Thing)null);
 				Vector3 s = new(1f, 1f, 1f);
 				Matrix4x4 matrix = default;
 				Vector3 vector = new(0f, 0f, 0f);
-				if ((int)((Apparel)this).get_Wearer().story.bodyType == 1)
+				if ((int)Wearer.story.bodyType.index == 1) //not sure if adding index is the correct way to remove the "cant convert from int to x" error
 				{
-					if (((Thing)((Apparel)this).get_Wearer()).get_Rotation() == Rot4.get_West())
+					if (((Thing)((Apparel)this).Wearer).Rotation == Rot4.West)
 					{
 						vector = new Vector3(-0.05f, 0f, 0f);
 					}
-					else if (((Thing)((Apparel)this).get_Wearer()).get_Rotation() == Rot4.get_East())
+					else if (((Thing)((Apparel)this).Wearer).Rotation == Rot4.East)
 					{
 						vector = new Vector3(0.05f, 0f, 0f);
 					}
 				}
-				if ((int)((Apparel)this).get_Wearer().story.bodyType != 1)
+				if ((int)Wearer.story.bodyType.index != 1)
 				{
-					if (((Thing)((Apparel)this).get_Wearer()).get_Rotation() == Rot4.get_West())
+					if (((Thing)((Apparel)this).Wearer).Rotation == Rot4.West)
 					{
 						vector = new Vector3(-0.1f, 0f, 0f);
 					}
-					else if (((Thing)((Apparel)this).get_Wearer()).get_Rotation() == Rot4.get_East())
+					else if (((Thing)((Apparel)this).Wearer).Rotation == Rot4.East)
 					{
 						vector = new Vector3(0.1f, 0f, 0f);
 					}
 				}
-				if (RestUtility.Awake(((Apparel)this).get_Wearer()) || !((Apparel)this).get_Wearer().get_Downed())
+				if (RestUtility.Awake(((Apparel)this).Wearer) || !((Apparel)this).Wearer.Downed)
 				{
-					matrix.SetTRS(((Thing)((Apparel)this).get_Wearer()).get_DrawPos() + new Vector3(0f, 1f, 0.365f) + vector, Quaternion.AngleAxis(0f, Vector3.up), s);
-					Graphics.DrawMesh(MeshPool.humanlikeHeadSet.MeshAt(((Thing)((Apparel)this).get_Wearer()).get_Rotation()), matrix, material, 0);
+					matrix.SetTRS(((Thing)((Apparel)this).Wearer).DrawPos + new Vector3(0f, 1f, 0.365f) + vector, Quaternion.AngleAxis(0f, Vector3.up), s);
+					Graphics.DrawMesh(MeshPool.humanlikeHeadSet.MeshAt(((Thing)((Apparel)this).Wearer).Rotation), matrix, material, 0);
 				}
 			}
 		}
-		if (Find.get_TickManager().get_TicksGame() % 120 == 0)
+		if (Find.TickManager.TicksGame % 120 == 0)
 		{
 			init = false;
 		}
@@ -86,7 +85,7 @@ public class HeadgearFrame : Apparel
 	public override void Tick()
 	{
 		((ThingWithComps)this).Tick();
-		if (ThingUtility.DestroyedOrNull((Thing)(object)((Apparel)this).get_Wearer()) && init)
+		if (ThingUtility.DestroyedOrNull((Thing)(object)((Apparel)this).Wearer) && init)
 		{
 			init = false;
 		}

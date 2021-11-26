@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "IndexRange/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net471/IndexRange.dll": {}
+        },
+        "runtime": {
+          "lib/net471/IndexRange.dll": {}
+        }
+      },
       "Krafs.Publicizer/1.0.1": {
         "type": "package",
         "build": {
@@ -95,6 +104,22 @@
     }
   },
   "libraries": {
+    "IndexRange/1.0.0": {
+      "sha512": "6TgS1JLSUkpmPLfXBPaAgB39ZUix8E4soXWk2XSDcscVe84i1JKzIAtA7jHbRHSkOOrcr6YA0MpLCeq98y9mYQ==",
+      "type": "package",
+      "path": "indexrange/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "indexrange.1.0.0.nupkg.sha512",
+        "indexrange.nuspec",
+        "lib/net45/IndexRange.dll",
+        "lib/net471/IndexRange.dll",
+        "lib/netstandard2.0/IndexRange.dll",
+        "lib/netstandard2.1/IndexRange.dll"
+      ]
+    },
     "Krafs.Publicizer/1.0.1": {
       "sha512": "HJBbfHNKz/RrbpDgrpMfnmatIdBGHI5BLh1E77+GFRw1e/W6Cy2Uan9OwDawlYgX8N3dn1EoeabOylQLBNQ7/w==",
       "type": "package",
@@ -203,6 +228,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "IndexRange >= 1.0.0",
       "Krafs.Publicizer >= 1.0.1",
       "Krafs.Rimworld.Ref >= 1.3.3159"
     ]
@@ -253,6 +279,10 @@
       "net472": {
         "targetAlias": "net472",
         "dependencies": {
+          "IndexRange": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Krafs.Publicizer": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

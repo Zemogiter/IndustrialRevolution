@@ -45,6 +45,10 @@
         "net472": {
           "targetAlias": "net472",
           "dependencies": {
+            "IndexRange": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Krafs.Publicizer": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
