@@ -36,7 +36,7 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 			{
 				isJammed = false;
 				MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.Position.x + 1f, ((Verb)this).caster.Position.y, (float)((Verb)this).caster.Position.z + 1f), ((Verb)this).caster.Map, "Jam Cleared", Color.white, -1f);
-				SoundStarter.PlayOneShot(((Thing)((Verb)this).EquipmentSource).def.soundInteract, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
+				SoundStarter.PlayOneShot(((Thing)((Verb)this).EquipmentSource).def.soundInteract, (new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
 			}
 			return;
 		}
@@ -56,7 +56,7 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 		}) == 1)
 		{
 			MoteMaker.ThrowText(new Vector3((float)((Verb)this).caster.Position.x + 1f, ((Verb)this).caster.Position.y, (float)((Verb)this).caster.Position.z + 1f), ((Verb)this).caster.Map, "Jammed", Color.white, -1f);
-			SoundStarter.PlayOneShot(jamSound, SoundInfo.op_Implicit(new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
+			SoundStarter.PlayOneShot(jamSound, (new TargetInfo(((Verb)this).caster.Position, ((Verb)this).caster.Map, false)));
 			isJammed = true;
 			return;
 		}

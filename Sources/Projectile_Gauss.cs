@@ -39,7 +39,7 @@ public class Projectile_Gauss : Projectile
 			if (val2 != null && !val2.Downed && Rand.Value < compED.chanceToProc)
 			{
 				ThrowMicroSparksBlue(base.destination, ((Thing)this).Map); //not sure if ThrowMicroSparksBlue is a correct replacement for MoteMaker.ThrowMicroSparks, need checking
-				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef, true), compED.damageAmount, ((Projectile)this).ExactRotation.eulerAngles.y, launcher, (BodyPartRecord)null, (ThingDef)null, (SourceCategory)0)); //to fix: a buch of "cant convert Verse.* to x" errors
+				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef, true), compED.damageAmount, ((Projectile)this).ExactRotation.eulerAngles.y, launcher, (Thing)null, (BodyPartRecord)null, (SourceCategory)0)); //to fix: a buch of "cant convert Verse.* to x" errors
 			}
 		}
 		else
@@ -66,7 +66,7 @@ public class Projectile_Gauss : Projectile
 		if (loc.ShouldSpawnMotesAt(map) && !map.moteCounter.SaturatedLowPriority)
 		{
 			MoteThrown val = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"), (ThingDef)null);
-			((Mote)val).Scale = Rand.Range(0.8f, 1.2f); //to fix: cannot convert this from float to Vector3
+			((Mote)val).Scale = Rand.Range(0.8f, 1.2f);
 			((Mote)val).rotationRate = Rand.Range(-12f, 12f);
 			((Mote)val).exactPosition = loc;
 			((Mote)val).exactPosition = ((Mote)val).exactPosition - new Vector3(0.5f, 0f, 0.5f);

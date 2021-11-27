@@ -43,7 +43,7 @@ public class Projectile_GaussGrenade : Projectile
 		//IL_00da: Unknown result type (might be due to invalid IL or missing references)
 		//IL_00df: Unknown result type (might be due to invalid IL or missing references)
 		((Thing)this).Destroy((DestroyMode)0);
-		GenExplosion.DoExplosion(((Thing)this).Position, ((Thing)this).Map, ((Thing)this).def.projectile.explosionRadius, ((Thing)this).def.projectile.damageDef, base.launcher, ((Thing)this).def.projectile.soundExplode, ((Thing)this).def, base.equipmentDef, ((Thing)this).def.projectile.postExplosionSpawnThingDef, ((Thing)this).def.projectile.preExplosionSpawnChance, 0, false, (ThingDef)null, 0f, 0);
+		GenExplosion.DoExplosion(((Thing)this).Position, ((Thing)this).Map, ((Thing)this).def.projectile.explosionRadius, ((Thing)this).def.projectile.damageDef, base.launcher, ((Thing)this).def.projectile.soundExplode, ((Thing)this).def, base.equipmentDef, ((Thing)this).def.projectile.postExplosionSpawnThingDef, ((Thing)this).def.projectile.preExplosionSpawnChance, 0, false, (ThingDef)null, 0f, (bool)0);
 		for (int i = 0; i < 4; i++)
 		{
 			IntVec3 position = ((Thing)this).Position;
