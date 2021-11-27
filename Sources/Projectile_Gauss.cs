@@ -15,64 +15,47 @@ public class Projectile_Gauss : Projectile
 
 	public override void SpawnSetup(Map map, bool respawningAfterLoad)
 	{
-		((ThingWithComps)this).SpawnSetup(map, respawningAfterLoad);
-		compED = ((ThingWithComps)this).GetComp<CompExtraDamage>();
+		base.SpawnSetup(map, respawningAfterLoad);
+		compED = GetComp<CompExtraDamage>();
 	}
 
-	public override void Impact(Thing hitThing) 
+	public override void Impact(Thing hitThing)
 	{
-		//IL_0062: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00e3: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0100: Unknown result type (might be due to invalid IL or missing references)
-		Map map = ((Thing)this).Map;
-		((Projectile)this).Impact(hitThing);
+		Map map = base.Map;
+		base.Impact(hitThing);
 		if (hitThing != null)
 		{
-			int damageAmountBase = ((Thing)this).def.projectile.damageAmountBase;
-			ThingDef equipmentDef = base.equipmentDef;
-			DamageInfo val = default;
-			((DamageInfo)(val)).ctor(((Thing)this).def.projectile.damageDef, damageAmountBase, ((Projectile)this).ExactRotation.eulerAngles.y, base.launcher, (BodyPartRecord)null, equipmentDef, (SourceCategory)0); //to fix: figure out the constructor
-			hitThing.TakeDamage(val);
-			Pawn val2 = (Pawn)(object)((hitThing is Pawn) ? hitThing : null);
-			if (val2 != null && !val2.Downed && Rand.Value < compED.chanceToProc)
+			int damageAmountBase = def.projectile.damageAmountBase;
+			ThingDef thingDef = equipmentDef;
+			DamageInfo damageInfo = new DamageInfo(def.projectile.damageDef, damageAmountBase, ExactRotation.eulerAngles.y, (Thing)base.launcher, (BodyPartRecord)null, (ThingDef)equipmentDef, (SourceCategory)0);
+			hitThing.TakeDamage(damageInfo);
+			if (hitThing is Pawn pawn && !pawn.Downed && Rand.Value < compED.chanceToProc)
 			{
-				ThrowMicroSparksBlue(base.destination, ((Thing)this).Map); //not sure if ThrowMicroSparksBlue is a correct replacement for MoteMaker.ThrowMicroSparks, need checking
-				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef, true), compED.damageAmount, ((Projectile)this).ExactRotation.eulerAngles.y, launcher, (Thing)null, (BodyPartRecord)null, (SourceCategory)0)); //to fix: a buch of "cant convert Verse.* to x" errors
+				//MoteMaker.ThrowMicroSparks(destination, base.Map); since MoteMaker no longer has a definition for ThrowMicroSparks I decided to use ThrowMicroSparksBlue
+				ThrowMicroSparksBlue(destination, base.Map);
+				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef), compED.damageAmount, ExactRotation.eulerAngles.y, (Thing)launcher, (BodyPartRecord)null, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown));
 			}
 		}
 		else
 		{
-			SoundStarter.PlayOneShot(SoundDefOf.BulletImpact_Ground, SoundInfo.InMap(new TargetInfo(((Thing)this).Position, map, false)));
-			MoteMaker.MakeStaticMote(((Projectile)this).ExactPosition, map, ThingDefOf.Filth_Dirt, 1f);
-			ThrowMicroSparksBlue(((Projectile)this).ExactPosition, ((Thing)this).Map);
+			SoundDefOf.BulletImpact_Ground.PlayOneShot(new TargetInfo(base.Position, map));
+			MoteMaker.MakeStaticMote(ExactPosition, map, ThingDefOf.Filth_Dirt, 1f);
+			ThrowMicroSparksBlue(ExactPosition, base.Map);
 		}
 	}
 
 	public static void ThrowMicroSparksBlue(Vector3 loc, Map map)
 	{
-		//IL_0027: Unknown result type (might be due to invalid IL or missing references)
-		//IL_002c: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0041: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0056: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005d: Unknown result type (might be due to invalid IL or missing references)
-		//IL_005e: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0082: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0083: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00a7: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00bd: Unknown result type (might be due to invalid IL or missing references)
-		//IL_00c8: Expected O, but got Unknown
 		if (loc.ShouldSpawnMotesAt(map) && !map.moteCounter.SaturatedLowPriority)
 		{
-			MoteThrown val = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"), (ThingDef)null);
-			((Mote)val).Scale = Rand.Range(0.8f, 1.2f);
-			((Mote)val).rotationRate = Rand.Range(-12f, 12f);
-			((Mote)val).exactPosition = loc;
-			((Mote)val).exactPosition = ((Mote)val).exactPosition - new Vector3(0.5f, 0f, 0.5f);
-			((Mote)val).exactPosition = ((Mote)val).exactPosition + new Vector3(Rand.Value, 0f, Rand.Value);
-			val.SetVelocity((float)Rand.Range(35, 45), 1.2f);
-			GenSpawn.Spawn((Thing)val, IntVec3Utility.ToIntVec3(loc), map);
+			MoteThrown obj = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MicroSparksBlue"));
+			obj.Scale = Rand.Range(0.8f, 1.2f);
+			obj.rotationRate = Rand.Range(-12f, 12f);
+			obj.exactPosition = loc;
+			obj.exactPosition -= new Vector3(0.5f, 0f, 0.5f);
+			obj.exactPosition += new Vector3(Rand.Value, 0f, Rand.Value);
+			obj.SetVelocity(Rand.Range(35, 45), 1.2f);
+			GenSpawn.Spawn((Thing)obj, loc.ToIntVec3(), map);
 		}
 	}
 }

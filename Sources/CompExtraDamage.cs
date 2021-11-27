@@ -15,7 +15,7 @@ public class CompExtraDamage : ThingComp
 
 	public override void Initialize(CompProperties vprops)
 	{
-		((ThingComp)this).Initialize(vprops);
+		base.Initialize(vprops);
 		compProp = vprops as CompProperties_ExtraDamage;
 		if (compProp != null)
 		{
@@ -32,7 +32,7 @@ public class CompExtraDamage : ThingComp
 
 	public override void PostExposeData()
 	{
-		((ThingComp)this).PostExposeData();
-		Scribe_Values.Look<int>(ref count, "count", 1, false);
+		base.PostExposeData();
+		Scribe_Values.Look(ref count, "count", 1);
 	}
 }
