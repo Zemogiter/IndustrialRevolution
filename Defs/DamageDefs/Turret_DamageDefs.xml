@@ -16,8 +16,8 @@
     <harmsHealth>true</harmsHealth>
     <defaultDamage>60</defaultDamage>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
-    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+    <explosionCellMote>BlastEMP</explosionCellMote>
     <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
-    <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+    <explosionInteriorMote>ElectricalSpark</explosionInteriorMote>
   </DamageDef>
 </Defs>

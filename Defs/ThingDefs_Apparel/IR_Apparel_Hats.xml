@@ -4,7 +4,7 @@
   <!-- Boater -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndBoaterRed</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>boater hat</label>
     <description>A fashionable hat to ward off the sun in summer, gives off a warm and breezy style. Improves social impact.</description>
     <recipeMaker>
@@ -56,7 +56,7 @@
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndBoaterBlack</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>boater hat</label>
     <description>A fashionable hat to ward off the sun in summer, gives off a warm and breezy style. Improves social impact.</description>
     <recipeMaker>
@@ -109,7 +109,7 @@
   <!-- Bowler Hat -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndBowlerHat</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>bowler hat</label>
     <description>A stylish hat which gives off a slightly formal, business style. Improves social impact.</description>
     <recipeMaker>
@@ -221,7 +221,7 @@
   <!-- Fedora -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndFedora</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>fedora</label>
     <description>A dignifed hat which gives off a sleek and formal style, often worn by pirates and mob bosses for its attitude. Improves social impact.</description>
     <recipeMaker>
@@ -332,7 +332,7 @@
   <!-- Newsboy Cap -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndNewsboy</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>newsboy cap</label>
     <description>A plain cap which gives off an urban look. Improves social impact.</description>
     <recipeMaker>
@@ -439,7 +439,7 @@
   <!-- Top hat -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndTophat</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>top hat</label>
     <description>An elegant hat which gives the wearer a sophisticated look of importance. Improves social impact.</description>
     <recipeMaker>
@@ -546,7 +546,7 @@
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndFancyTophat</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>feathered top hat</label>
     <description>A striking feathered hat that has an air of grandeur. Improves social impact.</description>
     <recipeMaker>
@@ -571,7 +571,6 @@
     <equippedStatOffsets>
       <SocialImpact>0.25</SocialImpact>
       <TradePriceImprovement>0.15</TradePriceImprovement>
-      <GiftImpact>0.05</GiftImpact>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -600,7 +599,7 @@
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndSteampunkTophat</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>steamer top hat</label>
     <description>A dashing eccentric hat fit for any stylish engineer or insane inventor.</description>
     <recipeMaker>
@@ -656,7 +655,7 @@
   <!-- Pith -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndPithHelmet</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>pith helmet</label>
     <description>A military helmet that protects its wearer from the sun while out in the field.</description>
     <recipeMaker>
@@ -710,7 +709,7 @@
   <!-- Pith -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndWhitePith</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>pith helmet</label>
     <description>A military helmet that protects its wearer from the sun while out in the field.</description>
     <recipeMaker>
@@ -776,7 +775,7 @@
   <!-- Kepi -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndKepi</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>kepi</label>
     <description>A military cap that protects the user from the sun while out in the field.</description>
     <recipeMaker>
@@ -862,7 +861,7 @@
   </ThingDef>
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndRebelKepi</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>kepi</label>
     <description>A military cap that protects the user from the sun while out in the field. This particular one protects the user's neck.</description>
     <recipeMaker>
@@ -1003,7 +1002,7 @@
   <!-- Aviator Goggles -->
   <ThingDef ParentName="HatMakeableBase" Name="AviatorGoggles">
     <defName>Apparel_AviatorGoggles</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>goggles</label>
     <description>A pair of goggles often donned by pilots and drifters to shield their eyes from wind and sand alike.</description>
     <recipeMaker>
@@ -1057,7 +1056,7 @@
   <!-- Steampunk Goggles  -->
   <ThingDef ParentName="HatMakeableBase" Name="SteamGoggles">
     <defName>Apparel_IndSteamGoggles</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>goggles</label>
     <description>A pair of goggles, often worn by engineers and mechanics to protect their eyes while working. Also provides a small amount of protection from toxic fallout.</description>
     <recipeMaker>
@@ -1115,7 +1114,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndSteamGogglesFancy</defName>
     <label>magnifying goggles</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <description>A pair of industrial goggles to protect the eyes, often seen on engineers and eccentric inventors. This pair has an extra set of magnifying lenses great for more precise work.</description>
     <graphicData>
       <texPath>Things/Apparel/Headwear/IndGoggles2</texPath>
@@ -1167,7 +1166,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndSpectacles</defName>
     <label>spectacles</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <description>A pair of eyeglasses that make the user look slightly smarter. Can also improves vision.</description>
     <graphicData>
       <texPath>Things/Apparel/Headwear/IndSpectacles</texPath>
@@ -1240,7 +1239,7 @@
     <equippedStatOffsets>
       <CookSpeed>0.20</CookSpeed>
       <FoodPoisonChance>-0.10</FoodPoisonChance>
-      <BrewingSpeed>0.05</BrewingSpeed>
+      <DrugCookingSpeed>0.05</DrugCookingSpeed>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -1318,7 +1317,7 @@
   </ThingDef>
   <!--Fedora-->
   <ThingDef ParentName="HatMakeableBase">
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <defName>Ind_Fedora</defName>
     <label>Fedora</label>
     <description>These hats are often associated with gangsters and government officials, which are both practically the same.</description>
@@ -1423,7 +1422,7 @@
   </ThingDef>
   <!-- Tricorn -->
   <ThingDef ParentName="HatMakeableBase">
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <defName>Ind_Tricorn</defName>
     <label>tricorne</label>
     <description>A seafaring hat primarily, they are comfortable to wear but out of style.</description>
@@ -1652,7 +1651,7 @@
   </ThingDef>
   <!-- Vandal -->
   <ThingDef ParentName="HatMakeableBase">
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <defName>Ind_Vandal</defName>
     <label>Scarf</label>
     <description>A scarf that provides small resistance against toxic fallout.</description>
@@ -1759,7 +1758,7 @@
     <defName>Ind_Bandit</defName>
     <label>Bandit scarf</label>
     <description>Robbing a stagecoach has never been as much fun without wearing a scarf on your face. Scarves provide small resistance against toxic fallout.</description>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <graphicData>
       <texPath>Things/Apparel/Headwear/Apparello/Bandit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1778,7 +1777,6 @@
     <equippedStatOffsets>
       <SocialImpact>-0.15</SocialImpact>
       <TradePriceImprovement>-0.15</TradePriceImprovement>
-      <GiftImpact>-0.15</GiftImpact>
       <ToxicSensitivity>-0.3</ToxicSensitivity>
     </equippedStatOffsets>
     <apparel>
@@ -1860,7 +1858,7 @@
   <!-- Psychonauts, Razputin  -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndRaz</defName>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <label>engineer's cap</label>
     <description>A cap often worn by engineers and mechanics.</description>
     <recipeMaker>

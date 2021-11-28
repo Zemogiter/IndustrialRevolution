@@ -13,10 +13,10 @@
     <tradeability>None</tradeability>
     <destroyOnDrop>true</destroyOnDrop>
     <statBases>
-      <accuracyTouch>1.00</accuracyTouch>
-      <accuracyShort>1.00</accuracyShort>
-      <accuracyMedium>1.00</accuracyMedium>
-      <accuracyLong>0.95</accuracyLong>
+      <AccuracyTouch>1.00</AccuracyTouch>
+      <AccuracyShort>1.00</AccuracyShort>
+      <AccuracyMedium>1.00</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
       <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
@@ -41,7 +41,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Tesla</defName>
     <label>electric arc</label>
-    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>
+    <thingClass>Projectile_Gauss</thingClass>
     <graphicData>
       <texPath>Things/Projectile/ElectricityArc</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -55,13 +55,13 @@
     </projectile>
     <comps>
       <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <compClass>CompExtraDamage</compClass>
         <damageDef>Stun</damageDef>
         <damageAmount>2</damageAmount>
         <chanceToProc>0.8</chanceToProc>
       </li>
       <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <compClass>CompExtraDamage</compClass>
         <damageDef>EMP</damageDef>
         <damageAmount>2</damageAmount>
         <chanceToProc>1</chanceToProc>

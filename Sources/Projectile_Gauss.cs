@@ -1,5 +1,4 @@
-﻿using GaussWeapons;
-using RimWorld;
+﻿using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -27,13 +26,13 @@ public class Projectile_Gauss : Projectile
 		{
 			int damageAmountBase = def.projectile.damageAmountBase;
 			ThingDef thingDef = equipmentDef;
-			DamageInfo damageInfo = new DamageInfo(def.projectile.damageDef, damageAmountBase, ExactRotation.eulerAngles.y, (Thing)base.launcher, (BodyPartRecord)null, (ThingDef)equipmentDef, (SourceCategory)0);
+			DamageInfo damageInfo = new(def.projectile.damageDef, damageAmountBase, 0, ExactRotation.eulerAngles.y, launcher, null, equipmentDef, 0);
 			hitThing.TakeDamage(damageInfo);
 			if (hitThing is Pawn pawn && !pawn.Downed && Rand.Value < compED.chanceToProc)
 			{
 				//MoteMaker.ThrowMicroSparks(destination, base.Map); since MoteMaker no longer has a definition for ThrowMicroSparks I decided to use ThrowMicroSparksBlue
 				ThrowMicroSparksBlue(destination, base.Map);
-				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef), compED.damageAmount, ExactRotation.eulerAngles.y, (Thing)launcher, (BodyPartRecord)null, (ThingDef)null, DamageInfo.SourceCategory.ThingOrUnknown));
+				hitThing.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed(compED.damageDef), compED.damageAmount, 0, ExactRotation.eulerAngles.y, launcher, null, null, SourceCategory.ThingOrUnknown));
 			}
 		}
 		else

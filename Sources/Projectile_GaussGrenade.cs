@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Verse;
+using System;
 
 public class Projectile_GaussGrenade : Projectile
 {
@@ -33,12 +34,14 @@ public class Projectile_GaussGrenade : Projectile
 		}
 		landed = true;
 		ticksToDetonation = def.projectile.explosionDelay;
+
 	}
 
 	protected virtual void Explode()
 	{
 		Destroy();
-		GenExplosion.DoExplosion(base.Position, base.Map, def.projectile.explosionRadius, def.projectile.damageDef, launcher, (SoundDef)def.projectile.soundExplode, (ThingDef)def, (ThingDef)equipmentDef, def.projectile.postExplosionSpawnThingDef, (float)def.projectile.preExplosionSpawnChance, (int)0, (bool)false, (ThingDef)null, 0f, 0);
+		float armorPenetration = -1;
+		GenExplosion.DoExplosion(base.Position, base.Map, def.projectile.explosionRadius, def.projectile.damageDef, launcher, -1, armorPenetration, def.projectile.soundExplode, (ThingDef)def, (ThingDef)equipmentDef, null, def.projectile.postExplosionSpawnThingDef, (float)def.projectile.preExplosionSpawnChance, 0, false, null, 0f, 0);
 		for (int i = 0; i < 4; i++)
 		{
 			ThrowSmokeBlue(base.Position.ToVector3Shifted() + Gen.RandomHorizontalVector(def.projectile.explosionRadius * 0.7f), base.Map, def.projectile.explosionRadius * 0.6f);

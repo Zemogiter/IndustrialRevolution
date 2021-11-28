@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BaseMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+		<smeltable>true</smeltable>
+		<weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_WeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+
+
+  <ThingDef Name="BaseMeleeWeapon_Sharp" ParentName="BaseMeleeWeapon" Abstract="True">
+    <recipeMaker>
+    <defaultIngredientFilter>
+      <categories>
+        <li>Root</li>
+      </categories>
+      <exceptedThingDefs>
+        <li>Silver</li>
+        <li>Gold</li>
+        <li>WoodLog</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="BaseMeleeWeapon_Blunt" ParentName="BaseMeleeWeapon" Abstract="True">
+    <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <exceptedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+        </exceptedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker>
+  </ThingDef>
+  
+  	<ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>MeleeWeapon_Saber</defName>
+    <label>saber</label>
+    <description>A curved saber. Good for slashing.</description>
+	<weaponTags>
+      <li>MeleeSoldier</li>
+      <li>Melee</li>	  
+    </weaponTags>
+		<generateCommonality>2</generateCommonality>		
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Saber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.5</Mass>
+      <MeleeWeapon_DamageAmount>12</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.65</MeleeWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>MeleeWeapon_Broadsword</defName>
+    <label>broadsword</label>
+    <description>A basket-hilted sword. Good for stabbing or slashing.</description>
+		<weaponTags>
+       <li>MeleeSoldier</li>
+      <li>Melee</li>
+    </weaponTags>
+		<generateCommonality>2</generateCommonality>		
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Broadsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.5</Mass>
+      <MeleeWeapon_DamageAmount>15</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2</MeleeWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>  
+ 
+	<ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>MeleeWeapon_Truncheon</defName>
+    <label>truncheon</label>
+    <description>A wooden baton. Often used by officers as a non-lethal solution in developed worlds. Basically a refined club.</description>
+		<weaponTags>
+       <li>MeleeSoldier</li>
+      <li>Melee</li>
+    </weaponTags>
+		<generateCommonality>1.5</generateCommonality>		
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Truncheon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.85</Mass>
+      <MeleeWeapon_DamageAmount>11</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.6</MeleeWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>   
+  
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp">
+		<defName>MeleeWeapon_Bayonet</defName>
+		<label>bayonet</label>
+		<description>A long blade designed to fix onto the end of a gun for stabbing.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Bayonet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+       <li>MeleeSoldier</li>
+      <li>Melee</li>
+    </weaponTags>		
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.5</Mass>
+			<MeleeWeapon_DamageAmount>10</MeleeWeapon_DamageAmount>
+			<MeleeWeapon_Cooldown>1.3</MeleeWeapon_Cooldown>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<meleeDamageDef>Cut</meleeDamageDef>
+			</li>
+		</verbs>
+	</ThingDef>	  
+
+</ThingDefs>

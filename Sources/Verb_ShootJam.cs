@@ -24,7 +24,6 @@ public class Verb_ShootJam : Verb_LaunchProjectile
 			}
 			return;
 		}
-		int num = 0;
 		caster.TryGetQuality(out var qc);
 		if (Rand.Range(1, qc switch
 		{

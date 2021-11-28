@@ -27,8 +27,8 @@
     <tradeability>None</tradeability>
     <statBases>
       <accuracyTouch>0.6</accuracyTouch>
-      <accuracyShort>0.7</accuracyShort>
-      <accuracyMedium>0.55</accuracyMedium>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
       <AccuracyLong>0.3</AccuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
@@ -63,8 +63,8 @@
     <tradeability>None</tradeability>
     <statBases>
       <accuracyTouch>0.65</accuracyTouch>
-      <accuracyShort>0.65</accuracyShort>
-      <accuracyMedium>0.75</accuracyMedium>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.85</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
     </statBases>

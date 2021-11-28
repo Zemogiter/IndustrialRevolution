@@ -65,7 +65,6 @@
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/Various/Pants_OnMap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>50</costStuffCount>
@@ -630,7 +629,6 @@
       <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/VestPlate/VestPlate</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>

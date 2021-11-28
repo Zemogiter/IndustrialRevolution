@@ -55,9 +55,6 @@
 		<Publicize Include="Assembly-CSharp;UnityEngine.CoreModule" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Reference Include="Assembly-CSharp">
-	    <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-	  </Reference>
 	  <Reference Include="mscorlib">
 	    <HintPath>..\..\..\RimWorldWin64_Data\Managed\mscorlib.dll</HintPath>
 	  </Reference>

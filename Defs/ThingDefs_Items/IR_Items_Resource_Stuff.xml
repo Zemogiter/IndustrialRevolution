@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Coal</defName>
     <label>coal</label>
-    <description>Doesn't look too nice, but it's good generator fuel.</description>
+    <description>A fuel made from fossilized remains of ancient lifeforms. Good for generators.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Coal</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -14,61 +14,10 @@
       <MarketValue>2.0</MarketValue>
       <MaxHitPoints>150</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <Beauty>-2</Beauty>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
     <stackLimit>500</stackLimit>
-  </ThingDef>
-  <ThingDef ParentName="ResourceBase">
-    <defName>Cloth</defName>
-    <label>cloth</label>
-    <description>Cloth woven from organic fibers.</description>
-    <graphicData>
-      <texPath>Things/Item/Resource/Cloth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <color>(162,157,152)</color>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>80</MaxHitPoints>
-      <MarketValue>1.9</MarketValue>
-      <Mass>0.026</Mass>
-      <Flammability>1.0</Flammability>
-      <DeteriorationRate>4</DeteriorationRate>
-    </statBases>
-    <stuffProps>
-      <categories>
-        <li>Fabric</li>
-      </categories>
-      <color>(162,157,152)</color>
-      <commonality>3</commonality>
-      <allowColorGenerators>true</allowColorGenerators>
-    </stuffProps>
-    <thingCategories>
-      <li>Textiles</li>
-    </thingCategories>
-    <comps>
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
-    </comps>
-    <colorGeneratorInTraderStock Class="ColorGenerator_Options">
-      <options>
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.33,0.33,0.33,1)</only>
-        </li>
-        <li>
-          <weight>10</weight>
-          <min>RGBA(0.3,0.3,0.3,1)</min>
-          <max>RGBA(0.9,0.9,0.9,1)</max>
-        </li>
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.9,0.9,0.9,1)</only>
-        </li>
-      </options>
-    </colorGeneratorInTraderStock>
   </ThingDef>
 </Defs>

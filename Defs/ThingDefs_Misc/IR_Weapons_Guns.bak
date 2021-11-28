@@ -57,7 +57,7 @@
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_ArcRifle</defName>
     <label>bolt-action rifle bullet</label>
-    <thingClass>GaussWeapons.Projectile_Gauss</thingClass>
+    <thingClass>Projectile_Gauss</thingClass>
     <projectile>
       <damageDef>Arc</damageDef>
       <damageAmountBase>14</damageAmountBase>
@@ -69,13 +69,13 @@
     </graphicData>
     <comps>
       <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <compClass>CompExtraDamage</compClass>
         <damageDef>Stun</damageDef>
         <damageAmount>6</damageAmount>
         <chanceToProc>0.8</chanceToProc>
       </li>
       <li Class="GaussWeapons.CompProperties_ExtraDamage">
-        <compClass>GaussWeapons.CompExtraDamage</compClass>
+        <compClass>CompExtraDamage</compClass>
         <damageDef>EMP</damageDef>
         <damageAmount>11</damageAmount>
         <chanceToProc>1</chanceToProc>
@@ -100,8 +100,8 @@
       <WorkToMake>35000</WorkToMake>
       <Mass>9.2</Mass>
       <accuracyTouch>0.95</accuracyTouch>
-      <accuracyShort>0.90</accuracyShort>
-      <accuracyMedium>0.85</accuracyMedium>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.75</AccuracyLong>
       <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
     </statBases>

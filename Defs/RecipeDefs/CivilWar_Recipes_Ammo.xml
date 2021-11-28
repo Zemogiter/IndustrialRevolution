@@ -11,16 +11,24 @@
     <allowMixingIngredients>true</allowMixingIngredients>
     <workAmount>800</workAmount>
     <targetCountAdjustment>5</targetCountAdjustment>
-    <costList>
-      <Steel>5</Steel>
-      <Chemfuel>10</Chemfuel>
-    </costList>
-    <fixedIngredientFilter>
-      <Defs>
-        <li>Steel</li>
-        <li>Chemfuel</li>
-      </Defs>
-    </fixedIngredientFilter>
+    <ingredients>
+	    <li>
+	    <filter>
+	        <thingDefs>
+			    <li>Steel</li>
+		    </thingDefs>
+		</filter>
+		<count>5</count>
+		</li>
+		<li>
+	    <filter>
+	        <thingDefs>
+			    <li>Chemfuel</li>
+		    </thingDefs>
+		</filter>
+		<count>10</count>
+		</li>
+	</ingredients>
     <products>
       <FCannonShell>1</FCannonShell>
     </products>
@@ -37,15 +45,29 @@
     <allowMixingIngredients>true</allowMixingIngredients>
     <workAmount>800</workAmount>
     <targetCountAdjustment>5</targetCountAdjustment>
-    <costList>
-      <Steel>10</Steel>
-      <Chemfuel>5</Chemfuel>
-    </costList>
+    <ingredients>
+	    <li>
+	    <filter>
+	        <thingDefs>
+			    <li>Steel</li>
+		    </thingDefs>
+		</filter>
+		<count>10</count>
+		</li>
+		<li>
+	    <filter>
+	        <thingDefs>
+			    <li>Chemfuel</li>
+		    </thingDefs>
+		</filter>
+		<count>50</count>
+		</li>
+	</ingredients>
     <fixedIngredientFilter>
-      <Defs>
+      <thingDefs>
         <li>Steel</li>
         <li>Chemfuel</li>
-      </Defs>
+      </thingDefs>
     </fixedIngredientFilter>
     <products>
       <FCannonShell>1</FCannonShell>

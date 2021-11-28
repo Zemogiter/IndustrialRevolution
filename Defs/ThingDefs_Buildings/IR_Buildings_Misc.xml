@@ -6,7 +6,7 @@
     <thingClass>Building_CommsConsole</thingClass>
     <graphicData>
       <texPath>Things/Building/Misc/Telegraph</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_StackCount</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2.5,1.5)</drawSize>
       <damageData>

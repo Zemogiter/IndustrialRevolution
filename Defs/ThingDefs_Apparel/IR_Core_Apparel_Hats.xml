@@ -4,7 +4,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_Tuque</defName>
     <label>tuque</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <description>A soft, thick cap. Great for keeping warm in winter.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</texPath>
@@ -61,7 +61,7 @@
   <ThingDef ParentName="HatMakeableBase" Name="CowboyHat">
     <defName>Apparel_CowboyHat</defName>
     <label>cowboy hat</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <description>Stylish yet rugged, this hat keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -167,7 +167,7 @@
   <ThingDef ParentName="CowboyHat">
     <defName>Apparel_BowlerHat</defName>
     <label>trilby</label>
-    <thingClass>Vanya_Headgear.HeadgearFrame</thingClass>
+    <thingClass>HeadgearFrame</thingClass>
     <description>A good-looking hat which projects a slightly urban, money-loving style. Improves social impact.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/BowlerHat/BowlerHat</texPath>

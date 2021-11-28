@@ -1,84 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Chemfuel Generator -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>ChemfuelGenerator</defName>
-    <label>chemfuel generator</label>
-    <thingClass>Building</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Power/FueledGenerator</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>125</pathCost>
-    <blockWind>true</blockWind>
-    <fillPercent>1.0</fillPercent>
-    <castEdgeShadows>false</castEdgeShadows>
-    <rotatable>false</rotatable>
-    <statBases>
-      <Mass>100</Mass>
-      <MarketValue>3000</MarketValue>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToBuild>10500</WorkToBuild>
-      <Flammability>0.75</Flammability>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <description>A generator that burns chemfuel for energy output. Produces a lot of power but consumes the fuel quickly. Highly explosive.</description>
-    <size>(3,3)</size>
-    <costList>
-      <Steel>300</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>5</ComponentIndustrial>
-    </costList>
-    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerPlant</compClass>
-        <basePowerConsumption>-3400</basePowerConsumption>
-        <transmitsPower>true</transmitsPower>
-      </li>
-      <li Class="CompProperties_Flickable" />
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>72.0</fuelConsumptionRate>
-        <fuelCapacity>150.0</fuelCapacity>
-        <fuelFilter>
-          <thingDefs>
-            <li>Chemfuel</li>
-          </thingDefs>
-        </fuelFilter>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
-        <glowColor>(207,124,33,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>9</heatPerSecond>
-      </li>
-      <li Class="CompProperties_Breakdownable" />
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>7.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <chanceNeverExplodeFromDamage>0.9</chanceNeverExplodeFromDamage>
-      </li>
-    </comps>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
-    <designationHotKey>Misc3</designationHotKey>
-    <constructEffect>ConstructMetal</constructEffect>
-    <researchPrerequisites>
-      <li>Industrial_OilGenerator</li>
-    </researchPrerequisites>
-  </ThingDef>
   <!-- Fueled Generator -->
   <ThingDef ParentName="BuildingBase">
     <defName>SteamEngine</defName>
     <label>steam engine</label>
     <thingClass>Building</thingClass>
     <graphicData>
-      <texPath>Things/Building/Power/WoodEngine</texPath>
+      <texPath>Things/Building/Power/WoodEngine/WoodEngine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
@@ -151,7 +79,7 @@
     <thingClass>Building</thingClass>
     <minifiedDef>MinifiedThing</minifiedDef>
     <graphicData>
-      <texPath>Things/Building/Power/PortableEngine</texPath>
+      <texPath>Things/Building/Power/PortableEngine/PortableEngine</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
@@ -187,10 +115,10 @@
         <fuelConsumptionRate>16.0</fuelConsumptionRate>
         <fuelCapacity>60.0</fuelCapacity>
         <fuelFilter>
-          <Defs>
+          <thingDefs>
             <li>Coal</li>
             <li>WoodLog</li>
-          </Defs>
+          </thingDefs>
         </fuelFilter>
       </li>
       <li Class="CompProperties_Glower">
@@ -223,7 +151,7 @@
     <label>industrial steam engine</label>
     <thingClass>Building</thingClass>
     <graphicData>
-      <texPath>Things/Building/Power/SteamGenerator</texPath>
+      <texPath>Things/Building/Power/SteamGenerator/SteamGenerator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(4,5)</drawSize>
     </graphicData>

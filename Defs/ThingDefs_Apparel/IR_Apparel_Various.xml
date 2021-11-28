@@ -1168,7 +1168,7 @@
       <GeneralLaborSpeed>0.05</GeneralLaborSpeed>
       <CookSpeed>0.10</CookSpeed>
       <FoodPoisonChance>-0.05</FoodPoisonChance>
-      <BrewingSpeed>0.10</BrewingSpeed>
+      <DrugCookingSpeed>0.10</DrugCookingSpeed>
       <ButcheryFleshSpeed>0.05</ButcheryFleshSpeed>
       <ButcheryFleshEfficiency>0.05</ButcheryFleshEfficiency>
     </equippedStatOffsets>
@@ -1278,7 +1278,6 @@
       <Insulation_Cold>5</Insulation_Cold>
     </statBases>
     <equippedStatOffsets>
-      <GiftImpact>-0.15</GiftImpact>
       <TradePriceImprovement>-0.15</TradePriceImprovement>
       <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
       <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>

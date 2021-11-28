@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseGun" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef Name="BaseMakeableElectric" ParentName="BaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <researchPrerequisite>Industrial_ArcWeaponry</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+    <weaponTags>
+      <li>EliteGun</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+  <!-- ==================== Arc Rifle ========================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ArcRifle</defName>
+    <label>bolt-action rifle bullet</label>
+    <thingClass>Projectile_Gauss</thingClass>
+    <projectile>
+      <damageDef>Arc</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Things/Projectile/ElectricityArc</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="GaussWeapons.CompProperties_ExtraDamage">
+        <compClass>CompExtraDamage</compClass>
+        <damageDef>Stun</damageDef>
+        <damageAmount>6</damageAmount>
+        <chanceToProc>0.8</chanceToProc>
+      </li>
+      <li Class="GaussWeapons.CompProperties_ExtraDamage">
+        <compClass>CompExtraDamage</compClass>
+        <damageDef>EMP</damageDef>
+        <damageAmount>11</damageAmount>
+        <chanceToProc>1</chanceToProc>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseMakeableElectric">
+    <defName>Gun_ArcRifle</defName>
+    <label>Arc-rifle</label>
+    <description>A heavy prototype rifle that hurls bolts of charged electricity. Slow-firing but powerful and has a chance to stun. Very effective against mechanoids.</description>
+    <weaponTags>
+      <li>EliteGun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/TeslaRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0.4</generateCommonality>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>9.2</Mass>
+      <accuracyTouch>0.95</accuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <accuracyLong>0.75</accuracyLong>
+      <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+      <WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <equippedAngleOffset>40</equippedAngleOffset>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <WoodLog>20</WoodLog>
+      <Gold>35</Gold>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ArcRifle</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>60</range>
+        <soundCast>ShotTesla</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

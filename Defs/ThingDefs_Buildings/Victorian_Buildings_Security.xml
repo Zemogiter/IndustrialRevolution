@@ -47,14 +47,14 @@
     </graphicData>
     <designationHotKey>Misc10</designationHotKey>
     <uiIconPath>BarbedWire/BarbedWire_Icon</uiIconPath>
-    <blueprintGraphicData>
-      <texPath>BarbedWire/BarbedWire_Blueprint_Atlas</texPath>
-    </blueprintGraphicData>
     <constructEffect>ConstructMetal</constructEffect>
     <repairEffect>ConstructMetal</repairEffect>
     <altitudeLayer>Building</altitudeLayer>
     <building>
-      <isInert>true</isInert>
+        <isInert>true</isInert>
+	    <blueprintGraphicData>
+            <texPath>BarbedWire/BarbedWire_Blueprint_Atlas</texPath>
+        </blueprintGraphicData>
     </building>
     <statBases>
       <Beauty>-10</Beauty>
@@ -155,12 +155,10 @@
     <constructEffect>ConstructMetal</constructEffect>
     <specialDisplayRadius>15</specialDisplayRadius>
     <building>
-      <turretShellDef>FCannonShell</turretShellDef>
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_FieldCannon</turretGunDef>
       <turretBurstWarmupTime>4.5</turretBurstWarmupTime>
       <turretBurstCooldownTime>15</turretBurstCooldownTime>
-      <turretTopgraphicPath>Things/Building/FieldCannon_Top</turretTopgraphicPath>
       <buildingTags>
         <li>Artillery</li>
       </buildingTags>
@@ -235,7 +233,6 @@
       <turretGunDef>Gun_GatlingGun</turretGunDef>
       <turretBurstWarmupTime>0.8</turretBurstWarmupTime>
       <turretBurstCooldownTime>2.75</turretBurstCooldownTime>
-      <turretTopgraphicPath>Things/Building/Gatling_Top</turretTopgraphicPath>
     </building>
     <tradeTags>
       <li>Turret</li>
