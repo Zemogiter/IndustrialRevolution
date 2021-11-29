@@ -13,7 +13,7 @@
     <isPlayer>true</isPlayer>
     <basicMemberKind>Colonist2</basicMemberKind>
     <pawnsPlural>colonists</pawnsPlural>
-    <settlementNameMaker>playerInitialSettlementNameMaker</settlementNameMaker>
+    <settlementNameMaker>NamerInitialSettlementColony</settlementNameMaker>
     <techLevel>Industrial</techLevel>
     <backstoryFilters>
       <li>

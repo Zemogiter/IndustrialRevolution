@@ -11,7 +11,7 @@
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been electrocuted to death.</deathMessage>
     <defaultDamage>30</defaultDamage>
-    <explosionCellMote>MicroSparksBlue</explosionCellMote>
+    <explosionCellFleck>MicroSparks</explosionCellFleck>
     <soundExplosion>TeslaImpact</soundExplosion>
     <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
@@ -27,9 +27,9 @@
     <impactSoundType>Electric</impactSoundType>
     <defaultDamage>60</defaultDamage>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
-    <explosionCellMote>MicroSparksBlue</explosionCellMote>
+    <explosionCellFleck>MicroSparks</explosionCellFleck>
     <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
-    <explosionInteriorMote>ElectricalSpark</explosionInteriorMote>
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
     <soundExplosion>Explosion_EMP</soundExplosion>
   </DamageDef>
 </Defs>

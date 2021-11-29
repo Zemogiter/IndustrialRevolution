@@ -65,23 +65,6 @@
     </tags>
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>Industrial_SiegeWeaponry</defName>
-    <label>siege weaponry</label>
-    <description>Exploration of complex siege weaponry designs that allows colonists to begin researching heavy weapons.</description>
-    <tab>Estate_ResearchTab</tab>
-    <baseCost>350</baseCost>
-    <techLevel>Industrial</techLevel>
-    <researchViewX>3</researchViewX>
-    <researchViewY>6</researchViewY>
-    <prerequisites>
-      <li>Machining</li>
-      <li>Industrial_GunSmithing</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
     <defName>Industrial_GatlingGun</defName>
     <label>gatling gun patent</label>
     <description>New designs for engineering a gatling gun at the machining table</description>

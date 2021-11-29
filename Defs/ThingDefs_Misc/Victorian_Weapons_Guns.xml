@@ -816,7 +816,7 @@
   </ThingDef>
   <!-- ======================== Flintlock Rifle w/ Bayonet ================================== -->
   <ThingDef ParentName="BaseBullet2">
-    <defName>Bullet_FlintlockRifle</defName>
+    <defName>Bullet_FlintlockRifleBayonet</defName>
     <label>musket ball</label>
     <projectile>
       <damageDef>Bullet</damageDef>
@@ -948,7 +948,7 @@
   </ThingDef>
   <!-- ==================== Trench Gun w/ Bayonet ========================== -->
   <ThingDef ParentName="BaseBullet2">
-    <defName>Bullet_TrenchShotgun</defName>
+    <defName>Bullet_TrenchShotgunBayonet</defName>
     <label>shotgun blast</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Shotgun</texPath>
@@ -991,7 +991,7 @@
     </equippedStatOffsets>
     <equippedAngleOffset>40</equippedAngleOffset>
     <costList>
-      <Gun_BerettaOVP>1</Gun_BerettaOVP>
+      <Gun_BoltActionRifle>1</Gun_BoltActionRifle>
       <MeleeWeapon_Bayonet>1</MeleeWeapon_Bayonet>
     </costList>
     <verbs>
