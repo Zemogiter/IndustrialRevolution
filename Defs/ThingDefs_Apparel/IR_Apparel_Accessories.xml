@@ -39,6 +39,7 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>25000</WorkToMake>
       <Beauty>5</Beauty>
+	  <Mass>0.1</Mass>
     </statBases>
     <equippedStatOffsets>
       <MentalBreakThreshold>-0.2</MentalBreakThreshold>

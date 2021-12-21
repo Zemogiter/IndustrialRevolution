@@ -60,5 +60,8 @@
     <researchPrerequisites>
       <li>Industrial_Telegraph</li>
     </researchPrerequisites>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
   </ThingDef>
 </Defs>

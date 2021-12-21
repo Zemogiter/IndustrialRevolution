@@ -76,6 +76,8 @@
     <weaponTags>
       <li>GrenadeDestructive</li>
     </weaponTags>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="GrenadierBase">
     <defName>GrenadierEMP</defName>
@@ -83,11 +85,15 @@
     <weaponTags>
       <li>GrenadeEMP</li>
     </weaponTags>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenaryGunner</defName>
     <label>mercenary gunner</label>
     <combatPower>90</combatPower>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
     <gearHealthRange>
       <min>0.7</min>
       <max>2.3</max>
@@ -195,6 +201,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenarySlasher</defName>
@@ -253,9 +261,13 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="MercenaryBase">
     <defName>MercenaryHeavy</defName>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
     <label>heavy mercenary</label>
     <labelPlural>heavy mercenaries</labelPlural>
     <combatPower>185</combatPower>
@@ -357,10 +369,14 @@
     <label>boss</label>
     <labelPlural>bosses</labelPlural>
     <factionLeader>true</factionLeader>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>12~18</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="EliteBase">
     <defName>MercenaryElite</defName>
     <label>elite mercenary</label>
     <labelPlural>elite mercenaries</labelPlural>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>10~13</initialResistanceRange>
   </PawnKindDef>
 </Defs>

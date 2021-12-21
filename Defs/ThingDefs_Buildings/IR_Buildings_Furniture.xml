@@ -58,6 +58,9 @@
     <researchPrerequisites>
       <li>Electricity</li>
     </researchPrerequisites>
+	<thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
   </ThingDef>
   <ThingDef Abstract="True" Name="StandingLampBase" ParentName="LampBase">
     <graphicData>

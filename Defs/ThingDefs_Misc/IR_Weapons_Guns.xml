@@ -128,7 +128,7 @@
         <muzzleFlashScale>15</muzzleFlashScale>
       </li>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
       </li>
     </verbs>

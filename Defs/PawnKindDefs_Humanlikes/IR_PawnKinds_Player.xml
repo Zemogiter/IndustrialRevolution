@@ -23,6 +23,7 @@
     </apparelMoney>
     <backstoryCryptosleepCommonality>0.001</backstoryCryptosleepCommonality>
     <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="BasePlayerPawnKind">
     <defName>Colonist</defName>
@@ -45,5 +46,6 @@
       <max>2400</max>
     </apparelMoney>
     <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
 </Defs>

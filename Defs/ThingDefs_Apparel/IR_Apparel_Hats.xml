@@ -1234,6 +1234,7 @@
       <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
       <MaxHitPoints>120</MaxHitPoints>
+	  <Mass>0.3</Mass>
     </statBases>
     <generateCommonality>0.2</generateCommonality>
     <equippedStatOffsets>
@@ -1284,6 +1285,7 @@
       <WorkToMake>3000</WorkToMake>
       <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+	  <Mass>0.3</Mass>
     </statBases>
     <generateCommonality>0.005</generateCommonality>
     <equippedStatOffsets>
@@ -1320,7 +1322,7 @@
     <thingClass>HeadgearFrame</thingClass>
     <defName>Ind_Fedora</defName>
     <label>Fedora</label>
-    <description>These hats are often associated with gangsters and government officials, which are both practically the same.</description>
+    <description>These hats are most frequently associated with gangsters.</description>
     <graphicData>
       <texPath>Things/Apparel/Headwear/Apparello/Fedora</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1337,6 +1339,7 @@
       <WorkToMake>3000</WorkToMake>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+	  <Mass>0.3</Mass>
     </statBases>
     <generateCommonality>1.5</generateCommonality>
     <equippedStatOffsets>
@@ -1436,6 +1439,7 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
+	  <Mass>0.2</Mass>
       <WorkToMake>3000</WorkToMake>
       <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
@@ -1517,6 +1521,7 @@
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Cold>8</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
+	  <Mass>0.2</Mass>
     </statBases>
     <equippedStatOffsets>
       <MentalBreakThreshold>-0.03</MentalBreakThreshold>
@@ -1592,6 +1597,7 @@
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Cold>8</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
+	  <Mass>0.2</Mass>
     </statBases>
     <equippedStatOffsets>
       <MentalBreakThreshold>-0.03</MentalBreakThreshold>
@@ -1673,6 +1679,7 @@
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>1</Insulation_Heat>
+	  <Mass>0.3</Mass>
     </statBases>
     <equippedStatOffsets>
       <ToxicSensitivity>-0.3</ToxicSensitivity>
@@ -1773,6 +1780,7 @@
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Cold>5</Insulation_Cold>
+	  <Mass>0.3</Mass>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>-0.15</SocialImpact>

@@ -31,6 +31,7 @@
       <AccuracyMedium>0.55</AccuracyMedium>
       <AccuracyLong>0.3</AccuracyLong>
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+	  <Mass>40</Mass>
     </statBases>
     <weaponTags>
       <li>TurretGun</li>
@@ -49,6 +50,11 @@
         <muzzleFlashScale>10</muzzleFlashScale>
       </li>
     </verbs>
+	<selectable>true</selectable>
+	<costList>
+      <Steel>120</Steel>
+	  <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_FieldCannon</defName>
@@ -67,6 +73,7 @@
       <AccuracyMedium>0.75</AccuracyMedium>
       <AccuracyLong>0.85</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+	  <Mass>50</Mass>
     </statBases>
     <weaponTags>
       <li>Artillery</li>
@@ -78,6 +85,7 @@
         <defaultProjectile>Bullet_FieldCannon</defaultProjectile>
         <warmupTime>190</warmupTime>
         <range>400</range>
+		<burstShotCount>1</burstShotCount>
         <forcedMissRadius>8</forcedMissRadius>
         <soundCast>ShotCannon</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -88,6 +96,11 @@
         </targetParams>
       </li>
     </verbs>
+	<selectable>true</selectable>
+	<costList>
+      <Steel>180</Steel>
+	  <ComponentIndustrial>20</ComponentIndustrial>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_FieldCannon</defName>
@@ -107,31 +120,25 @@
       <soundAmbient>MortarRound_Ambient</soundAmbient>
     </projectile>
   </ThingDef>
-  <ThingDef ParentName="BaseArtilleryWeapon">
-    <defName>Gun_LightCannon</defName>
-    <label>explosive mortar</label>
-    <description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
-    <weaponTags>
-      <li>Artillery_BaseDestroyer</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_LightCannonBomb</defaultProjectile>
-        <warmupTime>4</warmupTime>
-        <forcedMissRadius>8</forcedMissRadius>
-        <minRange>20</minRange>
-        <range>160</range>
-        <burstShotCount>1</burstShotCount>
-        <soundCast>Mortar_LaunchA</soundCast>
-        <muzzleFlashScale>16</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </verbs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_LightCannonBomb</defName>
+    <label>explosive mortar shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Shell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>55</damageAmountBase>
+      <speed>81</speed>
+      <explosionRadius>4.0</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_LightCannonBomb</defName>

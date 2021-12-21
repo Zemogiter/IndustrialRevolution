@@ -37,6 +37,11 @@
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
+	<selectable>true</selectable>
+	<costList>
+      <Steel>120</Steel>
+	  <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_Tesla</defName>

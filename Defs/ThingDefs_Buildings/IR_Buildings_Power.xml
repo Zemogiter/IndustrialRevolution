@@ -144,6 +144,9 @@
     <researchPrerequisites>
       <li>Industrial_BasicElectricity</li>
     </researchPrerequisites>
+	<thingCategories>
+      <li>BuildingsPower</li>
+    </thingCategories>
   </ThingDef>
   <!-- Steam Engine -->
   <ThingDef ParentName="BuildingBase">

@@ -15,8 +15,9 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
-      <Beauty>-4</Beauty>
+      <Beauty>1</Beauty>
       <SellPriceFactor>0.70</SellPriceFactor>
+	  <Mass>1</Mass>
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
@@ -60,15 +61,17 @@
   <!-- Long coat -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndLongcoat</defName>
-    <description>A warm and stylish long coat for keeping the cold at bay.</description>
     <label>long coat</label>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
+    <description>A warm and stylish long coat for keeping the cold at bay.</description>
+	<graphicData>
       <texPath>Things/Apparel/Bodywear/LongCoat/IndLongcoat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.25</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
     <costStuffCount>120</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
@@ -78,13 +81,13 @@
       <li>Apparel</li>
     </thingCategories>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>28000</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
       <Mass>3</Mass>
       <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.09</ArmorRating_Sharp>
       <ArmorRating_Heat>0.07</ArmorRating_Heat>
-      <Insulation_Cold>40</Insulation_Cold>
+      <Insulation_Cold>35</Insulation_Cold>
       <Insulation_Heat>1</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
@@ -190,15 +193,17 @@
   <!-- Waistcoat -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndWaistcoat</defName>
+	<label>waistcoat</label>
     <description>A staple piece of clothing that has a stylish look to it.</description>
-    <label>waistcoat</label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
       <texPath>Things/Apparel/Bodywear/Waistcoat/IndWaistcoat</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.25</generateCommonality>
     <costStuffCount>60</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
@@ -302,15 +307,17 @@
   <!-- Shirt and tie -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndShirt</defName>
+	<label>shirt</label>
     <description>A plain shirt with a tie.</description>
-    <label>shirt</label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/ShirtTie/IndShirtTie</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Apparel/Bodywear/ShirtTie</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.6</generateCommonality>
     <costStuffCount>120</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
@@ -319,9 +326,9 @@
       <li>Apparel</li>
     </thingCategories>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>7500</WorkToMake>
-      <Mass>3</Mass>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>2</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Cold>3</Insulation_Cold>
@@ -409,14 +416,14 @@
   <!-- Trenchcoat -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndTrenchCoat</defName>
+	<label>trench coat</label>
     <description>A sharp looking trench coat that has an air of poised action.</description>
-    <label>trench coat</label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/TrenchCoat/IndTrenchCoat</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Apparel/Bodywear/TrenchCoat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
@@ -427,15 +434,16 @@
       <li>Apparel</li>
     </thingCategories>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>22000</WorkToMake>
-      <Mass>2.6</Mass>
+      <MaxHitPoints>190</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.07</ArmorRating_Sharp>
       <ArmorRating_Heat>0.07</ArmorRating_Heat>
       <Insulation_Cold>15</Insulation_Cold>
       <Insulation_Heat>15</Insulation_Heat>
     </statBases>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.7</generateCommonality>
     <equippedStatOffsets>
       <MoveSpeed>-0.04</MoveSpeed>
@@ -527,8 +535,8 @@
   <!-- Greatcoat -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndGreatCoat</defName>
+	<label>greatcoat</label>
     <description>A large padded coat with a cape. Often worn by soldiers and officers, gives the wearer a commanding and courageous look.</description>
-    <label>greatcoat</label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
@@ -537,6 +545,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>160</costStuffCount>
+	<tradeability>Sellable</tradeability>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -670,6 +679,7 @@
       <Insulation_Cold>20</Insulation_Cold>
       <Insulation_Heat>5</Insulation_Heat>
     </statBases>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.5</generateCommonality>
     <equippedStatOffsets>
       <MoveSpeed>-0.04</MoveSpeed>
@@ -798,6 +808,7 @@
       <Insulation_Cold>2</Insulation_Cold>
       <Insulation_Heat>5</Insulation_Heat>
     </statBases>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.2</generateCommonality>
     <equippedStatOffsets>
       <MentalBreakThreshold>-0.02</MentalBreakThreshold>
@@ -913,7 +924,9 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>8000</WorkToMake>
+	  <Mass>0.3</Mass>
     </statBases>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>2</generateCommonality>
     <apparel>
       <bodyPartGroups>
@@ -1003,8 +1016,8 @@
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/Suspenders/IndSuspenders</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Apparel/Bodywear/Suspenders</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <costStuffCount>50</costStuffCount>
     <stuffCategories>
@@ -1017,6 +1030,7 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>8000</WorkToMake>
+	  <Mass>0.3</Mass>
     </statBases>
     <apparel>
       <bodyPartGroups>
@@ -1118,11 +1132,13 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>8000</WorkToMake>
+	  <Mass>0.3</Mass>
     </statBases>
     <equippedStatOffsets>
       <GeneralLaborSpeed>0.10</GeneralLaborSpeed>
       <SmoothingSpeed>0.05</SmoothingSpeed>
     </equippedStatOffsets>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.03</generateCommonality>
     <apparel>
       <bodyPartGroups>
@@ -1163,6 +1179,7 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>8000</WorkToMake>
+	  <Mass>0.3</Mass>
     </statBases>
     <equippedStatOffsets>
       <GeneralLaborSpeed>0.05</GeneralLaborSpeed>
@@ -1172,7 +1189,8 @@
       <ButcheryFleshSpeed>0.05</ButcheryFleshSpeed>
       <ButcheryFleshEfficiency>0.05</ButcheryFleshEfficiency>
     </equippedStatOffsets>
-    <generateCommonality>0.006</generateCommonality>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.4</generateCommonality>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -1276,6 +1294,7 @@
       <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
       <Insulation_Cold>5</Insulation_Cold>
+	  <Mass>0.4</Mass>
     </statBases>
     <equippedStatOffsets>
       <TradePriceImprovement>-0.15</TradePriceImprovement>
@@ -1283,6 +1302,7 @@
       <WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
       <ConstructionSpeed>0.05</ConstructionSpeed>
     </equippedStatOffsets>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.3</generateCommonality>
     <apparel>
       <bodyPartGroups>
@@ -1375,6 +1395,8 @@
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.25</generateCommonality>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>13000</WorkToMake>
@@ -1408,8 +1430,8 @@
   <!-- Shoulder pads -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndShoulderPads</defName>
+	<label>shoulderpads</label>
     <description>Crude Leather padding for added protection against blunt damage.</description>
-    <label>shoulderpads</label>
     <recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
@@ -1417,6 +1439,7 @@
       <texPath>Things/Apparel/Bodywear/Shoulderpads/IndShoulderPads</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>1</generateCommonality>
     <costStuffCount>35</costStuffCount>
     <stuffCategories>
@@ -1492,6 +1515,7 @@
       <Steel>220</Steel>
       <Cloth>30</Cloth>
     </costList>
+	<tradeability>Sellable</tradeability>
     <generateCommonality>0.5</generateCommonality>
     <apparel>
       <bodyPartGroups>

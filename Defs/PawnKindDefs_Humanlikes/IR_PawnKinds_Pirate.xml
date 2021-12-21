@@ -34,7 +34,7 @@
     </apparelMoney>
     <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
     <weaponMoney>
-      <min>60</min>
+      <min>70</min>
       <max>260</max>
     </weaponMoney>
     <weaponTags>
@@ -68,6 +68,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="PirateBase">
     <defName>Scavenger</defName>
@@ -119,6 +121,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="PirateBase">
     <defName>Thrasher</defName>
@@ -176,6 +180,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
   <PawnKindDef ParentName="PirateBase">
     <defName>Pirate</defName>
@@ -231,5 +237,7 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+	<initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>7~12</initialResistanceRange>
   </PawnKindDef>
 </Defs>
