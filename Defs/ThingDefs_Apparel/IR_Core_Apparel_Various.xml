@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef Name="ApparelBase" Abstract="True">
     <thingClass>Apparel</thingClass>
@@ -15,7 +15,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>2</DeteriorationRate>
-      <Beauty>-4</Beauty>
+      <Beauty>1</Beauty>
       <SellPriceFactor>0.70</SellPriceFactor>
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
@@ -57,127 +57,6 @@
     </recipeMaker>
   </ThingDef>
   <!-- ====================================== Medieval =========================================== -->
-  <ThingDef ParentName="ApparelMakeableBase">
-    <defName>Apparel_Pants</defName>
-    <label>pants</label>
-    <description>A simple set of pants.</description>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
-	  <texPath>Things/Apparel/Bodywear/Pants</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-    </graphicData>
-    <costStuffCount>50</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>7000</WorkToMake>
-      <Mass>0.5</Mass>
-      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
-      <Insulation_Cold>3</Insulation_Cold>
-    </statBases>
-    <apparel>
-      <wornGraphicPath>Things/Apparel/Bodywear/Pants/Pants</wornGraphicPath>
-      <bodyPartGroups>
-        <li>Legs</li>
-      </bodyPartGroups>
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-      </layers>
-      <tags>
-        <li>Outlander</li>
-        <li>Pirate</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-        <li>Soldier</li>
-      </defaultOutfitTags>
-    </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <!-- Color: Standard Coat -->
-        <!-- Dark Brown -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>
-        <!-- Brown  -->
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>
-        <!-- Light Brown -->
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.77,0.52,0.43,1)</only>
-        </li>
-        <!-- Beige -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.97,0.89,0.74,1)</only>
-        </li>
-        <!-- Orange Brown -->
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.38,0.17,0.17,1)</only>
-        </li>
-        <!-- Burgundy -->
-        <li>
-          <weight>10</weight>
-          <only>RGBA(0.56,0.32,0.37,1)</only>
-        </li>
-        <!-- Red -->
-        <li>
-          <weight>3</weight>
-          <only>RGBA(0.43,0.20,0.20,1)</only>
-        </li>
-        <!-- Sage Green -->
-        <li>
-          <weight>10</weight>
-          <only>RGBA(0.26,0.32,0.26,1)</only>
-        </li>
-        <!-- Lavendar -->
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.32,0.26,0.33,1)</only>
-        </li>
-        <!-- Navy Blue -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.20,0.20,0.30,1)</only>
-        </li>
-        <!-- Grey -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.50,0.50,0.50,1)</only>
-        </li>
-        <!-- Light Grey -->
-        <li>
-          <weight>15</weight>
-          <only>RGBA(0.65,0.65,0.65,1)</only>
-        </li>
-        <!-- White -->
-        <li>
-          <weight>15</weight>
-          <only>RGBA(0.85,0.85,0.85,1)</only>
-        </li>
-        <!-- Black -->
-        <li>
-          <weight>40</weight>
-          <only>RGBA(0.30,0.30,0.30,1)</only>
-        </li>
-      </options>
-    </colorGenerator>
-  </ThingDef>
   <!-- ======================================= Industrial =======================================-->
   <!-- ==================================== Spacer =====================================-->
 </Defs>
