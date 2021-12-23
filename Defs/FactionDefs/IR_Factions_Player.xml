@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <FactionDef Abstract="True" Name="PlayerFactionBase">
-    <settlementTexturePath>World/WorldObjects/DefaultFactionBase</settlementTexturePath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <colorSpectrum>
       <li>(0, 0.737, 0.847)</li>
     </colorSpectrum>
@@ -11,17 +11,18 @@
     <label>Drifters</label>
     <description>Your own community.</description>
     <isPlayer>true</isPlayer>
-    <basicMemberKind>Colonist2</basicMemberKind>
-    <pawnsPlural>colonists</pawnsPlural>
-    <settlementNameMaker>NamerInitialSettlementColony</settlementNameMaker>
-    <techLevel>Industrial</techLevel>
-    <backstoryFilters>
+	<backstoryFilters>
       <li>
         <categories>
           <li>Outlander</li>
         </categories>
       </li>
     </backstoryFilters>
+    <basicMemberKind>Colonist2</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+	<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+	<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+	<techLevel>Industrial</techLevel>
     <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
     <startingResearchTags>
       <li>TribalStart</li>

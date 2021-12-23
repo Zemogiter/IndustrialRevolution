@@ -313,7 +313,7 @@
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/ShirtTie</texPath>
+      <texPath>Things/Apparel/Bodywear/ShirtTie/IndShirtTie</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
 	<tradeability>Sellable</tradeability>
@@ -422,7 +422,7 @@
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/TrenchCoat</texPath>
+      <texPath>Things/Apparel/Bodywear/TrenchCoat/IndTrenchCoat</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <costStuffCount>80</costStuffCount>
@@ -901,112 +901,6 @@
       </options>
     </colorGenerator>
   </ThingDef>
-  <!-- Breeches -->
-  <ThingDef ParentName="IndApparelMakeableBase">
-    <defName>Apparel_IndJodphurs</defName>
-    <description>A set of breeches often worn by soldiers.</description>
-    <label>jodhpurs</label>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
-      <texPath>Things/Apparel/Bodywear/Jodhpurs/Pants</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <costStuffCount>50</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
-	  <Mass>0.3</Mass>
-    </statBases>
-	<tradeability>Sellable</tradeability>
-    <generateCommonality>2</generateCommonality>
-    <apparel>
-      <bodyPartGroups>
-        <li>Legs</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Apparel/Bodywear/Jodhpurs/BPants</wornGraphicPath>
-      <layers>
-        <li>OnSkin</li>
-        <li>Middle</li>
-      </layers>
-      <tags>
-        <li>Outlander</li>
-        <li>Pirate</li>
-        <li>Military</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-    </apparel>
-    <colorGenerator Class="ColorGenerator_Options">
-      <options>
-        <!-- Color: Standard Coat -->
-        <!-- Dark Brown -->
-        <li>
-          <weight>2</weight>
-          <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>
-        <!-- Brown  -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.51,0.32,0.20,1)</only>
-        </li>
-        <!-- Light Brown -->
-        <li>
-          <weight>20</weight>
-          <only>RGBA(0.77,0.52,0.43,1)</only>
-        </li>
-        <!-- Orange Brown -->
-        <li>
-          <weight>5</weight>
-          <only>RGBA(0.38,0.17,0.17,1)</only>
-        </li>
-        <!-- Burgundy -->
-        <li>
-          <weight>15</weight>
-          <only>RGBA(0.56,0.32,0.37,1)</only>
-        </li>
-        <!-- Red -->
-        <li>
-          <weight>10</weight>
-          <only>RGBA(0.33,0.14,0.14,1)</only>
-        </li>
-        <!-- Sage Green -->
-        <li>
-          <weight>10</weight>
-          <only>RGBA(0.26,0.32,0.26,1)</only>
-        </li>
-        <!-- Lavendar -->
-        <li>
-          <weight>10</weight>
-          <only>RGBA(0.32,0.26,0.33,1)</only>
-        </li>
-        <!-- Navy Blue -->
-        <li>
-          <weight>40</weight>
-          <only>RGBA(0.20,0.20,0.30,1)</only>
-        </li>
-        <!-- Grey -->
-        <li>
-          <weight>20</weight>
-          <max>RGBA(0.9,0.9,0.9,1)</max>
-        </li>
-        <!-- Black -->
-        <li>
-          <weight>30</weight>
-          <only>RGBA(0.60,0.60,0.60,1)</only>
-        </li>
-      </options>
-    </colorGenerator>
-  </ThingDef>
   <!-- Suspenders -->
   <ThingDef ParentName="IndApparelMakeableBase">
     <defName>Apparel_IndSuspenders</defName>
@@ -1016,7 +910,7 @@
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
     </recipeMaker>
     <graphicData>
-      <texPath>Things/Apparel/Bodywear/Suspenders</texPath>
+      <texPath>Things/Apparel/Bodywear/Suspenders/IndSuspenders</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <costStuffCount>50</costStuffCount>
@@ -1278,7 +1172,7 @@
     </recipeMaker>
     <graphicData>
       <texPath>Things/Apparel/Bodywear/Overalls/IndOveralls</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
     <costStuffCount>100</costStuffCount>
     <stuffCategories>
@@ -1437,7 +1331,7 @@
     </recipeMaker>
     <graphicData>
       <texPath>Things/Apparel/Bodywear/Shoulderpads/IndShoulderPads</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
 	<tradeability>Sellable</tradeability>
     <generateCommonality>1</generateCommonality>
