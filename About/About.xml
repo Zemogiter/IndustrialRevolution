@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Industrial Revolution</name>
-  <author>Inverness</author>
+  <author>Inverness, miku567/Zemogiter</author>
   <supportedVersions>
     <li>1.3</li>
   </supportedVersions>
-  <url>https://ludeon.com/forums/index.php?topic=15069.0</url>
-  <description>Brings Rimworld to the Industrial era.</description>
+  <description>A 1.3 port of an old mod that adds clothing, power buildings, weapons (among other things) that are centered around the theme of Industral Revolution. So expect a lot of steam-powered machines if you're into that.
+
+Original mod can be found here:
+https://ludeon.com/forums/index.php?PHPSESSID=fe7834866dd2c1d79f8e87d999b8b42f&topic=33189.0
+
+Known issues:
+- [strike] the textures for clothes do not load properly, I tried using Graphic_Multi, Graphic_StackCount and Graphic_Single but it always resulted in purple squares as textures and glitched pawn apperance in colonist bar [/strike]
+- [strike] the mod throws an error ever time the faction&settlement name giver tries to execute [/strike]
+- does not show in mod menu as 1.3 compatible and dosen't show 1.3 tag in workshop, loads fine in the game though
+
+Github repo:
+https://github.com/Zemogiter/IndustrialRevolution
+
+Feedback would be greatly appreciated.</description>
   <packageId>Inverness.industrialrevolution</packageId>
   <modDependencies>
     <li>
