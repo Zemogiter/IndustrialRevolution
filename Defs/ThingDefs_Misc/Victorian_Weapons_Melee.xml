@@ -54,7 +54,7 @@
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>1.5</Mass>
-      <MeleeWeapon_AverageDPS>12</MeleeWeapon_AverageDPS>
+      <MeleeWeapon_AverageDPS>14</MeleeWeapon_AverageDPS>
       <MeleeWeapon_CooldownMultiplier>1.65</MeleeWeapon_CooldownMultiplier>
     </statBases>
     <costList>
@@ -84,7 +84,7 @@
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>1.5</Mass>
-      <MeleeWeapon_AverageDPS>15</MeleeWeapon_AverageDPS>
+      <MeleeWeapon_AverageDPS>17</MeleeWeapon_AverageDPS>
       <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
     </statBases>
     <costList>

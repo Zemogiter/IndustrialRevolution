@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ResourceBase">
-    <defName>Coal</defName>
+    <defName>IR_Coal</defName>
     <label>coal</label>
     <description>A fuel made from fossilized remains of ancient lifeforms. Good for generators.</description>
     <graphicData>

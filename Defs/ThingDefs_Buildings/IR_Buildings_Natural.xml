@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="RockBase">
-    <defName>MineableCoal</defName>
+    <defName>Mineable_IR_Coal</defName>
     <label>coal ore</label>
     <graphicData>
       <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
@@ -16,7 +16,7 @@
     <description>A rich coal ore.</description>
     <building>
       <isResourceRock>true</isResourceRock>
-      <mineableThing>Coal</mineableThing>
+      <mineableThing>IR_Coal</mineableThing>
       <mineableYield>55</mineableYield>
       <mineableScatterCommonality>1</mineableScatterCommonality>
       <mineableScatterLumpSizeRange>

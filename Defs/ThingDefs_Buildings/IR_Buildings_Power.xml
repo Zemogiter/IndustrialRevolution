@@ -44,7 +44,7 @@
         <fuelFilter>
           <thingDefs>
             <li>WoodLog</li>
-            <li>Coal</li>
+            <li>IR_Coal</li>
           </thingDefs>
         </fuelFilter>
       </li>
@@ -116,7 +116,7 @@
         <fuelCapacity>60.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>Coal</li>
+            <li>IR_Coal</li>
             <li>WoodLog</li>
           </thingDefs>
         </fuelFilter>
@@ -195,7 +195,7 @@
         <fuelCapacity>200.0</fuelCapacity>
         <fuelFilter>
           <thingDefs>
-            <li>Coal</li>
+            <li>IR_Coal</li>
           </thingDefs>
         </fuelFilter>
       </li>

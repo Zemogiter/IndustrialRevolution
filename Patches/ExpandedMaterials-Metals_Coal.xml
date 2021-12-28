@@ -1,0 +1,8 @@
+<Patch>
+	<Operation Class="PatchOperationAdd">
+	    <xpath>/Defs/ThingDef[defName = "VMEu_MetalSmelter"]/comps/li/fuelFilter/thingDefs</xpath>
+	    <value>
+            <li>IR_Coal</li>
+	    </value>
+	</Operation>
+</Patch>
