@@ -56,7 +56,7 @@
   <!-- ==================== Arc Rifle ========================== -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_ArcRifle</defName>
-    <label>bolt-action rifle bullet</label>
+    <label>Bolt-Action Rifle Bullet</label>
     <thingClass>Projectile_Gauss</thingClass>
     <projectile>
       <damageDef>Arc</damageDef>
@@ -84,7 +84,7 @@
   </ThingDef>
   <ThingDef ParentName="BaseMakeableElectric">
     <defName>Gun_ArcRifle</defName>
-    <label>Arc-rifle</label>
+    <label>Arc-Rifle</label>
     <description>A heavy prototype rifle that hurls bolts of charged electricity. Slow-firing but powerful and has a chance to stun. Very effective against mechanoids.</description>
     <weaponTags>
       <li>EliteGun</li>
@@ -116,6 +116,7 @@
       <WoodLog>20</WoodLog>
       <Gold>35</Gold>
     </costList>
+	<techLevel>Industrial</techLevel>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

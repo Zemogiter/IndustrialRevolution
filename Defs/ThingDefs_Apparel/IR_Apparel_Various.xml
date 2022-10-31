@@ -423,7 +423,7 @@
     </recipeMaker>
     <graphicData>
       <texPath>Things/Apparel/Bodywear/TrenchCoat/IndTrenchCoat</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>

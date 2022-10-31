@@ -4,16 +4,18 @@
   <author>Inverness, miku567/Zemogiter</author>
   <supportedVersions>
     <li>1.3</li>
+	<li>1.4</li>
   </supportedVersions>
-  <description>A 1.3 port of an old mod that adds clothing, power buildings, weapons (among other things) that are centered around the theme of Industral Revolution. So expect a lot of steam-powered machines if you're into that.
+  <description>A port of an old mod that adds clothing, power buildings, weapons (among other things) that are centered around the theme of Industral Revolution. So expect a lot of steam-powered machines if you're into that.
 
 Original mod can be found here:
-https://ludeon.com/forums/index.php?PHPSESSID=fe7834866dd2c1d79f8e87d999b8b42f&topic=33189.0
+https://ludeon.com/forums/index.php?topic=33189.0
 
 Known issues:
 - [strike] the textures for clothes do not load properly, I tried using Graphic_Multi, Graphic_StackCount and Graphic_Single but it always resulted in purple squares as textures and glitched pawn apperance in colonist bar [/strike]
-- [strike] the mod throws an error ever time the faction&settlement name giver tries to execute [/strike]
-- does not show in mod menu as 1.3 compatible and dosen't show 1.3 tag in workshop, loads fine in the game though
+- [strike] the mod throws an error ever time the faction/settlement name giver tries to execute [/strike]
+- [strike] does not show in mod menu as 1.3 compatible and dosen't show 1.3 tag in workshop, loads fine in the game though [/strike]
+- [strike] trenchcoat is backwards when the pawn is facing you [/strike]
 
 Github repo:
 https://github.com/Zemogiter/IndustrialRevolution

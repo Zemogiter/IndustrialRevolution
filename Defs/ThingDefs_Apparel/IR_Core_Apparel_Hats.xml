@@ -426,7 +426,7 @@
   </ThingDef>
   <ThingDef ParentName="HatBase">
     <defName>Apparel_PsychicFoilHelmet</defName>
-    <label>psychic foil helmet</label>
+    <label>Psychic Foil Helmet</label>
     <description>A thin helmet containing finely-tuned sheets of psychically-absorptive foil. Reduces the impact of psychic events.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/PsychicFoilHelmet/PsychicFoilHelmet</texPath>
@@ -442,6 +442,10 @@
     <equippedStatOffsets>
       <PsychicSensitivity>-0.90</PsychicSensitivity>
     </equippedStatOffsets>
+	<costList>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+      <Steel>10</Steel>
+    </costList>
     <generateCommonality>0.001</generateCommonality>
     <apparel>
       <bodyPartGroups>

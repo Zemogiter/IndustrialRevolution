@@ -40,7 +40,7 @@
   </ThingDef>
   <ThingDef ParentName="BaseMeleeWeapon_Sharp">
     <defName>MeleeWeapon_Saber</defName>
-    <label>saber</label>
+    <label>Saber</label>
     <description>A curved saber. Good for slashing.</description>
     <weaponTags>
       <li>MeleeSoldier</li>
@@ -57,6 +57,35 @@
       <MeleeWeapon_AverageDPS>14</MeleeWeapon_AverageDPS>
       <MeleeWeapon_CooldownMultiplier>1.65</MeleeWeapon_CooldownMultiplier>
     </statBases>
+	<tools>
+      <li>
+        <label>hand guard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+	<recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>50</Steel>
     </costList>
@@ -87,6 +116,35 @@
       <MeleeWeapon_AverageDPS>17</MeleeWeapon_AverageDPS>
       <MeleeWeapon_CooldownMultiplier>2</MeleeWeapon_CooldownMultiplier>
     </statBases>
+	<tools>
+      <li>
+        <label>hand guard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+	<recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+    </recipeMaker>
     <costList>
       <Steel>50</Steel>
     </costList>
@@ -95,36 +153,6 @@
         <verbClass>Verb_MeleeAttack</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <meleeDamageDef>Cut</meleeDamageDef>
-      </li>
-    </verbs>
-  </ThingDef>
-  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
-    <defName>MeleeWeapon_Truncheon</defName>
-    <label>truncheon</label>
-    <description>A wooden baton. Often used by officers as a non-lethal solution in developed worlds. Basically a refined club.</description>
-    <weaponTags>
-      <li>MeleeSoldier</li>
-      <li>Melee</li>
-    </weaponTags>
-    <generateCommonality>1.5</generateCommonality>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponMelee/Truncheon</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>4000</WorkToMake>
-      <Mass>0.85</Mass>
-      <MeleeWeapon_AverageDPS>11</MeleeWeapon_AverageDPS>
-      <MeleeWeapon_CooldownMultiplier>1.6</MeleeWeapon_CooldownMultiplier>
-    </statBases>
-    <costList>
-      <WoodLog>45</WoodLog>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>Blunt</meleeDamageDef>
       </li>
     </verbs>
   </ThingDef>
@@ -146,6 +174,27 @@
       <MeleeWeapon_AverageDPS>10</MeleeWeapon_AverageDPS>
       <MeleeWeapon_CooldownMultiplier>1.3</MeleeWeapon_CooldownMultiplier>
     </statBases>
+	<tools>
+      <li>
+        <label>hand guard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+	<recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+    </recipeMaker>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <costList>
       <Steel>40</Steel>

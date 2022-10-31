@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <DamageDef Name="ArcBase" Abstract="True">
-    <harmsHealth>false</harmsHealth>
-    <makesBlood>false</makesBlood>
-  </DamageDef>
-  <DamageDef ParentName="ArcBase">
+  <DamageDef>
     <defName>Arc</defName>
     <label>electric burn</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
@@ -13,7 +9,9 @@
     <defaultDamage>30</defaultDamage>
     <explosionCellFleck>MicroSparks</explosionCellFleck>
     <soundExplosion>TeslaImpact</soundExplosion>
+	<impactSoundType>Slice</impactSoundType>
     <hediff>Burn</hediff>
+	<hediffSolid>Burn</hediffSolid>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <harmsHealth>true</harmsHealth>
     <hasForcefulImpact>true</hasForcefulImpact>
@@ -21,6 +19,7 @@
   <DamageDef ParentName="ArcBase">
     <defName>ArcEMP</defName>
     <label>EMP</label>
+	<workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been EMPed to death.</deathMessage>
     <harmsHealth>false</harmsHealth>

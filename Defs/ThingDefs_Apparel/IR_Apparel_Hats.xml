@@ -544,6 +544,7 @@
       </options>
     </colorGenerator>
   </ThingDef>
+  <!-- Feathered Top Hat -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndFancyTophat</defName>
     <thingClass>HeadgearFrame</thingClass>
@@ -597,36 +598,38 @@
       </options>
     </colorGenerator>
   </ThingDef>
+  <!-- Steamer Top Hat -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndSteampunkTophat</defName>
-    <thingClass>HeadgearFrame</thingClass>
+	<thingClass>HeadgearFrame</thingClass>
     <label>steamer top hat</label>
     <description>A dashing eccentric hat fit for any stylish engineer or insane inventor.</description>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
+	<graphicData>
       <texPath>Things/Apparel/Headwear/IndSteampunkTophat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <costStuffCount>25</costStuffCount>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.1</generateCommonality>
+	<costStuffCount>25</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <statBases>
+	<statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>0.14</Mass>
       <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
       <Insulation_Heat>4</Insulation_Heat>
     </statBases>
-    <generateCommonality>0.2</generateCommonality>
-    <equippedStatOffsets>
+	<equippedStatOffsets>
       <SocialImpact>0.1</SocialImpact>
       <ConstructionSpeed>0.1</ConstructionSpeed>
       <WorkTableWorkSpeedFactor>0.15</WorkTableWorkSpeedFactor>
     </equippedStatOffsets>
-    <apparel>
+	<thingCategories Inherit="False">
+	  <li>Headgear</li>
+	</thingCategories>
+	<apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
@@ -643,6 +646,11 @@
         <li>Worker</li>
       </defaultOutfitTags>
     </apparel>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    </recipeMaker>
+    
+	
     <colorGenerator Class="ColorGenerator_Options">
       <options>
         <li>
@@ -1866,19 +1874,20 @@
   <!-- Psychonauts, Razputin  -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_IndRaz</defName>
-    <thingClass>HeadgearFrame</thingClass>
+	<thingClass>HeadgearFrame</thingClass>
     <label>engineer's cap</label>
     <description>A cap often worn by engineers and mechanics.</description>
-    <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    </recipeMaker>
-    <graphicData>
+	<graphicData>
       <texPath>Things/Apparel/Headwear/IndRaznaut</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <costList>
-      <Cloth>40</Cloth>
-    </costList>
+	<tradeability>Sellable</tradeability>
+    <generateCommonality>0.1</generateCommonality>
+	<costStuffCount>25</costStuffCount>
+	<stuffCategories>
+	  <li>Fabric</li>
+	  <li>Leathery</li>
+	</stuffCategories>
     <statBases>
       <WorkToMake>9000</WorkToMake>
       <Mass>0.05</Mass>
@@ -1887,13 +1896,15 @@
       <ArmorRating_Heat>0.08</ArmorRating_Heat>
       <Insulation_Heat>5</Insulation_Heat>
     </statBases>
-    <generateCommonality>0.2</generateCommonality>
     <equippedStatOffsets>
       <WorkTableWorkSpeedFactor>0.03</WorkTableWorkSpeedFactor>
       <ConstructionSpeed>0.03</ConstructionSpeed>
       <GeneralLaborSpeed>0.05</GeneralLaborSpeed>
       <ConstructSuccessChance>0.03</ConstructSuccessChance>
     </equippedStatOffsets>
+	<thingCategories Inherit="False">
+	  <li>Headgear</li>
+	</thingCategories>
     <apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
@@ -1909,6 +1920,9 @@
         <li>Worker</li>
       </defaultOutfitTags>
     </apparel>
+	<recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+	</recipeMaker>
     <colorGenerator Class="ColorGenerator_Options">
       <options>
         <li>
